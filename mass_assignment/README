@@ -1,0 +1,1 @@
+To update objects like profiles, settings and so on, the server needs to set properties of the object. If somehow you manage to set properties that should not be editable like the guild which the object belongs, you're *assigning in mass* attributes of the object. 

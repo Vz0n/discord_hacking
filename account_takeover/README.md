@@ -1,0 +1,1 @@
+This class of vulnerabilities basically allows an attacker to steal your account. Can be by just clicking a link or something else like getting a password reset token from other people.
