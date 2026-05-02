@@ -64,8 +64,6 @@ app.run("0.0.0.0", 8000)
 
 And here is an example usage of it:
 
-<video controls>
-  <source src="assets/guns_poc.mp4">
-</video>
+https://github.com/user-attachments/assets/a42e27fe-7368-40e1-8851-b10fe4f651d0
 
 They took some days to fix it.
