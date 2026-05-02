@@ -101,9 +101,7 @@ Succesfully gave to you role {args(2)} in {args(1)}
 
 And you can simply use it to get any role that the bot can control:
 
-<video controls>
-  <source src="assets/carl3.mp4">
-</video>
+https://github.com/user-attachments/assets/35d8e6af-d06f-4d3e-815f-240dddd8c474
 
 Now, let's see the scope of this: Carl (at this date) is on 14.200.000 servers and asks for sensitive permissions like ban members, manage server and manage roles, and many people give it a privileged position in the roles positions:
 
