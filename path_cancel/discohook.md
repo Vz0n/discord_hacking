@@ -5,7 +5,7 @@
 
 > Of all the vulnerabilities in this repository, this is part of most interesting ones.
 
-Discohook is a website mainly used to design cool messages and send them with webhooks. It's widely used among servers for this. It also has a utils bot to do this from your Discord server directly. This bot is [open source](https://github.com/discohook/discohook), so I decided to take a look at his code.
+Discohook is a website mainly used to design cool messages and send them with webhooks. It's widely used among servers for this. It also has a utils bot to do this from your Discord server directly. This site is [open source](https://github.com/discohook/discohook), so I decided to take a look at his code.
 
 ![Website portal](assets/discohook.png)
 
@@ -146,6 +146,8 @@ From the previous source code, I saw that if the response didn't have an `id` fi
 If you read again the "if the response didn't have an `id` field, it will just return the plain", you can already think what to do: if you can't see only one resource, you **can see many of them**:
 
 ![Getting your messages](assets/discohook2.png)
+
+> Note that all of this is retrieved by the Discohook utils bot.
 
 This allows you to dump entire private channel messages, threads, webhooks and see every guild where the bot is in, and if the bot has permissions (that shouldn't have): audit logs.
 

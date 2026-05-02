@@ -109,10 +109,12 @@ Now, let's see the scope of this: Carl (at this date) is on 14.200.000 servers a
 - On the Shoto's Adventurers Guild, is on position 35 of 44
 - On the Bobicraft's server, is on position 127 of 140
 - On the NandaTayo (Spanish VTuber) server, is on position 151 of 151
+- On the Stellar Kingdom (Reino estelar) server, is on position 152 of 154
+- On the PewDiePie server, is on position 138 of 144.
 
 On some servers I can directly get admin, on others get some high value roles like mod, helper or support, and I'm pretty sure that in almost all servers I could ban normal users.
 
-So, you should get now why I called this "God mode".
+So, that's why I called this "God mode".
 
 I reported the tagscript bug on Jan 07 and as the other, it was fixed real quick.
 
