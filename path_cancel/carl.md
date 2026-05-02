@@ -114,7 +114,7 @@ On some servers I can directly get admin, on others get some high value roles li
 
 So, you should get now why I called this "God mode".
 
-I reported the tagscript bug on Jan 07, and as the other, it was fixed real quick.
+I reported the tagscript bug on Jan 07 and as the other, it was fixed real quick.
 
 > I didn't report it at the moment I found it cause the support server was under the christimas holiday, and I didn't want to report it until some days later.
 

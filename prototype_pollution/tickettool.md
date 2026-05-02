@@ -77,7 +77,7 @@ I tried sending it and at first glance, nothing happened. But within a few hours
 
 ![Error](assets/tickettool2.png)
 
-So it worked... and with this I realized that the dashboard is now a time bomb, as this error was slowly starting to appear with more frequency until the dashboard completely crashed:
+So it worked... and with this I realized that the dashboard has now a time bomb, as this error was slowly starting to appear more frequently until the dashboard completely crashed:
 
 ![Bomb](assets/tickettool3.png)
 
