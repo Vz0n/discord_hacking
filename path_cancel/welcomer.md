@@ -74,9 +74,7 @@ It only url-encodes the `#` char, and everything else is sent as it is via the `
 
 So with this and bypassing the "escaper" by using the `?` character, you can send any message to other channels and send a `PUT` to any Discord endpoint:
 
-<video controls>
-  <source src="assets/welcomer2.mp4">
-</video>
+https://github.com/user-attachments/assets/44a7e0e6-012e-467f-96f2-15f49756d6e8
 
 The dev took some hours to fix it.
 

@@ -32,8 +32,6 @@ This will make the bot delete the channel with id `b`, and can be used to delete
 
 According to the [bot's info](https://www.draftbot.gg/faq) it's using a custom version of discord.js for [microservices](https://microservices.io/), this means that probably there are some proxies behind; had to double url-encode the `#` to get it working:
 
-<video controls>
-  <source src="assets/draftbot2.mp4">
-</video>
+https://github.com/user-attachments/assets/e5bf3498-54e6-440f-a99a-2d68d1d63810
 
 The dev took some hours to fix it.

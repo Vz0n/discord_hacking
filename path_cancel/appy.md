@@ -60,9 +60,7 @@ This means that this value is used to construct a request to the Discord API, so
 
 So, it's probably using this endpoint, and if i'm able to tamper with the URL, I can try to go back to the API root with `../../../../../` and then give myself a role in other server... and that worked:
 
-<video controls>
-  <source src="assets/appy3.mp4">
-</video>
+https://github.com/user-attachments/assets/12e04a3b-667c-4557-a710-6f4df8c864dd
 
 You can pin messages and ban members too. Just as the Carl one.
 

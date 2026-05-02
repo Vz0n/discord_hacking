@@ -65,8 +65,6 @@ I can also control the path of the `DELETE` request, so by reviewing lengths, I 
 - Delete messages, `../../../../{channel.id}/messages/{message.id}` ($ x + 22 \leq 60$)
 - Delete invites, `../../../../../invites/{invite.id}` ($ x + 23 \leq 48$)
 
-<video controls>
-  <source src="assets/maki4.mp4">
-</video>
+https://github.com/user-attachments/assets/3aa56f72-2f95-44bf-acfe-182aa2dcfb5e
 
 I can see scammers drooling with the fact that you can delete invites, as vanity links are a high value target for them... but the devs fixed the bug real quickly after I reported it. 
