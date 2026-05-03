@@ -69,4 +69,4 @@ I can also control the path of the `DELETE` request, so by reviewing lengths, I 
 
 https://github.com/user-attachments/assets/3aa56f72-2f95-44bf-acfe-182aa2dcfb5e
 
-I can see scammers drooling with the fact that you can delete invites, as vanity links are a high value target for them... but the devs fixed the bug real quickly after I reported it. 
+I can see some scammers drooling with the fact that you can delete invites, as vanity invites are a high value target for them... but the devs fixed the bug real quickly after I reported it (and I don't even know if you can remove vanity invites with that). 
