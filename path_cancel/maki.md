@@ -3,6 +3,8 @@
 
 [Website](https://maki.gg) | [Discord](https://maki.gg/support)
 
+> On this one I used some LaTeX, so it's better to read it on a web browser.
+
 It's a multi-purpose bot owned by Quare CommV. Has various functions just like Dyno and Sapphire and also an [API](https://api.maki.gg/docs), so other developers can interact with the bot.
 
 As the other bots, this has the function to create a menu for role selection with reactions:
@@ -59,11 +61,11 @@ Good, but we can't give roles ourselves as the url is too large (three snowflake
 
 I can also control the path of the `DELETE` request, so by reviewing lengths, I could do this (note that $x$ is the ID length and the other number is the total path length without counting the snowflake):
 
-- Make the bot leave a guild, `../../../../../users/@me/guilds/{guild.id}` ($ x + 32 \leq 51$)
-- Delete channels, `../../../../{channel.id}` ($ x + 12 \leq 31$)
+- Make the bot leave a guild, `../../../../../users/@me/guilds/{guild.id}` ($x + 32 \leq 51$)
+- Delete channels, `../../../../{channel.id}` ($x + 12 \leq 31$)
 - Unpin messages (the same as pinning a message)
-- Delete messages, `../../../../{channel.id}/messages/{message.id}` ($ x + 22 \leq 60$)
-- Delete invites, `../../../../../invites/{invite.id}` ($ x + 23 \leq 48$)
+- Delete messages, `../../../../{channel.id}/messages/{message.id}` ($x + 22 \leq 60$)
+- Delete invites, `../../../../../invites/{invite.id}` ($x + 23 \leq 48$)
 
 https://github.com/user-attachments/assets/3aa56f72-2f95-44bf-acfe-182aa2dcfb5e
 
