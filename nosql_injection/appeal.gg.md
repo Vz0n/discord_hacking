@@ -114,7 +114,7 @@ and the server said:
 }
 ```
 
-We can also see data, and on MongoDB there is a special variable called `$$ROOT` and it refers to the current document. So by putting it in the args, adding an argument to the function and changing it's code to show the argument in the error:
+We can also see data, and on MongoDB there is a special variable called `$$ROOT` and it refers to the current document. So by putting it in the args, adding an argument to the function and changing its code to show the argument in the error:
 
 ![Pwned](assets/appeal3.png)
 
