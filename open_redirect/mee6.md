@@ -1,4 +1,4 @@
-*Fixed on: ????*
+*Fixed on: ??/??/2026*
 
 [Website](https://mee6.xyz) | [Discord](https://discord.gg/mee6)
 
