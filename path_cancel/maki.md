@@ -39,7 +39,7 @@ This request is sent by `POST` to the API endpoint `/guilds/:guild_id/role_selec
 }
 ```
 
-I tried to play with the `reactions[n].emoji` field and I saw that adding an `/@me#` at the end or `./` at the beginning won't change the request behaviour. So it's being part of the path of a request to this point:
+I tried to play with the `reactions[n].emoji` field and I saw that adding an `/@me#` at the end or `./` at the beginning won't change the request behaviour. So it's being part of the path of a request to this endpoint:
 
 > **Create reaction** 
 >
