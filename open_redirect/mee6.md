@@ -10,7 +10,7 @@ https://github.com/user-attachments/assets/929fb78d-3956-4261-9943-64070681bc2b
 
 This could have passed as just a minor bug or an informative one, but one of the MEE6 devs answered me that the bug was out of scope following the "HackerOne program".
 
-Welp: this guys don't even have a HackerOne program, they only have [this shitty Notion site](https://mee6.notion.site/Bug-bounty-program-47c17360a9ce498d8caf37035004cf80) and there is nothing about open redirects being out of scope, that's why I bothered to report this. This just seems foolery to avoid giving me a reward, and personally I don't give a fuck about it (considering that it was "in the scope", It was only 50$, as it's a low one). Just saying "Hey, we don't consider this a security issue with impact on the site" was more easy than creating a big message with lies which can be easily disproved.
+Welp: this guys don't even have a HackerOne program, they only have [this shitty Notion site](https://mee6.notion.site/Bug-bounty-program-47c17360a9ce498d8caf37035004cf80) and there is nothing about open redirects being out of scope, that's why I bothered to report this. This just seems foolery to avoid giving me a reward, and personally I don't give a fuck about it (considering that it was "in the scope", It was only 50$, as it's a low one). Just saying "Hey, we don't consider this a security issue with impact on the site" was waay more easy than creating a big message with lies which can be easily disproved.
 
 So Aleks, if you're reading this; don't be a fukcing liar.
 
