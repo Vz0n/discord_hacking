@@ -3,7 +3,7 @@
 
 [Website](https://discohook.app) | [Discord](https://discohook.app/discord)
 
-> Of all the vulnerabilities in this repository, this is part of most interesting ones.
+> Of all the vulnerabilities in this repository, this is part of the most interesting ones.
 
 Discohook is a website mainly used to design cool messages and send them with webhooks. It's widely used among servers for this. It also has a utils bot to do this from your Discord server directly. This site is [open source](https://github.com/discohook/discohook), so I decided to take a look at his code.
 

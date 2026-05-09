@@ -3,7 +3,7 @@
 
 [Website](https://wick.bot) | [Discord](https://wick.bot/support)
 
-> Of all the vulnerabilities in this repository, this is one of the most interesting.
+> Of all the vulnerabilities in this repository, this is part of the most interesting ones.
 
 Wick is probably one of the most used and recommended anti raid & protection bots.
 
