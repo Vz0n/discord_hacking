@@ -1,4 +1,4 @@
-# Object.prototype.toString is not callable
+# Object.prototype.toString.call is not a function
 *Fixed on: 18/05/2025*
 
 [Website](https://tt.bot) | [Discord](https://discord.gg/tUM9Xcv)
