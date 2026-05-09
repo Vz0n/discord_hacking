@@ -1,3 +1,5 @@
+*Fixed on: 27/03/2026*
+
 [Website](https://botghost.com) | [Discord](https://discord.gg/botghost)
 
 BotGhost is a website for creating bots without pretty little knowledge of coding, basically a no-code platform for Discord bots. It became popular since the case that [it had a vulnerability](https://www.youtube.com/watch?v=lUiLBBab1RY) where you can get any bot token and then [Discord for some reason tried to take it down](https://www.youtube.com/watch?v=gKtqAYbGvPs)

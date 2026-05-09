@@ -1,4 +1,5 @@
 ## omg those servers are ver- WTF IS THAT ALERT????
+*Fixed on: 17/03/2026*
 
 [Website](https://disboard.org) | [Discord](https://discord.gg/wu3g3Az)
 

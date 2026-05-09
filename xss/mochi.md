@@ -1,4 +1,5 @@
 ## Shop emoji? or anything else!
+*Fixed on: 06/03/2026*
 
 [Website](https://mochi.bot) | [Discord](https://discord.gg/krsFJDS2hA)
 
