@@ -5,7 +5,7 @@
 
 > Of all the vulnerabilities in this repository, this is part of the most interesting ones.
 
-Carl is a multi-purpose owned by BotLabs. It's #3 on the [most used Discord bots](https://gist.github.com/advaith1/451dcbca2d7c3503d4f48d63eb918cb0).
+Carl is a multi-purpose bot owned by BotLabs. It's #3 on the [most used Discord bots](https://gist.github.com/advaith1/451dcbca2d7c3503d4f48d63eb918cb0).
 
 His dashboard seems pretty simple and offers basic functions among Discord guilds:
 
