@@ -6,4 +6,10 @@ I found very nasty bugs across all these apps and I documented them on this repo
 
 By viewing the repo, you should get how it's structured. Every folder's name is a type of bug and their contents are the bots where I found that type of bug with a brief explanation on how the bug works.
 
-This also can serve as proof that most of the Discord "e-gangster" or "raiders" that are saying "I can hack Discord, get your IP, raid your server"... or the fuck else, are brainless dumbasses who don't even know how to code properly, because various of these bugs that I found were *really* easy to catch and exploit.
+This also can serve as proof that most of the Discord e-gangster or "raiders" that are saying "I can hack Discord, get your IP, raid your server"... or the fuck else, are brainless dumbasses who don't even know how to code properly, because various of these bugs that I found were *really* easy to catch and exploit.
+
+### About exploitation attempts in the wild...
+
+As far I know, I'm the only one who got all of this. If you suspect that somebody exploited a vulnerability in this repo before the fix date, contact me with proofs. 
+
+
