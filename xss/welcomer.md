@@ -1,4 +1,4 @@
-## Squid is being very squid
+## Your browser is now mine!
 *Fixed on: 22/04/2026*
 
 [Website](https://welcomer.gg) | [Discord](https://welcomer.gg/support)
@@ -40,7 +40,7 @@ There's a preview feature, and it sends this request via `POST` to `/api/guild/{
 }
 ```
 
-Inspecting the code, I noticed that all this data is going to be rendered into a HTML page, and the image that is rendered is a capture of that HTML page from a Chrome headless browser. Some of these attributes will be parsed to CSS styles, and the `layers[n].fill` has an interesting code for parsing:
+Inspecting the code, I noticed that all this data is going to be rendered into a HTML page, and the image that is rendered is a capture of that HTML page from a Chrome headless browser in the server. Some of these attributes will be parsed to CSS styles, and the `layers[n].fill` has an interesting code for parsing:
 
 ```go
 // welcomer-images-next/service/generator.go
