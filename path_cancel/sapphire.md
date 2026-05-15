@@ -1,5 +1,5 @@
 ## Leaking your staff channel messages!
-*Fixed on: 06/01/2025 - 07/04/2026*
+*Fixed on: 06/01/2025 - 08/04/2026*
 
 [Website](https://sapph.xyz) | [Discord](https://sapph.xyz/server)
 
