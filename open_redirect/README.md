@@ -13,4 +13,4 @@ Moreover, you can make the redirect happen on two ways:
 
 When it's the second case, you can easily escalate this to a XSS, as all the browsers will happily interpret a URL like `javascript:<code here>` as JavaScript code to execute.
 
-
+When it's the first case (or the second but without XSS), it may be a security issue or not. Because you may want to protect your users from phishing or let them use their head (who does not look at the domain?). If the developer(s) follows the last, you will need to demonstrate more security impact than just a wacky phising attack.
