@@ -103,7 +103,7 @@ export const action = async ({ request, context, params }: ActionArgs) => {
 }
 ```
 
-The `getWebhookMessage` does the following:
+The only validation made against the `webhookToken` is that the type must be a string. Knowing that the variable must be introduced in the path of the Discord API request makes this an injection point (but we must URL encode every character, as this parameter is taken from the route path). Now, the `getWebhookMessage` does the following:
 
 ```ts
 export const getWebhookMessage = async (
@@ -143,7 +143,7 @@ From the previous source code, I saw that if the response didn't have an `id` fi
 }
 ```
 
-If you read again the "if the response didn't have an `id` field, it will just return the plain", you can already think what to do: if you can't see only one resource, you **can see many of them**:
+If you read again the "if the response didn't have an `id` field, it will just return the plain...", you can already think what to do: if you can't see only one resource, you **can see many of them**:
 
 ![Getting your messages](assets/discohook2.png)
 
