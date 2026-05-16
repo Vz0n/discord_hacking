@@ -4,7 +4,7 @@ Many sites, after some process like logging-in, getting into a tab... etc. sends
 
 When there is no validation of that `redirect` parameter, you can put something like `https://google.com` instead, and when you end the process, you will be redirected to Google. There is no restriction for the redirect so it's "open".
 
-This is can be useful for phishing attacks, as some people will only look that the first URL that they entered is from your app, and will trust everything that you app redirects to.
+This can be useful for phishing attacks, as some people will only look that the first URL that they entered is from your app, and will trust everything that you app redirects to.
 
 Moreover, you can make the redirect happen on two ways:
 
