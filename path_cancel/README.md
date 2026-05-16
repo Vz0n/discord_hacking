@@ -33,7 +33,7 @@ false
 
 and as Python's `requests`, they will follow the redirect by default. Moreover, it's stated in the HTTP protocol that clients must change the request method to `GET` for the next request after receiving the 302 redirect status code only if the original request method is `POST`, but no `DELETE`, `PATCH`, or `PUT`.
 
-There are also libraries that url-encodes parameters (like [discord.js](https://discord.js.org)) before sending, but it's pretty normal for big bots to use proxies to send requests to Discord (preventing rate limits), and every url-encoded stuff in the URL usually gets decoded by the proxy server before reaching the code, so you end up with this:
+There are also libraries that url-encodes parameters (like [discord.js](https://discord.js.org)) before sending, but it's pretty normal for big bots to use proxies to send requests to Discord (preventing rate limits), and every url-encoded stuff in the URL usually gets decoded by the proxy server before reaching the code that sends the request to Discord API, so you end up with this:
 
 ![request diagram](assets/request_diagram.png)
 
