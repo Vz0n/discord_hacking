@@ -9,4 +9,4 @@ On login, this bot was using the `state` parameter of the OAuth2 protocol to red
 
 ![uwu owo](assets/invitelogger.png)
 
-The dev fixed it on a hours after the report.
+The dev fixed it on a hour after the report.
