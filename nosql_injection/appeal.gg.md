@@ -118,6 +118,6 @@ We can also see data, and on MongoDB there is a special variable called `$$ROOT`
 
 ![Pwned](assets/appeal3.png)
 
-This, chained with the Sapphire bug could allow you to read appeals sent by other users.
+This, chained with the Sapphire bug could allow you to read appeals sent by other users. Note that you don't need to be able to submit appeals to exploit this.
 
 The dev fixed it some hours after I reported the bug.

@@ -11,7 +11,7 @@ Welp, on this site you can link your Discord account for role syncing in the Dis
 
 Clicking this button would send your directly to authorizing the guns.lol application to access your Discord account, to a link like `https://discord.com/oauth2/authorize?client_id=1140632236509642882&response_type=code&redirect_uri=https%3A%2F%2Fguns.lol%2Fapi%2Fdiscord%2Fcallback&scope=identify%20role_connections.write`.
 
-For those won't don't known: Discord uses the [OAuth2](https://oauth.net/2/) protocol for granting access to other applications into accounts. Basically when you hit that "Authorize app" button, a code to identify your grant is used by the external app to get a Bearer access token limited to the scopes that were specified (that list of "This will allow the developer of [app name] to access" are the scopes).
+For those who don't known: Discord uses the [OAuth2](https://oauth.net/2/) protocol for granting access to other applications into accounts. Basically when you hit that "Authorize app" button, a code to identify your grant is used by the external app to get a Bearer access token limited to the scopes that were specified (that list of "This will allow the developer of [app name] to access" are the scopes).
 
 Now, on this protocol is stated that a parameter called `state` *should* be used to uniquely identify the approbation of a user, to prevent cross site attacks... and guns.lol was not using it. What this means, is that there is no difference between the users Discord authorization.
 
