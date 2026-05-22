@@ -1,4 +1,4 @@
-# Let's assign everything!
+## Let's assign everything!
 *Fixed on: 28/03/2024*
 
 [Website](https://circlebot.xyz) | [Discord](https://circlebot.xyz/support)
