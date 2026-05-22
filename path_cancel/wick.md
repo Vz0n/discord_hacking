@@ -42,7 +42,7 @@ When you save a rule, this is sent by `POST` to `/api/fetch/guilds/:guild_id/bui
 }
 ```
 
-So, I putted a `#` at the end of the automod rule, and it was still working. Going to the Discord API docs I saw this route:
+So, I putted a `#` at the end of the automod rule id, and it was still working. Going to the Discord API docs I saw this route:
 
 
 > **Modify Auto Moderation rule**
