@@ -119,6 +119,6 @@ I reported the tagscript bug on Jan 07 and as the other, it was fixed real quick
 
 > I didn't report it at the moment I found it cause the support server was under the christimas holiday, and I didn't want to report it until some days later.
 
-
+I've found out that on September 6, 2024, someone found an IDOR on this bot that allowed you to send messages as the bot to any guild channel and used it to do things like saying on a big game server that it will going to be shutdown. If you're the guy who found and exploited this, let me say that you're a fucking useless prick.
 
 
