@@ -63,7 +63,7 @@ The `emoji` field looks interesting... why? because seeing the Discord documenta
 >
 > Create a reaction for the message. This endpoint requires the `READ_MESSAGE_HISTORY` permission to be present on the current user. Additionally, if nobody else has reacted to the message using this emoji, this endpoint requires the `ADD_REACTIONS` permission to be present on the current user. Returns a 204 empty response on success. Fires a Message Reaction Add Gateway event. The `emoji` must be URL Encoded or the request will fail with `10014: Unknown Emoji`. To use custom emoji, you must encode it in the format `name:id` with the emoji name and emoji id.
 
-The only thing is that it will be urlencoded, but by the error messages I saw that the backend is made on Python (and the bot is made on Pycord following advaith1). Most devs will use the `quote` function from the `urllib.parse` library... and this function has a quirk:
+The only thing is that it will be urlencoded, but by the error messages I saw that the backend is made on Python (and the bot is made on Pycord). Most devs will use the `quote` function from the `urllib.parse` library... and this function has a quirk:
 
 ```python
 >>> from urllib.parse import quote
