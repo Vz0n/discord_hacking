@@ -45,7 +45,7 @@ Now, the channel object in the Discord API has always assigned a `last_message_i
 
 With a simple script, you could fetch the channel every $x$ time and if the `last_message_id` changes, fetch it with this vulnerability, dumping almost every new message.
 
-> **Note on this (Jun, 2026):** Discord is planning to hide the private channel names from API responses if you don't have permission to view them, this could make this exact type of bug harder to exploit. And if the `last_message_id` field is also hidden, that would render this attack vector almost useless.
+> **Note on this (Jun, 2026):** Discord is planning to hide the private channels from API responses if you don't have permission to view them. This would render this attack vector almost useless.
 
 I reported this on Jan 06, 2025 and it was fixed quickly.
 
