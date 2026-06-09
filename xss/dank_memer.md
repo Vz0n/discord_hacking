@@ -96,7 +96,7 @@ And that worked:
 
 ![1](assets/dankmemer6.png)
 
-You can practically modify almost everything you want in the page, from the title to it's contents. It's pretty fun and interesting because it's like a React2shell equivalent bug but on the client side, and as far I know there is no documented exploits or anything about this type of XSS.
+You can practically modify almost everything you want in the page, from the title to the content. It's pretty fun and interesting because it's like a React2shell equivalent bug but on the client side, and as far I know there is no documented exploits or anything about this type of XSS.
 
 The devs took a day to fix it.
 

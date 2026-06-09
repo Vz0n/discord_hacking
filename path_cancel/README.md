@@ -39,6 +39,6 @@ There are also libraries that url-encodes parameters (like [discord.js](https://
 
 > Also, if there is a fragment after your input (like `/messages` if you're sending a message to a channel), you could also *eliminate/cancel* it by just appending the start-of-query character (`?`) or the fragment (`#`) at the end of your input, so the server won't consider it as part of the real URI.  
 
-On the case of Discord bots, they usually allow user actions like sending reactions, assigning roles and sending messages from the dashboard. So if there is poor user-input validation, with this you could convert a simple embed editing tool into a nuke tool.
+On the case of Discord bots, they usually allow user actions like sending reactions, assigning roles and sending messages from the dashboard. So if there is poor user-input validation, with this you could convert a simple embed editing tool into a nuke tool. This bug also applies for other things that inserts user input into a request URI.
 
 This is a good example on what happens when you don't validate user input.
