@@ -50,7 +50,7 @@ These three headers became to my eyes, and by searching a bit in the Next.js sou
 
 This request is expecting to get either a HTML page for redirecting to (the usual `window.location.href = "<URI>"` redirect), or a React Server Components serialized payload (`text/x-component`) to render on the client. The payload is the interesting thing, as it will render the serialized data as raw HTML.
 
-So, by putting an URL of the form `https://dankmemer.lol/api/auth/callback?state=https://cock.com` in the invite link, would give me the ability to redirect the preflight request to a server that is under my control, but now I need to return a response that the React client would accept as a valid RSC payload. I made this wacky server on Node.js for that:
+So, by putting an URL of the form `https://dankmemer.lol/api/auth/callback?state=https://cock.com` in the invite link, I would get the ability to redirect the preflight request to a server that is under my control, but now I need to return a response that the React client would accept as a valid RSC payload. I made this wacky server on Node.js for that:
 
 ```js
 const express = require("express");
