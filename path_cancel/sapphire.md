@@ -53,5 +53,5 @@ One year later, I decided to take another look at the bot, and tried to double u
 
 ![SUPER PRIVATE MESSAGE x2](assets/sapph3.png)
 
-So, the dev fixed it quickly (again) after reporting it.
+So, the dev fixed it after reporting, but it took a while compared to the first time.
 
