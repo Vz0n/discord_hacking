@@ -119,6 +119,17 @@ I reported the tagscript bug on Jan 07 and as the other, it was fixed real quick
 
 > I didn't report it at the moment I found it cause the support server was under the christimas holiday, and I didn't want to report it until some days later.
 
-I've found out that on September 6, 2024, someone found an IDOR on this bot that allowed you to send messages as the bot to any guild channel and used it to do things like saying on a big game server that it will going to be shutdown. If you're the guy who found and exploited this, let me say that you're a fucking useless prick.
+#### A small note aside
+
+I've found out that on September 6, 2024, someone found an IDOR on this bot that allowed you to send messages as the bot to any guild channel and used it to do things like saying on a big game server that it will going to be shutdown. While this was ongoing, this mf said that there was also a ban exploit:
+
+![REMOVE CARL FROM YOUR SERVER!!!!!!!!!!!!!](assets/carl4.png)
+
+The last thing is partially true, but it seems that this guy was just lying/fearmongering about the supposed vulnerability, as the dev was not able to reproduce whatever this guy was reporting to him. This has nothing to do with the path elimination exploit (also, being a Discord bug hunter and lying like this... xd).
+
+And, if you're the other mf who was trolling on big Discord servers with this, let me say that you're a fucking useless prick.
+
+
+
 
 
