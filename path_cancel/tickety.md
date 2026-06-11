@@ -47,7 +47,7 @@ Given this, I also decided to give a shot to the Giveaways module. When creating
 }
 ```
 
-There was no validation made agaisnt the `channelId`, and the `winnerRoles` array had the same behaviour as the verification module unverified role value. That means that I can also send the giveaway message to other channels where I don't have permissions to write (and pinging @everyone) or do things like triggering the typing indicator of the bot, as this is a `POST` request and I can control the path.
+There was no validation made against the `channelId`, and the `winnerRoles` array had the same behaviour as the verification module unverified role value. That means that I can also send the giveaway message to other channels where I don't have permissions to write (and pinging @everyone) or do things like triggering the typing indicator of the bot, as this is a `POST` request and I can control the path.
 
 https://github.com/user-attachments/assets/373de6b8-6ef8-4201-9094-a7c9cc2d1c88
 
