@@ -42,5 +42,5 @@ When I saw my custom command list from the other guild, the command was there...
 
 Most of the plugins were disabled, so at least servers that invited the bot without making any configuration are "safe".
 
-Devs quickly fixed it after reporting it and gave me a reward.
+Devs quickly fixed it after reporting.
 
