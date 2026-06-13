@@ -66,7 +66,7 @@ While trying redirect to `127.0.0.1` I noticed that the server throws 404 if an 
 
 Now; I focused on searching for internal services, and I noticed that the server will take ~3 seconds to answer with a 404 if the address is unreachable and < 1 second if it actually exists, answering with 404 if an error occurs in the request (port closed or `status_code >= 400`). With this I started searching the network and found some interesting internal services running:
 
-![ConvertX running](assets/galaxybot2.png)
+![Internal service](assets/galaxybot2.png)
 
 The devs fixed it quickly after I reported it.
 
