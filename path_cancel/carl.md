@@ -103,7 +103,7 @@ And you can simply use it to get any role that the bot can control:
 
 https://github.com/user-attachments/assets/35d8e6af-d06f-4d3e-815f-240dddd8c474
 
-Now, let's see the scope of this: Carl (at this date) is on 14.200.000 servers and asks for sensitive permissions like ban members, manage server and manage roles, and many people give it a privileged position in the roles positions (and elevated permissions):
+Now, let's see the scope of this: Carl (at this date) is on 14.200.000 servers and asks for sensitive permissions like ban members, manage server and manage roles, and many people give it a privileged position in the roles positions (and there's people that gives it administrator):
 
 - On the Shoto's Adventurers Guild, is on position 35 of 44
 - On the Bobicraft's server, is on position 127 of 140
