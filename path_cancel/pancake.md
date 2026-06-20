@@ -22,7 +22,7 @@ https://github.com/user-attachments/assets/a4448950-3afd-45f3-8ac8-d0ad931d4c3a
 
 > **Trivia:** Following [this list](https://gist.github.com/advaith1/451dcbca2d7c3503d4f48d63eb918cb0), this bot is made in Eris, but on this library this bug should not be possible because it uses the native Node http module to send requests. Guess that either the list is wrong or a proxy is doing his magic.
 
-The command for creating embeds has an option to grab embeds from other messages, and it also had this bug. But it's not actually useful as it only allows getting the embed from the message (and remember that Discord is probably getting rid of the private channels in API responses).
+The command for creating embeds has an option to grab embeds from other messages, and it also had this bug. But it's not actually useful as it only allows getting the embed from the message (and you can't see private channels in API responses anymore).
 
 It's useful for content spoofing, as the bot's messages are mainly on embed format, and surely there are servers that sends things like their rules using embeds from this bot. 
 

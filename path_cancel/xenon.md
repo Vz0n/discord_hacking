@@ -38,6 +38,6 @@ Now, this was on the website. I looked at the bot and the command `/export messa
 
 ![Extracted message](assets/xenon3.png)
 
-> **Note on this (Jun, 2026):** Discord is planning to hide the private channels from API responses if you don't have permission to view them. This would render this attack vector almost useless.
+> **Note:** Since Jun 19, 2026 Discord hides private channels from API responses if you don't have permission to view them. The only way to exploit this specific bug now, is by getting a full message url from somebody else.
 
 The website bug was fixed quickly by the dev, but took some days to read my message. It also tried to fix the bot vulnerability at the same date (08/11/2025), but whatever he made didn't work, and after that he didn't answer me anymore. But as he also made message.style and [I found a XSS in there](/xss/message.style.md), I took advantage and reported the bug again, and this time, he actually fixed it.  
