@@ -33,6 +33,8 @@ I put that with a CMD that sends a `curl` request to a canary token, and I got a
 
 ![pwned](assets/botghost4.png)
 
+> Note that BotGhost uses AWS (Amazon Web Services).
+
 Also; on another block called "Send an API request", I noticed that you were able to send any type of HTTP request, so I decided to look deeper on what was doing. They were using axios/0.14.1 and that was vulnerable to `CVE-2020-28168`, allowing me to bypass their proxy with just this dumb server:
 
 ```python
