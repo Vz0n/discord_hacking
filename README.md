@@ -12,4 +12,6 @@ This also can serve as proof that most of the Discord e-gangster or "raiders" th
 
 As far I know, I'm the only one who got all of this. If you suspect that somebody exploited a vulnerability in this repo before the fix date, contact me with proofs. 
 
+*Research made by [Vz0n](https://github.com/Vz0n). All rights reserved.*
+
 
