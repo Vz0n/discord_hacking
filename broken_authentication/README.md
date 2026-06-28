@@ -1,0 +1,3 @@
+Every dev usually makes sure that a client can only access resources on which they have the required permissions to access. If the authorization checks over the resources are missing or broken then indeed, you have a broken authentication problem there.
+
+This could be tought as a subset of IDORs vulnerabilities, but an IDOR is about making references to objects from resources where you have access. On this type of bugs, the authorization checks on functions/resources could be totally unexistent, bypassables, or just broken in someway.
