@@ -63,9 +63,7 @@ And then, it was used as it-is in the Discord API request path.
 
 So, with `some%3a<Snowflake>/@me#` I verified that was able to eliminate the `/@me` suffix and so get the ability to redirect the `PUT` request to wherever I want. That allows me to do things like giving myself a role on other guild that the bot can control, ban people and pin messages.
 
-<video controls note="replace this with the github url">
-   <source src="assets/april3.mp4">
-</video>
+https://github.com/user-attachments/assets/51fa3b3b-2fd7-4056-b8a7-2a3d218fdcf6
 
 Both endpoints for creating and editing reaction roles were vulnerable. 
 
