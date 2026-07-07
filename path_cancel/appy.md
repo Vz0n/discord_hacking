@@ -62,7 +62,7 @@ So, it's probably using this endpoint, and if i'm able to tamper with the URL, I
 
 https://github.com/user-attachments/assets/12e04a3b-667c-4557-a710-6f4df8c864dd
 
-You can pin messages and ban members too. Just as the Carl one.
+You can pin messages and ban members too.
 
 The dev fixed it real quick after I reported it.
 
