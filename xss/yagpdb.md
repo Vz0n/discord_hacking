@@ -59,6 +59,6 @@ function esc(s) {
 
 It was being used to sanitize the href attribute, but didn't account for double quotes.
 
-The dev took a little to fix it.
+The dev fixed it quickly.
 
 
