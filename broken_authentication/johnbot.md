@@ -90,8 +90,6 @@ app.run("127.0.0.1", 8000)
 
 And welp, here's the PoC:
 
-<video controls note="replace this with the github url">
-   <source src="assets/john4.mp4">
-</video>
+https://github.com/user-attachments/assets/87ea81f4-ff79-4c82-a304-028ffea55ec8
 
 The dev fixed it quickly.
