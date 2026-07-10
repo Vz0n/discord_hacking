@@ -17,10 +17,10 @@ Now, going back to the messages section of the dashboard, when you edit a messag
 
 ![message JSON](assets/sapph3.png)
 
-On every thing where you can put a URL, I tried to add a `javascript:alert(1)` URL, and it worked, and so on the message kit preview:
+On every thing where you can put a URL, I tried to add a `javascript:alert(1)` URL, and it worked... and so on the message kit preview:
 
 ![GET PWNED](assets/sapph4.png)
 
-So, anybody who visits that message kit and presses a link, it will get XSSed.
+So anybody who visits that message kit and clicks a link, will get XSSed.
 
 The dev quickly fixed it after reporting.
