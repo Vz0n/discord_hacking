@@ -9,14 +9,14 @@ On the action blocks available to add bot functionality, there was one called `M
 
 ![uwu math](assets/botghost1.png)
 
-Playing with it, I found a strange error message that is retreived when you put weird things: "Unexpected variable ... [snip]", and doing some OSINT I came to this library, with this issue:
+Playing with it, I found a strange error message that is invoked when you put weird things: "Unexpected variable ... [snip]", and doing some OSINT I came to this library, with this issue:
 
 ![silentmatt/expr-eval](assets/botghost2.png)
 
 Searching for vulnerabilities, I saw [CVE-2025-13204](https://huntr.com/bounties/1-npm-expr-eval), a prototype pollution flaw... and by testing the PoC with:
 
 ```js
-Object=constructor;a=Object.fromEntries([["owo","123"]]);Object.assign(__proto__, a)
+Object=constructor;a=Object.fromEntries([["owo","123"]]);Object.assign(__proto__, a); var + 1
 ```
 
 The bot didn't answer, but when I tried to use it again:
