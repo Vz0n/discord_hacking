@@ -3,7 +3,7 @@
 
 [Website](https://dyno.gg) | [Discord](https://discord.gg/dyno)
 
-You must already know Dyno, so I'll skip his presentation. But in summary is another widely used multi-purpose bot.
+You must already known Dyno, so I'll skip his presentation. But in summary is another widely used multi-purpose bot.
 
 On the dashboard, there is a module called Auto responder:
 
@@ -44,7 +44,7 @@ When you edit an already created auto response, this request is sent to `/api/se
 }
 ```
 
-As you may already guess, the `guildId` attribute was edited in this request, allowing you to change the guild that the auto response belongs to. As this module is enabled by default, I had a good chance to put several autoresponses with wildcards like "a*" and a "@everyone" or something else to cause havoc across servers. I tested it on some guilds:
+As you may already guess, the `guildId` attribute was edited in this request, allowing you to change the guild that the auto response belongs to. As this module is enabled by default, I had a good chance to put several autoresponses with wildcards like "a*" and a funny message or something else to cause havoc across servers. I tested it on some guilds:
 
 ![Example 1](assets/dyno2.png)
 
