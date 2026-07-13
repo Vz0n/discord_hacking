@@ -3,7 +3,7 @@
 
 [Website](https://startit.bot) | [Discord](https://discord.gg/GEanJ2g)
 
-It's an all-in-one (multipurpose) bot. Is the one behind [discord.builders](https://discord.builders) and it winned the #1 spot in the "Bot of the year" selection of top.gg's 2025 awards (which I can't give a link because those mf for some reason deleted the page and now it's the default Next.js 404 page)
+It's an all-in-one (multipurpose) bot. Is the one behind [discord.builders](https://discord.builders) and it winned the #1 spot in the "Bot of the year" selection of [top.gg's 2025 awards](https://blog.top.gg/top-gg-awards-2025-the-winners/) 
 
 ![Dashboard](assets/startit1.png)
 
