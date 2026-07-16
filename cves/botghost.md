@@ -3,7 +3,7 @@
 
 [Website](https://botghost.com) | [Discord](https://discord.gg/botghost)
 
-BotGhost is a website for creating bots without pretty little knowledge of coding, basically a no-code platform for Discord bots. It became popular since the case that [it had a vulnerability](https://www.youtube.com/watch?v=lUiLBBab1RY) where you can get a bot token under non rare conditions and then [Discord for some reason tried to take it down](https://www.youtube.com/watch?v=gKtqAYbGvPs)
+BotGhost is a website for creating bots without pretty little knowledge of coding, basically a no-code platform for Discord bots. It became popular since the case that [it had a vulnerability](https://www.youtube.com/watch?v=lUiLBBab1RY) where you can get a bot token under non rare conditions and then [Discord for some reason tried to take it down](https://www.youtube.com/watch?v=gKtqAYbGvPs), but it was also known before because it was actively used for getting the deprecated active developer badge. 
 
 On the action blocks available to add bot functionality, there was one called `Math` that as his name suggests, is for evaluating math expressions:
 
