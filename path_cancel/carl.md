@@ -99,7 +99,7 @@ This makes the bug very funny, because with this you can create a command (tag) 
 Succesfully gave to you role {args(2)} in {args(1)}
 ```
 
-And you can simply use it to get any role that the bot can control:
+And simply use it to get any role that the bot can control:
 
 https://github.com/user-attachments/assets/35d8e6af-d06f-4d3e-815f-240dddd8c474
 
