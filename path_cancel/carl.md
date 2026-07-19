@@ -127,9 +127,7 @@ I've found out that on September 5, 2024, someone found an IDOR on this bot that
 
 The last thing is partially true, but it seems that this guy was just lying/fearmongering about the supposed vulnerability, as the dev was not able to reproduce whatever this guy was reporting to him. This has nothing to do with the path elimination exploit (also, being a bug hunter and lying like this... xd).
 
-> An amazing fact is that this lie was the thing which spread most on the moment. Even ["respected" people](https://x.com/panley01/status/1831909968905433120) from the Discord community were spreading it.
-
-And, if you're the other mf who was trolling on big Discord servers with this, let me say that you're a fucking useless prick.
+If you want more information about this incident, [I've made a blog post](https://vzon.moe/blog/posts/carl_incident/) taking a deep look at it.
 
 
 
