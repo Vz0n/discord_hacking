@@ -5,7 +5,7 @@
 
 It's a utility bot that provides functions for creating interactive component-based messages.
 
-The bot has various commands that allows editing previously sent messages by the bot. Every one of them requires you to enter a Discord message URL to said message.
+The bot has various commands zthat allows editing previously sent messages by the bot. Every one of them requires you to enter a Discord message URL to said message.
 
 ![Commands](assets/slashbot1.png)
 
@@ -33,4 +33,4 @@ https://github.com/user-attachments/assets/596c38a3-13de-48f4-885c-bf05109aa023
 
 So yes, I was able to edit any message sent by the bot on other servers.
 
-The dev fixed it quickly.
+The dev fixed it quickly. It also made a [blog post](https://slashbot.xyz/blog/message-link-guild-validation) talking about the issue.
