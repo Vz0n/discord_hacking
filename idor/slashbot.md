@@ -5,7 +5,7 @@
 
 It's a utility bot that provides functions for creating interactive component-based messages.
 
-The bot has various commands zthat allows editing previously sent messages by the bot. Every one of them requires you to enter a Discord message URL to said message.
+The bot has various commands that allows editing previously sent messages by the bot. Every one of them requires you to enter a Discord message URL to said message.
 
 ![Commands](assets/slashbot1.png)
 
