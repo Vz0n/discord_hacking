@@ -2,15 +2,8 @@ Many sites, after some process like logging-in, getting into a tab... etc. sends
 
 `/login?redirect=/dashboard`
 
-When there is no validation of that `redirect` parameter, you can put something like `https://google.com` instead, and when you end the process, you will be redirected to Google. There is no restriction for the redirect so it's "open".
+When there is no validation of that `redirect` parameter, you can put something like `https://google.com` instead, and when you end the process, you will be redirected to Google. There is no restriction for the redirect so it's "open". On Discord bots this is a bit useful for phishing attacks as the redirect will be issued after a user authorizes your application; they may trust the new page as the trusted application redirected them to it.
 
-This can be useful for phishing attacks, as some people will only look that the first URL that they entered is from your app, and will trust everything that you app redirects to.
+On formal Bug Bounty platforms like HackerOne or BugCrowd, this bug by itself is considered generally out of scope or informative as the impact is just phishing, which is something that you can easily prevent by looking where you are at. Most times, this bug is chained with another application function(s) to prove real harm.
 
-Moreover, you can make the redirect happen on two ways:
-
-- Sending a 30x HTTP status code with the `Location` header set to the destination
-- Use JavaScript by doing something like `window.location.href = "[destination]"`
-
-When it's the second case, you can easily escalate this to a XSS, as all the browsers will happily interpret a URL like `javascript:<code here>` as JavaScript code to execute.
-
-When it's the first case (or the second but without XSS), it may be a security issue or not. Because you may want to protect your users from phishing or let them use their head (who does not look at the domain?). If the developer(s) follows the last, you will need to demonstrate more security impact than just a wacky phising attack.
+The cases here aren't interesting at all. It's just to keep record.
