@@ -17,32 +17,32 @@ When you save a rule, this is sent by `POST` to `/api/fetch/guilds/:guild_id/bui
 {
     "data":[
         {
-            "id":":rule_id",
-            "name":"uwu owo",
+            "id":"<Snowflake>",
+            "name":"<String>",
             "event_type":1,
             "actions":[
                 {
                     "type":1,
                     "metadata":{
-                        "custom_message":"Nova: This word is not allowed."
+                        "custom_message":"<String>"
                     }
                 }
             ],
             "trigger_type":1,
-            "enabled":true,
-            "exempt_roles":[],
-            "exempt_channels":[],
+            "enabled":"<Boolean>",
+            "exempt_roles":"Array<Snowflake>",
+            "exempt_channels":"Array<Snowflake>",
             "trigger_metadata":{
-                "keyword_filter":["uwu"],
-                "regex_patterns":[],
-                "allow_list":[]
+                "keyword_filter":"Array<String>",
+                "regex_patterns":"Array<Regex>",
+                "allow_list":"Array<?>"
             }
         }
     ]
 }
 ```
 
-So, I putted a `#` at the end of the automod rule id, and it was still working. Going to the Discord API docs I saw this route:
+So, I putted a `#` at the end of the automod rule id and it stopped working, but with the url-encoded version (`%23`) it was working. Going to the Discord API docs I saw this route:
 
 
 > **Modify Auto Moderation rule**
@@ -51,23 +51,23 @@ So, I putted a `#` at the end of the automod rule id, and it was still working. 
 >
 > Modify an existing rule. Returns an auto moderation rule on success. Fires an Auto Moderation Rule Update Gateway event.
 
-So, I tried to slowly go back in the patch with `../rules/<rule-id>` and so on; still working. And when I got into `/guilds`, I tried to edit a moderation rule from other server with `../../../<guild-id>/auto-moderation/rules/<rule-id>`, and it worked:
+So, I tried to slowly go back in the patch with `%2e%2e%/rules/<rule-id>` and so on; still working. And when I got into `/guilds`, I tried to edit a moderation rule from other server with `%2e%2e%2f%2e%2e%2f%2e%2e%2f<guild-id>/auto-moderation/rules/<rule-id>`, and it worked:
 
 ![Edited!](assets/wick2.png)
 
-With this, I got into the API root by adding another `../`, and here it was... but there is something that is unknown to me, and is... every other field on that request that is not from Wick is sent to the Discord API? can I add other fields?
+With this, I got into the API root but there was something that is unknown to me, and is... every other field on that request that is not from Wick is sent to the Discord API? can I add other fields?
 
-I need to test it... but even if it the second question was false, I have a `name`, and the endpoint to edit a guild `/guilds/{guilds.id}` accepts it, has no required fields and every other thing that is not an accepted field is ignored. So let's test.
+I need to test it... but even if the answer to the second question was false, I have a `name`, and the endpoint to edit a guild `/guilds/{guilds.id}` accepts it, has no required fields and the Discord API ignores every other field that is not part of the expected schema. So let's test.
 
-At the first attempt, I didn't work, but when I made the path look uglier as it wont accept more than three `../` (`../../../a/../../guilds/<guild-id>`)... it worked:
+At the first attempt, I didn't work, but when I made the injected path look uglier as I noticed that it wont accept more than three `%2e%2e%2f` joined together (i.e `%2e%2e%2f%2e%2e%2f%2e%2e/a/%2e%2e%2f%2e%2e%2fguilds/<guild-id>`)... it worked:
 
 ![Edited x2](assets/wick3.png)
 
-Now, I removed every field from the request, preserved the `name` and added a `description`, and well:
+Now, I removed every non essential field from the request, preserved the `name` and added a `description`, and well:
 
 ![Edited x3](assets/wick4.png)
 
-So, I can send a `PATCH` request to anywhere with any JSON I want.
+So, I can send a `PATCH` request to anywhere with any JSON field that I want.
 
 This is **extremely lethal** as this is an anti-raid bot, and it normally requires a high spot in the roles positions with admin permissions. You can even edit the application profile and their slash commands.
 
