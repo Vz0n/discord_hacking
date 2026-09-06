@@ -7,6 +7,8 @@ Circle is a multipurpose bot, much like the other. It has modules like custom co
 
 ![Bot dashboard](assets/circle.png)
 
+> This was the dashboard at the time of discovery.
+
 I was testing things in the custom command modules, and I saw that a request was made to `/api/guilds/:guild_id/customcommmands/:command_id`:
 
 ```json
