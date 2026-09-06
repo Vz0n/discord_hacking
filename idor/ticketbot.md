@@ -15,14 +15,14 @@ When you create a panel, this is sent via `POST` to `/setting/servers/$guild_id/
     "type":"BUTTON",
     "subjects":[
         {
-            "subjectId":"$subject_id",
-            "text":"test",
+            "subjectId":"<System.Integer>",
+            "text":"<System.String>",
             "style":1
         }
     ],
     "integrationDetails":{
-        "channelId":"$channel_id",
-        "serverId":"$server_id"
+        "channelId":"<Discord.Snowflake>",
+        "serverId":"<Discord.Snowflake>"
     },
     "message":{
         "content":{
@@ -33,7 +33,7 @@ When you create a panel, this is sent via `POST` to `/setting/servers/$guild_id/
                     "content":[
                         {
                             "type":"text",
-                            "text":"uwu owo"
+                            "text":"<System.String>"
                             }
                     ]
                 }

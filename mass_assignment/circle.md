@@ -7,13 +7,13 @@ Circle is a multipurpose bot, much like the other. It has modules like custom co
 
 ![Bot dashboard](assets/circle.png)
 
-I was testing for things for the custom command modules, and I saw that a request was made to `/api/guilds/:guild_id/customcommmands/:command_id`:
+I was testing things in the custom command modules, and I saw that a request was made to `/api/guilds/:guild_id/customcommmands/:command_id`:
 
 ```json
 {
-    "_id":":command_id",
-    "id":":guild_id",
-    "name":"owot",
+    "_id":"<ObjectId>",
+    "id":"<Snowflake>",
+    "name":"<String>",
     "enabled":true,
     "responses":[
         {

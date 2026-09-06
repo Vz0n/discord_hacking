@@ -23,18 +23,14 @@ When you create it, a tRPC request is sent to `/api/trpc/giveaway.create?batch=1
       "json":{
          "guildId":"<Snowflake>",
          "channelId":"<Snowflake>",
-         "prize":"Something",
-         "description":"Win something",
-         "totalWinners":1,
-         "maxEntries":0,
+         "prize":"<String>",
+         "description":"<String>",
+         "totalWinners":"<Integer>",
+         "maxEntries":"<Integer>",
          "endTime":"<Date>",
-         "unlimitedEntries":true,
-         "requiredRoles":[
-            
-         ],
-         "rewardRoles":[
-            "<Snowflake>"
-         ]
+         "unlimitedEntries":"<Boolean>",
+         "requiredRoles":"Array<Snowflake>",
+         "rewardRoles":"Array<Snowflake>"
       },
       "meta":{
          "values":{
@@ -47,7 +43,7 @@ When you create it, a tRPC request is sent to `/api/trpc/giveaway.create?batch=1
 }
 ```
 
-I tried putting something that it's not a snowflake in `rewardRoles`, and the giveaway creation was still working, just that no role would be given when it ends cause the invalid ID. Then I putted a valid role snowflake with a `#` at the end... and it would give me the role.
+I tried putting an element that it's not a snowflake in the `rewardRoles` array, and the giveaway creation was still working, just that no role would be given when it ends cause the invalid ID. Then I putted a valid role snowflake with a `#` at the end... and it would give me the role.
 
 This means that this value is used to construct a request to the Discord API, so I decided to look for endpoints in the docs and I found this on the Guild resource:
 

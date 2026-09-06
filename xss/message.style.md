@@ -13,7 +13,7 @@ From the above tools, the `Embed Links` lets you generate links that you can use
 
 ![Embed Links](assets/ms2.png)
 
-This is sent via `POST` to `/api/embed-links` for creating the link in question:
+This is sent via `POST` to `/api/embed-links` for creating the link in question (using `https://google.com` as example):
 
 ```json
 {

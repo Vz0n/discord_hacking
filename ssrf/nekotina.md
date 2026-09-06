@@ -9,44 +9,19 @@ There is a module that lets you create a welcome message, with many options:
 
 ![Welcome module](assets/nekotina1.png)
 
-When you save settings, this is sent via server components:
+When you save settings, this payload is sent via server actions:
 
-```ruby
-------geckoformboundaryd3dea44df3c4992be565b71cfa88a49e
-Content-Disposition: form-data; name="1_payload_json"
-
+```json
 {
-  "channelId":null,
-  "content":"Here is your response!",
-  "card": {
-      "font":"Inter",
-      "imageUrl":null,
-      "overlayColor":"#000000",
-      "overlayOpacity":0.75,
-      "subtitle":"We are {{members}} members now",
-      "textColor":"#FFFFFF",
-      "title":"{{username}} joined the server!"
-  },
-  "embed":{
-      "author":null,
-      "title":null,
-      "description":null,
-      "color":null,
-      "thumbnail":null,
-      "image":null,
-      "fields":null,
-      "footer":null
-  },
+  "channelId":"<Snowflake>",
+  "content":"<String>",
+  "card": "<WelcomeCard>",
+  "embed":"<DiscordEmbed>",
   "type":"text",
-  "imageUrl":null,
-  "ignoreBots":false,
-  "components":[]
+  "imageUrl":"<URL>",
+  "ignoreBots":"<Boolean>",
+  "components":"Array<DiscordComponent>"
 }
-------geckoformboundaryd3dea44df3c4992be565b71cfa88a49e
-Content-Disposition: form-data; name="0"
-
-[{"status":"idle"},"$K1"]
-------geckoformboundaryd3dea44df3c4992be565b71cfa88a49e--
 ```
 
 I tried to tamper the `imageUrl` field with an URL that points to a simple HTML page, and when I triggered the module, a request was received:

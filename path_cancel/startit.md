@@ -16,9 +16,7 @@ The JSON body of this reaction action was the following:
 ```json
 {
     "type":"add_reaction",
-    "reactions":[
-        "<String>"
-    ]
+    "reactions":"Array<String>"
 }
 ```
 

@@ -11,11 +11,11 @@ When you create the verification message on the dashboard, a `POST` request is s
 
 ```json
 {
-    "welcomeMessage":"<string>",
-    "welcomeChannelID":"<string>",
-    "unverifiedRole":"Array<string>",
-    "verifiedRoles":"Array<string>",
-    "verificationType":"click-to-pass|web|...",
+    "welcomeMessage":"<String>",
+    "welcomeChannelID":"<String>",
+    "unverifiedRole":"Array<String>",
+    "verifiedRoles":"Array<String>",
+    "verificationType":"OneOf<click-to-pass|web|...>",
     "emoji":"<Emoji>"
 }
 ```

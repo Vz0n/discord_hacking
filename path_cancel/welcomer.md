@@ -17,16 +17,16 @@ This creates, edits and deletes the reaction roles in mass; that means it just m
         {
             "enabled":true,
             "is_system_message":true,
-            "message":"{\"embeds\":[{\"description\":\"React below to get roles!\"}]}",
+            "message":"Schema[DiscordMessage]",
             "roles":[
                 {
-                    "emoji":"{emoji_id}",
-                    "role_id":"{role_id}",
-                    "name":"",
-                    "description":""
+                    "emoji":"[Snowflake]",
+                    "role_id":"[Snowflake]",
+                    "name":"[String]",
+                    "description":"[String]"
                     }
             ],
-            "channel_id":"{channel_id}",
+            "channel_id":"[Snowflake]",
             "type":"emoji"
         }
     ]

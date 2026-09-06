@@ -16,9 +16,9 @@ To save settings in the dashboard, a `POST` request is sent to `/config/:server_
     // It's a big chunk of JSON, so imma cut it to the insteresting fields
     // [... snip]
     "external_edited":true,
-    "id":":server_id",
-    "lang":"es-ES",
-    "premium": false
+    "id":":<Snowflake>",
+    "lang":"<Lang>",
+    "premium": "<Boolean>"
     // [... snip]
 }
 ```

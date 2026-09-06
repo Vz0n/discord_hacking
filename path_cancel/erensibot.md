@@ -15,16 +15,12 @@ To create one, the dashboard sends a `POST` to the `/[guild_id]/reaction-role` A
 {
     "message":{
         "existingMessage":"<Boolean>",
-        "message":"<String>"
+        "message":"<Snowflake>"
     },
     "emojiId":"<String|Snowflake>",
     "channelId":"<Snowflake>",
-    "addRoles":[
-        "<Snowflake>"
-    ],
-    "removeRoles":[
-        "<Snowflake>"
-    ],
+    "addRoles":"Array<Snowflake>",
+    "removeRoles":"Array<Snowflake>",
     "DMNotifications":"<Boolean>"
 }
 ```

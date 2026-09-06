@@ -15,10 +15,10 @@ This website uses [tRPC](https://trpc.io/) as design, they have various methods 
 {
     "0":{
         "json":{
-            "id":"$templateId",
-            "emoji":"$emoji",
-            "language":"$lang",
-            "tags":[]
+            "id":"[string]",
+            "emoji":"[string]",
+            "language":"[string]",
+            "tags":"[]string"
         }
     }
 }

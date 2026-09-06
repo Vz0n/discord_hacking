@@ -14,8 +14,8 @@ The backend didn't validate if those channels actually belonged to the guild tha
 ```json
 {
     "data":{
-        "confessionsChannel":"<snowflake>",
-        "adminConfessionsChannel":"<snowflake>"
+        "confessionsChannel":"<Snowflake>",
+        "adminConfessionsChannel":"<Snowflake>"
     }
 }
 ```

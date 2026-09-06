@@ -14,7 +14,7 @@ This is sent to `/api/v1/discord/bots/channelmsgs-$channelId` via `POST`
 ```json
 {
     "channelId":"$channelId",
-    "messageId":"$messageId"
+    "messageId":"<Snowflake>"
 }
 ```
 
@@ -27,19 +27,17 @@ Now, the channel object in the Discord API has always assigned a `last_message_i
 ```json
 {
     "id":"<Snowflake>",
-    "type":0,
+    "type":"<Integer>",
     "last_message_id":"<Snowflake>",
-    "flags":0,
+    "flags":"<Integer>",
     "guild_id":"<Snowflake>",
-    "name":"\u0b68\u0b67\u02da\ud83d\udcd6\u02dadiscord-mods\u00b0\ua4b1",
+    "name":"<String>",
     "parent_id":"<Snowflake>",
-    "rate_limit_per_user":0,
-    "topic":"Todas las actualizaciones de Discord sobre los servidores se mostrar\u00e1n ac\u00e1.",
-    "position":11,
-    "permission_overwrites":[
-        {"id":"<Snowflake>","type":0,"allow":"0","deny":"1024"}
-    ],
-    "nsfw":false
+    "rate_limit_per_user":"<Integer>",
+    "topic":"<String>",
+    "position":"<Integer>",
+    "permission_overwrites":"Array<ChannelPermissionOverwrite>",
+    "nsfw":"<Boolean>"
 },
 ```
 

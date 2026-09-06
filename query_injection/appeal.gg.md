@@ -29,9 +29,9 @@ When sending the answers for a specific form, this was sent by `POST` to `api/v1
 
 ```json
 {
-    "formId":":form_id",
+    "formId":"<Integer>",
     "answers":{
-        ":question_id":"This is a test!"
+        ":question_id":"<String>"
     },
     "encr":false
 }
@@ -91,7 +91,7 @@ So, by putting this:
         }
     },
     "answers":{
-        ":question_id":"This is a test!"
+        ":question_id":"<String>"
     },
     "encr":false
 }

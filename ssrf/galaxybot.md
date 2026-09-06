@@ -13,20 +13,20 @@ While saving settings, I noticed that there were some modules that save settings
 
 ```jsonc
 {
-    "enabled":true,
-    "removeOldRolesEnabled":false,
+    "enabled":"<Boolean>",
+    "removeOldRolesEnabled":"<Boolean>",
     "dmMessage":{
-        "enabled":false,
+        "enabled":"<Boolean>",
         "description":null
     },
     "join":{
-        "enabled":false,
-        "channelID":null,
+        "enabled":"<Boolean>",
+        "channelID":"<Snowflake>",
         "embed":{
-            "title":null,
-            "description":null,
-            "footerImageURL":null,
-            "thumbnailURL":null
+            "title":"<String>",
+            "description":"<String>",
+            "footerImageURL":"<URL>",
+            "thumbnailURL":"<URL>"
         }    
     }
     // [... snip]

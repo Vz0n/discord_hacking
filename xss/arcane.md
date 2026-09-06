@@ -15,10 +15,10 @@ The emoji is sent raw on requests JSON:
 {
     "emojis":[
         {
-            "emote":"02_derp:1489673649689722990",
+            "emote":"<String>",
             "role":"",
             "type":"default",
-            "role_id":"1482044605305454623"
+            "role_id":"<Snowflake>"
         }
     ]
 }

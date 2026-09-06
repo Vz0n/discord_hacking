@@ -131,14 +131,14 @@ From the previous source code, I saw that if the response didn't have an `id` fi
 
 ```json
 {
-    "id":"297045388538417167",
+    "id":"<Snowflake>",
     "webhookId":"$webhookId",
-    "channelId":"$channelId",
+    "channelId":"<Snowflake>",
     "messageId":"$messageId",
     "webhook":{
         "id":"$webhookId",
-        "discordGuildId":"$guildId",
-        "channelId":"$channelId"
+        "discordGuildId":"<Snowflake>",
+        "channelId":"<Snowflake>"
     }
 }
 ```

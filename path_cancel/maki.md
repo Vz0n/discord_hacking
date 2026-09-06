@@ -15,27 +15,17 @@ This request is sent by `POST` to the API endpoint `/guilds/:guild_id/role_selec
 
 ```json
 {
-    "channel_id":":channel_id",
-    "unique":false,
+    "channel_id":"<Snowflake>",
+    "unique":"<Boolean>",
     "reactions":[
         {
-            "emoji":":emoji",
-            "roles":[":role_id"],
-            "random_roles_amount":1,
-            "mode":"toggle"
+            "emoji":"<String>",
+            "roles":"Array<Snowflake>",
+            "random_roles_amount":"<Integer>",
+            "mode":"OneOf<'toggle'|'add'|...>"
         }
     ],
-    "components":[
-        {
-            "type":17,
-            "components":[
-                {
-                    "type":10,
-                    "content":"Pick a role!"
-                }
-            ]
-        }
-    ]
+    "components":"Array<DiscordV2Component>"
 }
 ```
 

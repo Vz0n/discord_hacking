@@ -87,25 +87,25 @@ The route `/es/guilds/{guild.id}/settings.data?bot={bot.id}` is used to configur
 
 ```json
 {
-    "prefix":"String",
+    "prefix":"<String>",
     "language":"OneOf<Locales>",
-    "timezone":"Timezone",
-    "embed_color":"String",
-    "enabled_embed_color":"Boolean",
+    "timezone":"<Timezone>",
+    "embed_color":"<String>",
+    "enabled_embed_color":"<Boolean>",
     "permissions":{
         "admin_roles":"Array<Snowflake>",
         "admin_users":"Array<Snowflake>",
-        "module_grants":"ModuleGrant"
+        "module_grants":"Array<ModuleGrant>"
     },
     "commands":{
         "help":{
-            "enabled":"Boolean"
+            "enabled":"<Boolean>"
         },
         "commands":{
-            "enabled":"Boolean"
+            "enabled":"<Boolean>"
         },
         "config":{
-            "enabled":"Boolean"
+            "enabled":"<Boolean>"
         }
     }
 }

@@ -13,7 +13,7 @@ To send the message, a request to `/api/guilds/[guild_id]/messagebuilder` is sen
 
 ```json
 {
-    "_id":"",
+    "_id":"<ObjectId>",
     "name":"<String>",
     "channelId":"<Snowflake>",
     "content":"<String>",
@@ -23,9 +23,9 @@ To send the message, a request to `/api/guilds/[guild_id]/messagebuilder` is sen
             // Embed JSON
         }
     ],
-    "buttons":[],
-    "actionRows":[],
-    "components":[],
+    "buttons":"Array<DiscordButton",
+    "actionRows":"Array<DiscordActionRow>",
+    "components":"Array<DiscordComponent>",
     "messageType":"message",
     "webhook":{
         "id":null,

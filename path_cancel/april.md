@@ -15,27 +15,27 @@ When you create one with the default settings, this is sent via `POST` to `/api/
 
 ```json
 {
-    "messageId":"<System.Integer>",
-    "channelId":"<System.Integer>",
+    "messageId":"<Discord.Snowflake>",
+    "channelId":"<Discord.Snowflake>",
     "description":"<System.String>",
-    "enabled":true,
+    "enabled":"<System.Boolean>",
     "thresholdLimit":null,
     "endTerm":null,
     "pickLimit":null,
-    "thresholdCount":0,
-    "dm":false,
+    "thresholdCount":"<System.Integer>",
+    "dm":"<System.Boolean>",
     "rolesPermissionsBehaviour":"<Enum>",
     "rolesPermissionsExclude":[],
     "reactions":[
         {
             "emojiName":"<System.String>",
-            "emojiId":"<System.Integer>",
+            "emojiId":"<Discord.Snowflake>",
             "role":["<System.Integer>"],
-            "removable":false,
-            "reversed":false
+            "removable":"<System.Boolean>",
+            "reversed":"<System.Boolean>"
         }
     ],
-    "managedEmbedId":"<ID>"
+    "managedEmbedId":"<AprilID>"
 }
 ```
 

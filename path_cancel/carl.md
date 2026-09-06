@@ -17,41 +17,20 @@ When creating one, a `PUT` request is made to `/api/v1/servers/<guild_id>/reacti
 
 ```json
 {
-    "channel_id":"<channel_id>",
-    "content":"",
-    "embed":{"color":5198940},
+    "channel_id":"<Snowflake>",
+    "content":"<String>",
+    "embed":"<DiscordEmbed>",
     "pairs":[
         {
-            "emoji":"😀",
-            "roles":[
-                {
-                    "color":0,
-                    "colors":{
-                        "primary_color":0,
-                        "secondary_color":null,
-                        "tertiary_color":null
-                    },
-                    "description":null,
-                    "flags":0,
-                    "hoist":false,
-                    "icon":null,
-                    "id":"<role_id>",
-                    "managed":false,
-                    "mentionable":false,
-                    "name":"<role_name>",
-                    "permissions":0,
-                    "permissions_new":"0",
-                    "position":12,
-                    "unicode_emoji":null
-                }
-            ]
+            "emoji":"<String>",
+            "roles":"Array<DiscordRole>"
         }
     ],
-    "whitelist":[],
-    "blacklist":[],
-    "reaction_role_limit":0,
-    "mode":1,
-    "message_id":"<message_id>"
+    "whitelist":"Array<?>",
+    "blacklist":"Array<?>",
+    "reaction_role_limit":"<Integer>",
+    "mode":"OneOf<1|2|3>",
+    "message_id":"<Snowflake>"
 }
 ```
 
