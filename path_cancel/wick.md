@@ -51,7 +51,7 @@ So, I putted a `#` at the end of the automod rule id and it stopped working, but
 >
 > Modify an existing rule. Returns an auto moderation rule on success. Fires an Auto Moderation Rule Update Gateway event.
 
-So, I tried to slowly go back in the patch with `%2e%2e%/rules/<rule-id>` and so on; still working. And when I got into `/guilds`, I tried to edit a moderation rule from other server with `%2e%2e%2f%2e%2e%2f%2e%2e%2f<guild-id>/auto-moderation/rules/<rule-id>`, and it worked:
+So, I tried to slowly go back in the patch with `%2e%2e/rules/<rule-id>` and so on; still working. And when I got into `/guilds`, I tried to edit a moderation rule from other server with `%2e%2e%2f%2e%2e%2f%2e%2e%2f<guild-id>/auto-moderation/rules/<rule-id>`, and it worked:
 
 ![Edited!](assets/wick2.png)
 
