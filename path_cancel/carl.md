@@ -1,5 +1,5 @@
 ## God mode
-*Fixed on: 18/10/2025 - 07/01/2026*
+*Fixed on: 18/10/2025 - 08/01/2026*
 
 [Website](https://carl.gg) | [Discord](https://discord.gg/S2ZkBTnd8X)
 
@@ -85,7 +85,7 @@ And simply use it to get any role that the bot can control:
 
 https://github.com/user-attachments/assets/35d8e6af-d06f-4d3e-815f-240dddd8c474
 
-Now, let's see the scope of this: Carl (at this date) is on 14.200.000 servers and asks for sensitive permissions like ban members, manage server and manage roles, and many people give it a privileged position in the roles positions (and there's people that gives it administrator):
+Now, let's see the scope of this: Carl (at the date of findings) was between 13.500.000 and 14.200.000 servers and asks for sensitive permissions like ban members, manage server and manage roles, and many people give it a privileged position in the roles positions (and there's people that gives it administrator):
 
 - On the Shoto's Adventurers Guild, is on position 35 of 44
 - On the Bobicraft's server, is on position 127 of 140
@@ -97,7 +97,7 @@ On some servers I can directly get admin, on others get some high value roles li
 
 So, that's why I called this "God mode".
 
-I reported the tagscript bug on Jan 07 and as the other, it was fixed real quick.
+I reported the TagScript bug on Jan 07, but it took a bit longer to get fixed compared to the first bug. Probably because it was the beginning of the year.
 
 > I didn't report it at the moment I found it cause the support server was under the christimas holiday, and I didn't want to report it until some days later.
 
