@@ -26,9 +26,11 @@ That url points to a [Google storage bucket](https://docs.cloud.google.com/stora
 
 ![xd](assets/midjourney2.png)
 
-The most interesting thing is that every file had his associated `user_id` in the name. So mapping every attachment to the user who uploaded it was easy. As it's for feedback/support stuff, there were various screenshots leaking PII (Personal Identifiable Information), receipts, billing information and full system screenshots. Here's a sample one:
+The most interesting thing is that every entry of the bucket was in the format `{user.id}/{filename}`. So mapping every attachment to the user who uploaded it was easy. As it's for feedback/support stuff, there were various screenshots leaking PII (Personal Identifiable Information), receipts, billing information and full system screenshots. Here are two samples:
 
-![Sample](assets/midjourney3.png)
+![Korean sample](assets/midjourney3.png)
+
+![Sample](assets/midjourney4.png)
 
 And yes, there were attachments getting added recently.
 
