@@ -7,7 +7,7 @@ appeal.gg is a platform made by the dev of Sapphire to basically handle appeal f
 
 ![dashboard](assets/appeal1.png)
 
-Inspecting requests sent to the API, I saw that if you put an object instead of an identifier, it will throw an error, but if I put something like `{"$neq": 1}`, the request now say that everything is good (and the change is made)... something already smelling bad there.
+Inspecting requests sent to the API, I saw that if you put an object instead of an identifier, it will throw an error, but if I put something like `{"$neq": 1}`, the request now says that everything is good (and the change is made)... something already smelling bad there.
 
 ```json
 // PATCH /api/v1/user-guilds/:guild_id/sections/forms -> 200 OK
@@ -21,11 +21,11 @@ Inspecting requests sent to the API, I saw that if you put an object instead of 
 }
 ```
 
-But, it seems that on the dashboard I was constrained to only the document of my guilds. So, I started to think on places were I could be in the context of another document where I could have some permissions... and that was the same appeal page of the guild!
+But, it seems that on the dashboard I was constrained to only the document of my guilds. So, I started to think on places where I could be in the context of another document where I could have some permissions... and that was the same appeal page of the guild!
 
 ![NTTS appeal page](assets/appeal2.png)
 
-When sending the answers for a specific form, this was sent by `POST` to `api/v1/guilds/:guild_id/submissions`:
+When sending the answers for a specific form, this was sent by `POST` to `/api/v1/guilds/:guild_id/submissions`:
 
 ```json
 {
@@ -37,7 +37,7 @@ When sending the answers for a specific form, this was sent by `POST` to `api/v1
 }
 ```
 
-I firstly putted something strange on `formId` like `{"$abc":123}`, and the server said:
+I first put something strange on `formId` like `{"$abc":123}`, and the server said:
 
 ```json
 {
@@ -46,7 +46,7 @@ I firstly putted something strange on `formId` like `{"$abc":123}`, and the serv
 }
 ```
 
-So, I get error messages and i'm injecting NoSQL operators, good. Now, watching the MongoDB docs, I saw the [$expr](https://www.mongodb.com/docs/manual/reference/operator/query/expr/) predicate operator:
+So, I get error messages and I'm injecting NoSQL operators, good. Now, watching the MongoDB docs, I saw the [$expr](https://www.mongodb.com/docs/manual/reference/operator/query/expr/) predicate operator:
 
 > Syntax: `{ $expr: { <expression> } }`
 >
@@ -75,7 +75,7 @@ And there is the expression operator `$function`:
 }
 ```
 
-This basically let's you run arbitrary JavaScript against the document. Note that this will only work if the MongoDB instance has JavaScript enabled... and in this case it was enabled.
+This basically lets you run arbitrary JavaScript (on the DB) against the document. Note that this will only work if the MongoDB instance has JavaScript enabled... and in this case it was enabled.
 
 So, by putting this:
 
@@ -97,7 +97,7 @@ So, by putting this:
 }
 ```
 
-The server would now say that everything is okay, but it can't find the form (probably because with that, the server does not know what form refer to), but knowing that the server shows errors, I tried changing the `body` to:
+The server would now say that everything is okay, but it can't find the form (probably because with that, the server does not know what form to refer to), but knowing that the server shows errors, I tried changing the `body` to:
 
 ```js
 function t(){
@@ -120,6 +120,6 @@ We can also see data, and on MongoDB there is a special variable called `$$ROOT`
 
 > Note: That data is from my own server
 
-This, chained with the [Sapphire bug](/path_cancel/sapphire.md) could allow you to read appeals sent by other users. Note that you don't need to be able to submit appeals to exploit this.
+This, chained with the [Sapphire bug](/path_cancel/sapphire.md) could allow you to read appeals sent by other users as it leaks the channel where appeals are submitted. Note that you don't need to be able to submit appeals to exploit this.
 
 The dev fixed it some hours after I reported the bug.
