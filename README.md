@@ -1,5 +1,3 @@
-If you're a Discord bug hunter (from DTesters or BugCrowd) or employee then `GOAWAY` for you. You don't have any business here.
-
 ## My Discord ecosystem hacking adventures.
 
 Since 2024, after a short series of videos made by the youtuber [No Text To Speech](https://www.youtube.com/@NoTextToSpeech) with [xyzeva](https://github.com/xyzeva) as collaborator, I decided to go and hunt bugs across all the bots and popular apps/websites on the Discord community, specially these one that are widely recommended by many users.
