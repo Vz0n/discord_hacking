@@ -1,4 +1,4 @@
-If you're a Discord bug hunter or employee then `GOAWAY` for you. You don't have any business here.
+If you're a Discord bug hunter (from DTesters or BugCrowd) or employee then `GOAWAY` for you. You don't have any business here.
 
 ## My Discord ecosystem hacking adventures.
 
