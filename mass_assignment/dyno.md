@@ -9,7 +9,7 @@ On the dashboard, there is a module called Auto responder:
 
 ![Autoresponder](assets/dyno1.png)
 
-When you edit an already created auto response, this request is sent to `/api/server/:guild_id/autoresponder/edit/:response_id`:
+When you edit an already created auto response, this request is sent to `/api/server/:guild_id/autoresponder/edit/:responder_id`:
 
 ```json
 {
