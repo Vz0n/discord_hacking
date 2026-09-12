@@ -9,7 +9,7 @@ Discohook is a website mainly used to design cool messages and send them with we
 
 ![Website portal](assets/discohook.png)
 
-When you send a message with a webhook, Discohook sends a `POST` to the endpoint `/api/v1/log/webhooks/$webhookId/$webhookToken/messages/$messageId` to verify that the message was sent and store it. The source code for this endpoint was the following:
+When you do stuff on messages with a webhook, Discohook sends a `POST` to the endpoint `/api/v1/log/webhooks/$webhookId/$webhookToken/messages/$messageId` to verify that the message was sent and store it. The source code for this endpoint was the following:
 
 ```ts
 export const action = async ({ request, context, params }: ActionArgs) => {
@@ -125,7 +125,7 @@ export const getWebhookMessage = async (
 };
 ```
 
-This `discordRequest` function is just using the `REST#request` of discord.js, and from the source code I saw that it was using internal node functions like `fetch` to make the HTTP request, the problem here is that discord.js by default url-encodes every parameter of the path, but there was the probability that this was using a proxy or something like for the requests.
+This `discordRequest` function is just using the `REST#request` of discord.js against the endpoint `/webhooks/{webhook.id}/{webhook.token}/messages/{message.id}`, and from the source code I saw that it was using internal node functions like `fetch` to make the HTTP request, the problem here is that discord.js by default url-encodes every parameter of the path, but if you look at the code it's using `context.env.DISCORD_API_PROXY` as API URL for the `REST` object, this means that it's using a proxy and *maybe* those encoded characters can get decoded by the former.
 
 From the previous source code, I saw that if the response didn't have an `id` field, it will just return the plain response from Discord. The endpoint returns this JSON if the previous condition was true:
 
@@ -143,7 +143,18 @@ From the previous source code, I saw that if the response didn't have an `id` fi
 }
 ```
 
-If you read again the "if the response didn't have an `id` field, it will just return the plain...", you can already think what to do: if you can't see only one resource, you **can see many of them**:
+If you read again the "if the response didn't have an `id` field, it will just return the plain...", you can already think what to do: if you can't see only one resource, you **can see many of them**. Endpoints like `/channels/{channel.id}/messages`, `/users/@me/guilds` or `/guilds/{guild.id}/members` return arrays and don't have the `id` field, which will make the backend return a 404 with the Discord response as body.
+
+So, sending a `POST` against `/api/v1/log/webhooks/$webhookId/..%2F..%2Fchannels%2F{random_channel}%2Fmessages%23/messages/111111111` with the following body:
+
+```jsonc
+{
+  "type":"edit", // To not trigger the timestamp check against $messageId
+  "threadId":"1232131231254234231"
+}
+```
+
+Didn't work, but with the double URL encoded version (`/api/v1/log/webhooks/$webhookId/..%252F..%252Fchannels%252F{random_channel}%25%2Fmessages%2523/messages/111111111`)... it did:
 
 ![Getting your messages](assets/discohook2.png)
 
