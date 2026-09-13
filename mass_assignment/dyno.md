@@ -14,32 +14,31 @@ When you edit an already created auto response, this request is sent to `/api/se
 ```json
 {
     "command":{
-        "command":"test",
-        "response":"test",
-        "type":"message",
+        "command":"<String>",
+        "response":"<String>",
+        "type":"OneOf<message|embed|reaction>",
         "allowedChannels":{
-            "channels":[]
+            "channels":"Array<Snowflake>"
         },
         "ignoredChannels":{
-            "channels":[]
+            "channels":"Array<Snowflake>"
         },
         "allowedRoles":{
-            "roles":[]
+            "roles":"Array<Snowflake>"
         },
         "ignoredRoles":{
-            "roles":[]
+            "roles":"Array<Snowflake>"
         },
         "reactions":{
-            "reactions":[]
+            "reactions":"Array<String>"
         },
-        "wildcard":false,
+        "wildcard":"<Boolean>",
         "guildId":":guild_id",
-        "embed":null,
-        "cooldown":null,
-        "choices":null,
-        "id":":autoresponse_id",
-        "createdAt":"2026-04-29T22:21:16.724Z",
-        "updatedAt":"2026-04-29T22:21:16.724Z"
+        "embed":"<DiscordEmbed>",
+        "cooldown":"<Integer>",
+        "choices":"Array<Choices>",
+        "createdAt":"<Date>",
+        "updatedAt":"<Date>"
     }
 }
 ```
