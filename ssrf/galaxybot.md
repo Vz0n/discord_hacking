@@ -33,7 +33,7 @@ While saving settings, I noticed that there were some modules that save settings
 }
 ```
 
-The `footerImageURL` and `thumbnailURL` became to my eyes, as every valid HTTPS url that were introduced was being transformed into `https://ext-images-01.galaxybot.app/file/proxy/[sha256]/[url]` by the backend. So I putted the URL of my server and I received the raw request from the proxy:
+The `footerImageURL` and `thumbnailURL` became to my eyes, as every valid HTTPS url that were introduced was being transformed into `https://ext-images-01.galaxybot.app/file/proxy/[sha256]/[url]` by the backend. So I putted the URL of my server and I got the respective signed URL for it, to which I can send a `GET` and inspect the request that the proxy makes:
 
 ```bash
 vzon@vzon:~/oob$ nc -s 127.0.0.1 -lvnp 8000
@@ -48,7 +48,7 @@ accept-encoding: gzip, br
 ... [snip]
 ```
 
-I saw that the HTTP client that they were using follows redirects by default, so, what would happen if I redirect this to an internal address? We can make this simple Python server for that purpose:
+Trying to point a record directly to internal addresses didn't work, but I saw that the HTTP client that they were using follows redirects by default, so, what would happen if I redirect this to an internal address? We can make this simple Python server for that purpose:
 
 ```python
 from flask import Flask, redirect, request, Response
@@ -64,7 +64,7 @@ app.run("127.0.0.1", 8000)
 
 While trying redirect to `127.0.0.1` I noticed that the server throws 404 if an error occurs in the request. Every common port was throwing an error, but from some extra info that I gathered, I knew that this was using clusters, so there must be containers... and when I tried to send a request to `172.17.0.1` (Docker default network) I got the response from https://galaxybot.app.
 
-Now; I focused on searching for internal services, and I noticed that the server will take ~3 seconds to answer with a 404 if the address is unreachable and < 1 second if it actually exists, answering with 404 if an error occurs in the request (port closed or `status_code >= 400`). With this I started searching the network and found some interesting internal services running:
+Now; I focused on searching for internal services, and I noticed that the server will take ~3 seconds to answer with a 404 if the address is unreachable and < 1 second if it actually exists but the port is closed or `status_code >= 400`, and that this proxy can reach every address inside of `172.16.0.0/12`. With this I started searching the subnets and found some interesting internal services running:
 
 ![Internal service](assets/galaxybot2.png)
 
