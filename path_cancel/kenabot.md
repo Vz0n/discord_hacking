@@ -33,7 +33,7 @@ Accept: */*
 Cookie: ...[snip]
 ```
 
-It doesn't seem interesting, but what if it's used in some request to an API? Sounds out of nowhere but, I added a `#` (`%23` encoded) at the end of the bot ID and everything was still ok and... there was a very weird thing hidden in plain sight in the serialized response:
+It doesn't seem interesting, but what if it's used in some request to an API? Sounds out of nowhere but, I added a `#` (`%23` encoded) at the end of the bot ID and everything was still ok and... there was a very weird thing hidden in the serialized response:
 
 ```json
 "__v",0,"_id","\"6a11982bd25e9c6adbaaa6ed\"","allowed_modules",[10690,10691,10692,10693,10694,10695,10696,10697],"music","greeter","bot_id","910965586622816326","collect_guild_stats",true,"whitelisted_guilds",[],"createdAt","2026-05-23T12:06:03.732Z","custom_name","default_enabled_modules",[10690],"default_visible_modules",[],"embed_color","guild_stats",{"_10712":10713,"_10714":10715},"added",155,"kicked",91,"hidden_module_testers",{"_10693":10718,"_10692":10724,"_10697":10725,"_10696":10726,"_10695":10727},[10719,10720,10721,10722,10723],"",[10721,10723,10720],[10720,10721,10723],[10720,10721,10723],[10720,10723],"hidden_modules",[10692,10693,10695,10696,10697],"language","max_guilds","mode","prod","owner_id","prefix","premium_id","presence",{"_10739":10740,"_10741":10742,"_10743":10744,"_10745":10746},"activity_name","kena.bot","activity_type","Playing","activity_url","","status","online","token","updatedAt","2026-08-25T15:11:59.893Z","visibility","public"

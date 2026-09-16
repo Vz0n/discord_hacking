@@ -67,7 +67,7 @@ Now, I removed every non essential field from the request, preserved the `name` 
 
 ![Edited x3](assets/wick4.png)
 
-So, I can send a `PATCH` request to anywhere with any JSON field that I want.
+So, I can send a `PATCH` request to anywhere with any JSON fields that I want.
 
 This is **extremely lethal** as this is an anti-raid bot, and it normally requires a high spot in the roles positions with admin permissions. You can even edit the application profile and their slash commands.
 
