@@ -18,7 +18,7 @@ As far as I know, I'm the only one who got all of this. If you suspect that some
 
 #### Did you get paid?
 
-Yes, I got bounties from various developers. The rewards ranged from Discord Nitro to real money. (for those who want amounts, the sole `query_injection` section has 505€ worth)
+Yes, I got bounties from various developers. The rewards ranged from Discord Nitro to real money.
 
 #### Isn't this illegal?
 
