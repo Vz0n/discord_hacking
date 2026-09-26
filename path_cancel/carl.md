@@ -34,7 +34,7 @@ When creating one, a `PUT` request is made to `/api/v1/servers/<guild_id>/reacti
 }
 ```
 
-The `emoji` field looks interesting... why? because seeing the Discord documentation, I saw that you need to put emoji in the URL:
+The `emoji` field looks interesting... why? because seeing the Discord documentation, I saw that you need to put the emoji in the URL:
 
 > **Create reaction** 
 >
