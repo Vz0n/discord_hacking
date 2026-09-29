@@ -28,6 +28,10 @@ Yes and no. Legally speaking, I'm in a grey area, but far away from legal stuff;
 
 You may ask this because you saw what happened with [BotGhost in 2025](https://www.youtube.com/watch?v=gKtqAYbGvPs), and the answer is no. I highly doubt that Discord would even care about this. (even if the entire path_cancel section bugs gave me the chance of blowing up a large portion of the platform)
 
+#### Do you have a team or something?
+
+No, I work completely alone as stated above the FAQs section. I don't want to team with other people also.
+
 *The assets (videos, images) are made by me and all rights are reserved.*
 
 ![POCK](/pock.gif)
