@@ -19,13 +19,13 @@ As you may know, this Bearer token is used by the application to identify your a
 
 ![Authorization prompt](assets/john2.png)
 
-As you may see, the bot does not ask for special permissions. Other apps also does not ask for special permissions, so, what would happen if I use a Bearer token from a 3rd party app as the cookie?
+The bot does not ask for special permissions. Other apps also does not ask for special permissions so, what would happen if I use a Bearer token from a 3rd party app as the cookie?
 
 I tried to use a Bearer token issued with one of my apps... and it worked. I also noticed that I just need two fields in the cookie, `access_token` and `user_id`:
 
 ![Uh oh](assets/john3.png)
 
-This means that whoever has a Bearer token with your identity and with the `identify` & `guilds` scopes, can impersonate you on the John bot dashboard. That should not be possible. Moreover, while testing I noticed that the `guilds` scope is not needed as you can directly make requests to the API endpoints and it will success. That makes the bug more weaponizable than it already is. 
+This means that whoever has a Bearer token with your identity and with the `identify` & `guilds` scopes, can impersonate you on the John bot dashboard. That should not be possible. Moreover, while testing I noticed that the `guilds` scope is not needed as you can directly make requests to API endpoints that execute actions and it will success. That makes the bug more weaponizable. 
 
 As example, I made this simple Python website which gets a Bearer token and creates a giveaway in the target guild:
 
