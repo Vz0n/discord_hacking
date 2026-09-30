@@ -34,6 +34,6 @@ The most interesting thing is that every entry of the bucket was in the format `
 
 And yes, there were attachments getting added recently.
 
-> Friendly reminder that you should not upload sensitive information unless it's really needed.
+> Friendly reminder that you should not upload sensitive information unless it's really needed. Somebody uploaded on that bucket a screenshot with their entire credit card number + expiration date + CVV without censor because it was being rejected.
 
 I reported it, but the devs didn't give me a callback. They took one or two hours to fix it at least.
