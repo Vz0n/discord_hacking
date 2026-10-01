@@ -111,7 +111,7 @@ The dev said that it wasn't able to reproduce whatever this guy was reporting to
 
 ![Arbitrary POST to certain endpoints](assets/carl5.png)
 
-This would mean that he had the idea behind this whole path elimination bug class before me, because the way to do exactly that is by redirecting the `POST` message create request sent by the Carl dashboard using dot segments... but, there seems to be some nuances and it pops questions:
+This would mean that he had the idea behind this path elimination bug class before me, because the way to do exactly that is by redirecting the `POST` message create request sent by the Carl dashboard using dot segments... but, there seems to be some nuances and it pops questions:
 
 - The Carl devs were lying on the "not reproducible" part? That seems, because if it was exactly the Reaction Roles thing but on the `Utility > Embeds` section it would be easily reproducible.
 
