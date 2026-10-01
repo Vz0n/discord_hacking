@@ -107,7 +107,7 @@ I've found out that on September 5, 2024, someone found a bug on this bot that a
 
 ![REMOVE CARL FROM YOUR SERVER!!!!!!!!!!!!!](assets/carl4.png)
 
-The dev said that it wasn't able to reproduce whatever this guy was reporting to him, but it also posted this on his X account:
+The dev said that it wasn't able to reproduce whatever this guy was reporting to him, *but* the guy also posted this on his X account:
 
 ![Arbitrary POST to certain endpoints](assets/carl5.png)
 
