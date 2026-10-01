@@ -103,15 +103,26 @@ I reported the TagScript bug on Jan 07, but it took a bit longer to get fixed co
 
 #### A small note aside
 
-I've found out that on September 5, 2024, someone found an IDOR on this bot that allowed you to send messages as the bot to any guild channel and used it to do things like saying on a big game server that it will going to be shutdown. While this was ongoing, this mf said that there was also a ban exploit:
+I've found out that on September 5, 2024, someone found a bug on this bot that allowed you to send messages as the bot to any guild channel and used it to do things like saying on a big game server that it will going to be shutdown. While this was ongoing, this mf said that there was also a ban exploit:
 
 ![REMOVE CARL FROM YOUR SERVER!!!!!!!!!!!!!](assets/carl4.png)
 
-The last thing is partially true, but it seems that this guy was just lying/fearmongering about the supposed vulnerability, as the dev was not able to reproduce whatever this guy was reporting to him. This has nothing to do with the path elimination exploit (also, being a bug hunter and lying like this... xd).
+The dev said that it wasn't able to reproduce whatever this guy was reporting to him, but it also posted this on his X account:
 
-If you want more information about this incident, [I've made a blog post](https://vzon.moe/blog/posts/carl_incident/) taking a deep look at it.
+![Arbitrary POST to certain endpoints](assets/carl5.png)
 
+This would mean that he had the idea behind this whole path elimination bug class before me, because the way to do exactly that is by redirecting the `POST` message create request sent by the Carl dashboard using dot segments... but, there seems to be some nuances and it pops questions:
 
+- The Carl devs were lying on the "not reproducible" part? That seems, because if it was exactly the Reaction Roles thing but on the `Utility > Embeds` section it would be easily reproducible.
 
+- The Carl backend should just forward the `embeds` and `content` JSON fields from the Embed creator to the Discord API, and the `Begin Guild Prune`/`Bulk Guild Ban` endpoints requires fields like `user_ids` and `include_roles` to "nuke big servers". If they were also forwading other unknown fields (just as [Wick](/path_cancel/wick.md)), this means arbitrary POST to wherever the fuck you want, not just banning/prunning members. Why he didn't mention this? I don't know.
+
+> Even if we asumme that the last is true, it's still a bit less powerful than this one because it does not allow privilege escalation directly tho. Just annoying and destructive things like creating channels, auto mod rules, banning members, posting messages... etc.
+
+- Why they didn't patch the two bugs showed here at the moment? It's pretty easy to reason that if you can do it with snowflakes, you can also do it with emojis. Both Discord bug hunters (yes, other well known users like Panley audited the bot shortly after the bug was fixed) and the BotLabs people were lazy on this.
+
+Even if there are no visual proofs, it's still credible. On this bug section there are various medium-big sized bots that also didn't validate snowflakes (Example: [Tickety](/path_cancel/tickety.md))
+
+If the guy's version is totally true, then this "God mode" thing would actually be related to that incident. Would like to get more context but I think this guy will never contact me. (and I won't either), so it will just stay as trivia.
 
 
