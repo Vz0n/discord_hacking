@@ -13,7 +13,7 @@ There is a module that let's you create channels that shows server stats:
 
 ![Statistic Channels](assets/automod2.png)
 
-Before; when you created one, this was sent to `PATCH /api/v1/discord/channels?guildId=<guild id>&channelId=<channel id>`
+Before; when you created one, a `PATCH` request was sent to `/api/v1/discord/channels?guildId={guild.id}&channelId={channel.id}`:
 
 ```json
 {

@@ -13,7 +13,7 @@ His dashboard seems pretty simple and offers basic functions among Discord guild
 
 On the roles category, there's a function called "Reaction Roles" that lets you create messages with reactions. When you react on them, you will get the role that you specified.
 
-When creating one, a `PUT` request is made to `/api/v1/servers/<guild_id>/reactionroles` with this content (mode set as "Use ID" and removing not needed fields):
+When creating one, a `PUT` request is made to `/api/v1/servers/<guild_id>/reactionroles` with the following body (mode set as "Use ID" and removing not needed fields):
 
 ```json
 {
@@ -34,7 +34,7 @@ When creating one, a `PUT` request is made to `/api/v1/servers/<guild_id>/reacti
 }
 ```
 
-The `emoji` field looks interesting... why? because seeing the Discord documentation, I saw that you need to put the emoji in the URL:
+The `pairs[n].emoji` field looks interesting... why? because seeing the Discord documentation, I saw that you need to put the emoji in the URL:
 
 > **Create reaction** 
 >
@@ -123,6 +123,6 @@ This would mean that he had the idea behind this path elimination bug class befo
 
 Even if there are no visual proofs, it's still credible. On this bug section there are various medium-big sized bots that also didn't validate snowflakes (Example: [Tickety](/path_cancel/tickety.md))
 
-If the guy's version is totally true, then this "God mode" thing would actually be related to that incident. Would like to get more context but I think this guy will never contact me. (and I won't either), so it will just stay as trivia.
+But anyways, I don't know exactly who was right there. Maybe the guy is saying the truth and the BotLabs guys were lying or maybe the guy did the path elimination but wasn't able to control the request body at all (therefore making it just a [RaidProtect](/path_cancel/raidprotect.md) variant but with control of the message content), which would explain why the devs weren't able to reproduce it. Would like to get more context but I think this guy will never contact me. (and I won't either), so it will just stay as trivia.
 
 

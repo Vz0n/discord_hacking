@@ -9,15 +9,19 @@ They have a dashboard, and at the moment it was in beta stage:
 
 ![Dashboard](assets/confessions1.png)
 
-When saving any setting, this was sent via `PATCH` to `/api/guilds/:guild_id/config`, where `key_n` represents a configuration section and `key_n+1` its values:
+When saving any setting, this request was sent:
 
-```json
+```http
+PATCH /api/guilds/[guild_id]/config HTTP/1.1
+Host: dashboard.confessions.bot
+Content-Type: application/json
+
 {
     "key_1.key_2.key_3...key_n":"<value>"
 }
 ```
 
-or $key_1.key_2.key_3...key_n = v_n$ in math notation. So, I tried to put a key that does not exists and the server threw an error. But with `__proto__.value` everything was going okay, then I tried to put `__proto__.__proto__.t` with value 123... and the server crashed:
+Where `key_n` represents a configuration section and `key_n+1` its values, or $key_1.key_2.key_3...key_n = v_n$ in math notation. So, I tried to put a key that does not exists and the server threw an error. But with `__proto__.value` everything was going okay, then I tried to put `__proto__.__proto__.t` with value 123... and the server crashed:
 
 ![Internal server error](assets/confessions2.webp)
 

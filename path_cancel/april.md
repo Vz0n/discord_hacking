@@ -11,7 +11,7 @@ The bot has a reaction roles module, just as other bots:
 
 ![Reaction roles](assets/april2.png)
 
-When you create one with the default settings, this is sent via `POST` to `/api/reactionrole/{guild_id}` in `https://internal.aprilbot.me`:
+When you create one with the default settings, this `POST` request is sent to `https://internal.aprilbot.me`:
 
 ```json
 {

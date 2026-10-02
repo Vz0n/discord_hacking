@@ -7,10 +7,13 @@ appeal.gg is a platform made by the dev of Sapphire to basically handle appeal f
 
 ![dashboard](assets/appeal1.png)
 
-Inspecting requests sent to the API, I saw that if you put an object instead of an identifier, it will throw an error, but if I put something like `{"$neq": 1}`, the request now says that everything is good (and the change is made)... something already smelling bad there.
+Inspecting requests sent to the dashboard API, I saw that if you put an object instead of an identifier, it will throw an error, but if I put something like `{"$neq": 1}`, the request now says that everything is good (and the change is made)... something already smelling bad there.
 
-```json
-// PATCH /api/v1/user-guilds/:guild_id/sections/forms -> 200 OK
+```http
+PATCH /api/v1/user-guilds/:guild_id/sections/forms HTTP/1.1
+Content-Type: application/json
+Host: dashboard.appeal.gg
+
 {
     "shortDescription":"test",
     "_metadata":{
@@ -19,15 +22,21 @@ Inspecting requests sent to the API, I saw that if you put an object instead of 
         }
     }
 }
+
+# Returns a 200 OK
 ```
 
-But, it seems that on the dashboard I was constrained to only the document of my guilds. So, I started to think on places where I could be in the context of another document where I could have some permissions... and that was the same appeal page of the guild!
+But, it seems that on the dashboard I was constrained to only the document of my guilds. So, I started to think on places where I could be in the context of another document where I could have some permissions... and that was the same appeal page of the guild at `https://appeal.gg/{invite.code}`!
 
 ![NTTS appeal page](assets/appeal2.png)
 
-When sending the answers for a specific form, this was sent by `POST` to `/api/v1/guilds/:guild_id/submissions`:
+When sending the answers for a specific form, this request is sent:
 
-```json
+```http
+POST /api/v1/guilds/:guild_id/submissions HTTP/1.1
+Content-Type: application/json
+Host: appeal.gg
+
 {
     "formId":"<Integer>",
     "answers":{

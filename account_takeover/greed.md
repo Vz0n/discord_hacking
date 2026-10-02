@@ -9,7 +9,7 @@ Greed is a medium-sized all-in-one bot with style of the Lucky Star anime. There
 
 When you log in at `https://x.greed.best/oauth/login`, there is a parameter `redirect_uri` with value `https://greed.best/login` that is used as redirect after you authorize the greed application. I tried to change the value to `https://google.com` and the app redirected me to Google without any question after the authorization... and with a special thing:
 
-```bash
+```http
 HTTP/1.1 302 Found
 Date: Wed, 29 Jul 2026 23:07:50 GMT
 Content-Type: text/plain; charset=utf-8

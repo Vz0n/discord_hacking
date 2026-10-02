@@ -9,7 +9,7 @@ His dashboard seems pretty cool. They have an organization-like web infrastructu
 
 ![Dashboard](assets/galaxybot1.png)
 
-While saving settings, I noticed that there were some modules that save settings differently than the others, the `welcome` was one and this was sent via `POST` to `/api/user/servers/[guild_id]/modules/welcome`:
+While saving settings on the dashboard, I noticed that there were some modules whose settings structure is different to others. The Welcomer module was one of those and this `POST` request is sent to `/api/user/servers/[guild_id]/modules/welcome` when you save its settings:
 
 ```jsonc
 {
@@ -33,9 +33,9 @@ While saving settings, I noticed that there were some modules that save settings
 }
 ```
 
-The `footerImageURL` and `thumbnailURL` became to my eyes, as every valid HTTPS url that were introduced was being transformed into `https://ext-images-01.galaxybot.app/file/proxy/[sha256]/[url]` by the backend. So I putted the URL of my server and I got the respective signed URL for it, to which I can send a `GET` and inspect the request that the proxy makes:
+The `join.embed.footerImageURL` and `join.embed.thumbnailURL` became to my eyes, as every valid HTTPS url that were introduced was being transformed into `https://ext-images-01.galaxybot.app/file/proxy/[sha256]/[url]` by the backend. So I putted the URL of my server and I got the respective signed URL for it, to which I can send a `GET` and inspect the request that the proxy makes:
 
-```bash
+```http
 vzon@vzon:~/oob$ nc -s 127.0.0.1 -lvnp 8000
 Listening on 127.0.0.1 8000
 Connection received on 127.0.0.1 49700
