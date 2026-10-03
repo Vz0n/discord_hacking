@@ -13,7 +13,7 @@ There are 8 bots (or Kenas) that you can use in your server, but only four of th
 
 So I started watching the dashboard, and while inspecting requests I noticed that the site was using [Remix](https://remix.run/) in the backend, because responses to actions were getting returned in a serialized format:
 
-```bash
+```http
 HTTP/1.1 200 OK
 Date: Tue, 25 Aug 2026 14:20:15 GMT
 Content-Type: text/x-script; charset=utf-8
@@ -21,12 +21,12 @@ X-Powered-By: Express
 X-Remix-Response: yes
 Cf-Cache-Status: DYNAMIC
 
-[{"_1":2,"_7":8,"_10675":10676},"root",{"_3":4}, ... [snip]
+[{"_1":2,"_7":8,"_10675":10676},"root",{"_3":4},...]
 ```
 
 On the main bot (the blue one, if it's still not clear), there were only two modules available (greeter and music). Following the requests inspection I noticed that the target bot id to configure was in a query parameter of the actions:
 
-```bash
+```http
 GET /es/guilds/{guild.id}/music.data?bot={bot.id} HTTP/1.1
 Host: dash.kena.bot
 Accept: */*

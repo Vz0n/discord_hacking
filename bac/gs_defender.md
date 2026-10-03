@@ -7,13 +7,13 @@ This is a small security bot made by the GamerSafer organization (a well known M
 
 ![Dashboard](assets/gs_defender1.png)
 
-The dashboard allows admins to create message templates which can be sent by them, and also attach actions like giving roles, sending messages or forms using components (buttons, dropdown menus):
+The dashboard allows admins to create message templates that can be sent by them, and also attach actions like giving roles, sending messages or forms using components (buttons, dropdown menus):
 
 ![Message system](assets/gs_defender2.png)
 
 When you send one, a `POST` request is made to `/api/proxy/guild/[guild_id]/message-templates/[template_id]/send` which the template data and the target channel. I tried to change the `channelId` to a channel of another guild... but the server didn't allow it. So it's safe and everything is good.
 
-Just joking. I started to inspect the actions things and I noticed that there was one that let's you send messages to a channel:
+Just joking. I started to inspect the actions things and I noticed that there was one that let's you send messages to a channel using another message template:
 
 ![Send to channel](assets/gs_defender3.png)
 

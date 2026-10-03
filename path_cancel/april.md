@@ -11,7 +11,7 @@ The bot has a reaction roles module, just as other bots:
 
 ![Reaction roles](assets/april2.png)
 
-When you create one with the default settings, this `POST` request is sent to `https://internal.aprilbot.me`:
+When you create one with the default settings, this `POST` request is sent to `https://internal.aprilbot.me/api/reactionrole/{guild_id}`:
 
 ```json
 {
@@ -39,7 +39,7 @@ When you create one with the default settings, this `POST` request is sent to `h
 }
 ```
 
-The website didn't verify if the `messageId` and `channelId` belonged to the actual guild, it was just doing a type check. That means I can react to any message in any channel as the bot. 
+The website didn't verify if the `messageId` and `channelId` belonged to the actual guild, it was just doing a type check. That means I already can react to any message in any channel as the bot. 
 
 Now, I went to the edit reaction role request (that is, `PUT` to `/api/reactionrole/{guildId}/{reactionRole_id}`) which is basically the same as above but without `channelId` and `messageId`. 
 

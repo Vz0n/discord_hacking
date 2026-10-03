@@ -7,7 +7,7 @@ WispByte is a hosting platform mainly designed for Discord bots, but it also sup
 
 ![Portal](assets/wispbyte1.png)
 
-Inspecting the dashboard, I found some URLs related to ads videos (`/client/venatus-reward-demo-prod` and `/client/venatus-reward-demo`) that are triggered when you try to do certain actions like turning on a server. To return back the user to the URL where they was before, the page does a client side redirect with some checks:
+Inspecting the dashboard, I found some URLs related to ads videos (`/client/venatus-reward-demo-prod` and `/client/venatus-reward-demo`) that are triggered when you try to do certain actions like turning on a server. To return back the user to the URL where they was before, the page does a client side redirect using the `return` query param with some checks:
 
 ```js
 function parseReturnUrl() {
@@ -66,7 +66,7 @@ URL {
 }
 ```
 
-So with a URL like `javascript:<code>//` you easily get XSS after watching the ad or when the site redirects you, if for some reason the ad does not load:
+So with a URL like `https://wispbyte.com/client/venatus-reward-demo?return=javascript:<code>%2f%2f` you easily get XSS after watching the ad or when the site redirects you, if for some reason the ad does not load:
 
 ![xd](assets/wispbyte2.png)
 
