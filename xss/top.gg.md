@@ -13,12 +13,15 @@ So, I noticed that you can set any link for the bot invite, which is the one tha
 
 Seems innocent, but I noticed that the frontend was prefetching the link rather than just redirecting to it:
 
-```bash
-GET /bot/[bot_id]/invite?_rsc=AnZnK6Nm6TZijOb5
-... [snip]
+```http
+GET /bot/[bot_id]/invite?_rsc=AnZnK6Nm6TZijOb5 HTTP/1.1
+Host: top.gg
+Accept: */*
 Rsc: 1
 Next-Router-State-Tree: %5B%22%22%2C%7B%22children%22%3A%5B%5B%22locale%22%2C%22en%22%2C%22d%22%2Cnull%5D%2C%7B%22children%22%3A%5B%22(default)%22%2C%7B%22children%22%3A%5B%22bot%22%2C%7B%22children%22%3A%5B%5B%22id%22%2C%22[bot_id]%22%2C%22d%22%2Cnull%5D%2C%7B%22children%22%3A%5B%22(public)%22%2C%7B%22children%22%3A%5B%22(project)%22%2C%7B%22children%22%3A%5B%22__PAGE__%22%2C%7B%7D%2Cnull%2Cnull%2C0%5D%7D%2Cnull%2Cnull%2C0%5D%7D%2Cnull%2Cnull%2C0%5D%7D%2Cnull%2Cnull%2C0%5D%7D%2Cnull%2Cnull%2C0%5D%7D%2Cnull%2Cnull%2C0%5D%7D%2Cnull%2Cnull%2C16%5D%7D%2Cnull%2Cnull%2C0%5D
 Next-Url: /en/bot/[bot_id]
+
+; ... [snip]
 ```
 
 The `/bot/[bot_id]/invite` route just returns a `307` redirect to the invite URL.
