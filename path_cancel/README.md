@@ -1,4 +1,4 @@
-This vulnerability class relies on certain bugs, how the [Discord REST API](https://discord.com/developers/docs) works, and the behaviour of various HTTP clients, so let's see...
+This vulnerability class is a generalized version of path traversal for every context possible. Like client side requests (Client Side Path Traversal), filesystem file reads (the generic path traversal that you may know about), and server side API requests. But most cases here are about this technique applied to Discord bots, so here's a description of that:
 
 As you may know, in Discord, important parameters like the IDs (Snowflakes) of objects are passed in the final URL of the request that is going to be sent. For example: to get a channel message you do a `GET` request to:
 
@@ -39,6 +39,6 @@ There are also libraries that url-encode parameters (like [discord.js](https://d
 
 > Also, if there is a fragment after your input (like `/messages` if you're sending a message to a channel), you could also *eliminate/cancel* it by just appending the start-of-query character (`?`) or the fragment delimiter (`#`) at the end of your input, so the server won't consider it as part of the real URI.  
 
-On the case of Discord bots, they usually allow user actions like sending reactions, assigning roles and sending messages from the dashboard. So if there is poor user-input validation, with this you could convert a simple embed editing tool into a nuke tool. This bug also applies for other things that insert user input into a request URI.
+On the case of Discord bots, they usually allow user actions like sending reactions, assigning roles and sending messages from the dashboard. So if there is poor user-input validation, with this you could convert a simple embed editing tool into a nuke tool.
 
 This is a good example of what happens when you don't validate user input.
