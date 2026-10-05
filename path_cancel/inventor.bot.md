@@ -24,7 +24,7 @@ POST /api/share/<uuid>/import HTTP/1.1
 Host: dash.inventor.bot
 Content-Type: application/json
 
-{"project_id":"e56t63k5wazw"}
+{"project_id":"[string]"}
 ```
 
 As you may have already guessed, we can also control the path of that request. Every route of the API uses `POST` for actions that mutate stuff, so it's useful.
