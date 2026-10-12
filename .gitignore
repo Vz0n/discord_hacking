@@ -1,1 +1,7 @@
 drafts
+website/node_modules/
+website/dist/
+website/src/content.json
+website/public/content/
+website/public/icons/
+website/public/pock.gif

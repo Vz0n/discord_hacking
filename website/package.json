@@ -1,0 +1,22 @@
+{
+  "name": "discord-hacking-site",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/build-content.mjs && vite",
+    "build": "node scripts/build-content.mjs && vite build && node scripts/prerender.mjs",
+    "icons": "node scripts/build-content.mjs && node scripts/fetch-icons.mjs && node scripts/shrink-icons.mjs",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.5.43",
+    "vue-router": "^5.4.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.10",
+    "highlight.js": "^11.12.0",
+    "markdown-it": "^15.0.2",
+    "vite": "^8.3.4"
+  }
+}
