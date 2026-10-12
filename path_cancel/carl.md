@@ -1,5 +1,5 @@
 ## God mode
-*Fixed on: 18/10/2025 - 08/01/2026*
+*Fixed on: 18/10/2025 && 08/01/2026*
 
 [Website](https://carl.gg) | [Discord](https://discord.gg/S2ZkBTnd8X)
 

@@ -1,5 +1,5 @@
 ## I'm testing messages on your channels, sorry but no sorry!
-*Fixed on: 15/04/2024 - 13/08/2026*
+*Fixed on: 15/04/2024 && 13/08/2026*
 
 [Website](https://koya.gg) | [Discord](https://discord.gg/koya)
 
