@@ -30,6 +30,7 @@
     "disboard": "Disboard",
     "discohook": "Discohook",
     "discordhome": "DiscordHome",
+    "doll":"Doll",
     "draftbot": "DraftBot",
     "dyno": "Dyno",
     "erensibot": "ErensiBot",
@@ -128,7 +129,8 @@
     "account_takeover/guns.lol": "guns_poc.mp4",
     "broken_authentication/johnbot": "john4.mp4",
     "path_cancel/april": "april3.mp4",
-    "path_cancel/carl": "carl3.mp4"
+    "path_cancel/carl": "carl3.mp4",
+    "mass_assignment/doll": "dolls4.mp4"
   },
   "siteUrl": "https://hunting.vzon.moe",
   "meta": {
