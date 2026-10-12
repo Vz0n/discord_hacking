@@ -13,13 +13,8 @@ const w = computed(() => cat.value?.writeups.find((x) => x.slug === route.params
 const copied = ref(false)
 let copiedTimer = null
 
-function resolveUrl() {
-  const canonical = document.querySelector('link[rel="canonical"]')?.getAttribute('href')
-  return canonical || window.location.href
-}
-
 async function copyLink() {
-  const url = resolveUrl()
+  const url = window.location.href
   try {
     await navigator.clipboard.writeText(url)
   } catch {
