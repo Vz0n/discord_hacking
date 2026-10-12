@@ -36,11 +36,15 @@ function discordEmbed({ text, thumbnail, buttons }) {
   const components = []
 
   if (text) {
-    components.push({
-      type: 9,
-      components: [{ type: 10, content: text }],
-      ...(thumbnail ? { accessory: { type: 11, media: { url: thumbnail } } } : {})
-    })
+    if (thumbnail) {
+      components.push({
+        type: 9,
+        components: [{ type: 10, content: text }],
+        accessory: { type: 11, media: { url: thumbnail } }
+      })
+    } else {
+      components.push({ type: 10, content: text })
+    }
   }
   if (buttons?.length) {
     components.push({ type: 14 })

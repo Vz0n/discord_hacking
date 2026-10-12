@@ -7,7 +7,8 @@
     "dev": "node scripts/build-content.mjs && vite",
     "build": "node scripts/build-content.mjs && vite build && node scripts/prerender.mjs",
     "icons": "node scripts/build-content.mjs && node scripts/fetch-icons.mjs && node scripts/shrink-icons.mjs",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "validate-embeds": "node scripts/validate-embeds.mjs"
   },
   "dependencies": {
     "@vscode/markdown-it-katex": "^1.1.2",
