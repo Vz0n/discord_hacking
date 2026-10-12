@@ -216,7 +216,6 @@ main.container {
   display: flex;
   align-items: center;
   gap: 12px;
-  flex-wrap: wrap;
 }
 
 .wi-icon {
@@ -237,8 +236,17 @@ main.container {
   color: var(--accent-text);
 }
 
+.wi-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  min-width: 0;
+}
+
 .wi-name {
   margin-left: auto;
+  flex-shrink: 0;
   font-size: 12px;
   color: var(--muted);
 }
@@ -291,6 +299,33 @@ main.container {
 
 .w-head-text {
   min-width: 0;
+}
+
+.w-copy {
+  margin-left: auto;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.w-copy:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.w-copy.copied {
+  color: #7ee2a8;
+  border-color: rgba(126, 226, 168, 0.3);
 }
 
 .w-title {

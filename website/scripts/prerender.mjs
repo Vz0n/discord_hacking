@@ -164,8 +164,10 @@ for (const cat of content.categories) {
       (w) => `<div class="writeup-item">
         <div class="wi-main">
           ${w.icon ? `<img src="${w.icon}" alt="${escAttr(w.name)}" class="wi-icon" loading="lazy" />` : `<span class="wi-icon wi-icon-fallback">${esc(w.name.charAt(0).toUpperCase())}</span>`}
-          <span class="wi-title">${esc(w.title)}</span>
-          ${w.fixedOn ? `<span class="chip chip-fixed">fixed on ${esc(w.fixedOn)}</span>` : ''}
+          <div class="wi-text">
+            <span class="wi-title">${esc(w.title)}</span>
+            ${w.fixedOn ? `<span class="chip chip-fixed">fixed on ${esc(w.fixedOn)}</span>` : ''}
+          </div>
           <span class="wi-name">${esc(w.name)}</span>
         </div>
       </div>`
@@ -216,6 +218,10 @@ for (const cat of content.categories) {
         <h1 class="w-title">${esc(w.title)}</h1>
         <span class="w-app">${esc(w.name)}</span>
       </div>
+      <button type="button" class="w-copy" aria-label="Copy link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        Copy link
+      </button>
     </div>
     <div class="w-meta">
       ${w.fixedOn ? `<span class="chip chip-fixed">fixed on ${esc(w.fixedOn)}</span>` : ''}

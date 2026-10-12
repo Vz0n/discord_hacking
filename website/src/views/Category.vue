@@ -32,8 +32,10 @@ watchEffect(() => {
         <div class="wi-main">
           <img v-if="w.icon" :src="w.icon" :alt="w.name" class="wi-icon" loading="lazy" />
           <span v-else class="wi-icon wi-icon-fallback">{{ w.name.charAt(0).toUpperCase() }}</span>
-          <span class="wi-title">{{ w.title }}</span>
-          <span v-if="w.fixedOn" class="chip chip-fixed">fixed on {{ w.fixedOn }}</span>
+          <div class="wi-text">
+            <span class="wi-title">{{ w.title }}</span>
+            <span v-if="w.fixedOn" class="chip chip-fixed">fixed on {{ w.fixedOn }}</span>
+          </div>
           <span class="wi-name">{{ w.name }}</span>
         </div>
         <div v-if="w.links.length" class="wi-links">
