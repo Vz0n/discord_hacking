@@ -5,7 +5,7 @@ import { setMeta } from '../seo'
 
 watchEffect(() => {
   setMeta(
-    'Discord Ecosystem Hacking',
+    'Vz0n\'s Discord Bug Hunting',
     `Security writeups from across the Discord ecosystem — ${content.stats.writeups} writeups across ${content.stats.categories} bug classes.`
   )
 })
@@ -13,10 +13,10 @@ watchEffect(() => {
 
 <template>
   <section class="hero">
-    <h1>Discord ecosystem hacking</h1>
+    <h1>Vz0n's Discord bug hunting</h1>
     <p class="tagline">
-      Security writeups from across the Discord ecosystem —
-      {{ content.stats.writeups }} writeups across {{ content.stats.categories }} bug classes.
+      This is a collection of security writeups of bugs that I found across popular Discord apps —
+      There are {{ content.stats.categories }} categories with a total of {{ content.stats.writeups }} cases.
     </p>
   </section>
   <section class="grid">

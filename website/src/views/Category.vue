@@ -12,7 +12,7 @@ const cat = computed(() => content.categories.find((c) => c.id === route.params.
 
 watchEffect(() => {
   if (!cat.value) return
-  setMeta(`${cat.value.name} · Discord Ecosystem Hacking`, cat.value.intro)
+  setMeta(`${cat.value.name} · Vz0n's Discord Bug Hunting`, cat.value.intro)
 })
 </script>
 
@@ -21,7 +21,7 @@ watchEffect(() => {
   <template v-else>
     <router-link to="/" class="back">← Go back</router-link>
     <div class="prose readme" v-html="cat.readmeHtml"></div>
-    <h2 class="list-title">{{ cat.writeups.length }} writeups</h2>
+    <h2 class="list-title">{{ cat.writeups.length }} cases</h2>
     <div class="writeup-list">
       <div
         v-for="w in cat.writeups"
