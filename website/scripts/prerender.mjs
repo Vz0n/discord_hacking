@@ -198,7 +198,7 @@ for (const cat of content.categories) {
   for (const w of cat.writeups) {
     const wPath = `${catPath}${w.slug}/`
     urls.push(wPath)
-    const desc = `${w.title} — ${w.name}` + (w.fixedOn ? ` (fixed on ${w.fixedOn})` : '')
+    const desc = "From Vz0n's bug hunting writeups across the Discord ecosystem."
     const date = isoDate(w.fixedOn)
     const jsonLd = {
       '@context': 'https://schema.org',
@@ -226,7 +226,7 @@ for (const cat of content.categories) {
     const wText =
       `## **[${w.title}](${siteUrl}${wPath})**\n${w.name}` +
       (w.fixedOn ? ` · fixed on ${w.fixedOn}` : '') +
-      `\n${desc}`
+      `\n\n${desc}`
     writeFile(
       path.join('c', cat.id, w.slug, 'index.html'),
       renderPage({
