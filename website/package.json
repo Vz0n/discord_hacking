@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vscode/markdown-it-katex": "^1.1.2",
+    "katex": "^0.19.0",
     "vue": "^3.5.43",
     "vue-router": "^5.4.0"
   },

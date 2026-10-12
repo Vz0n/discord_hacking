@@ -4,6 +4,8 @@ import { fileURLToPath } from 'node:url'
 import MarkdownIt from 'markdown-it'
 import hljs from 'highlight.js/lib/common'
 import http from 'highlight.js/lib/languages/http'
+import * as katexModule from '@vscode/markdown-it-katex'
+const katexPlugin = katexModule.default?.default || katexModule.default
 
 const here = path.dirname(fileURLToPath(import.meta.url))
 const siteDir = path.resolve(here, '..')
@@ -27,7 +29,7 @@ const md = new MarkdownIt({
     }
     return `<pre><code class="hljs">${md.utils.escapeHtml(str)}</code></pre>`
   }
-})
+}).use(katexPlugin, { throwOnError: false })
 
 const defaultLinkOpen =
   md.renderer.rules.link_open || ((tokens, idx, options, env, self) => self.renderToken(tokens, idx, options))
