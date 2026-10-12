@@ -1,5 +1,5 @@
 ## I'll confess my sins... but in your announcements!
-*Fixed on: 03/01/2024 - 02/05/2026*
+*Fixed on: 03/01/2024 && 02/05/2026*
 
 [Website](https://cactusfire.xyz) | [Discord](https://discord.cactusfire.xyz)
 
