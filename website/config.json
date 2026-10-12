@@ -1,5 +1,5 @@
 {
-  "_comment": "summaries: category -> home-card text; names: slug -> display name; titles: category/slug -> fallback title when the md has no \"## \" title; iconOverrides: slug -> icon URL (fetch skips web sources for these slugs). videoOverrides: category/slug -> local filename (from that category assets/), served from /content/<category>/ when the GitHub user-attachments URL is dead. siteUrl: custom domain base (e.g. https://example.com) — enables canonical URLs, og:url and sitemap.xml when set.",
+  "_comment": "summaries: category -> home-card text; names: slug -> display name; titles: category/slug -> fallback title when the md has no \"## \" title; iconOverrides: slug -> icon URL (fetch skips web sources for these slugs). videoOverrides: category/slug -> local filename (from that category assets/), served from /content/<category>/ when the GitHub user-attachments URL is dead. siteUrl: custom domain base (e.g. https://example.com) — enables canonical URLs, og:url and sitemap.xml when set. meta: siteName = suffix for page titles / embed headings; description = home meta description (SEO only, not visible).",
   "summaries": {
     "account_takeover": "Bugs that let an attacker take over someone's account — sometimes with nothing more than a clicked link.",
     "bac": "Broken Access Control: apps that fail to check you're allowed to touch a resource, like sending messages to channels you can't write to from the dashboard.",
@@ -130,5 +130,9 @@
     "path_cancel/april": "april3.mp4",
     "path_cancel/carl": "carl3.mp4"
   },
-  "siteUrl": "https://hunter.vzon.moe"
+  "siteUrl": "https://hunting.vzon.moe",
+  "meta": {
+    "siteName": "Vz0n's Discord Bug Hunting",
+    "description": "Security writeups: bugs found across the Discord ecosystem — bots, dashboards and apps."
+  }
 }

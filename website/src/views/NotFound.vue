@@ -3,7 +3,7 @@ import { watchEffect } from 'vue'
 import { setMeta } from '../seo'
 
 watchEffect(() => {
-  setMeta("404 · Discord Ecosystem Hacking", "This page doesn't exist.")
+  setMeta(`404 · ${content.meta.siteName}`, "This page doesn't exist.")
 })
 </script>
 

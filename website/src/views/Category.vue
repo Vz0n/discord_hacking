@@ -12,7 +12,7 @@ const cat = computed(() => content.categories.find((c) => c.id === route.params.
 
 watchEffect(() => {
   if (!cat.value) return
-  setMeta(`${cat.value.name} · Vz0n's Discord Bug Hunting`, cat.value.intro)
+  setMeta(`${cat.value.name} · ${content.meta.siteName}`, cat.value.intro)
 })
 </script>
 

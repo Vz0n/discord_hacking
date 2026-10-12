@@ -4,10 +4,7 @@ import content from '../content.json'
 import { setMeta } from '../seo'
 
 watchEffect(() => {
-  setMeta(
-    'Vz0n\'s Discord Bug Hunting',
-    `Security writeups from across the Discord ecosystem — ${content.stats.writeups} writeups across ${content.stats.categories} bug classes.`
-  )
+  setMeta(content.meta.siteName, content.meta.description)
 })
 </script>
 
@@ -17,6 +14,9 @@ watchEffect(() => {
     <p class="tagline">
       This is a collection of security writeups of bugs that I found across popular Discord apps —
       There are {{ content.stats.categories }} categories with a total of {{ content.stats.writeups }} cases.
+      <br><br>
+      Every writeup uses the <code>DD/MM/YYYY</code> format to indicate when the bug was fixed.
+      Right now, there is no proof that any of these bugs were ever exploited in the wild, and I have no knowledge of any such incidents. 
     </p>
   </section>
   <section class="grid">

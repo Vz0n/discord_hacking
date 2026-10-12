@@ -58,12 +58,14 @@ let summaries = {}
 let names = {}
 let titles = {}
 let videoOverrides = {}
+let metaCfg = { siteName: "Vz0n's Discord Bug Hunting", description: 'Security writeups: bugs found across the Discord ecosystem — bots, dashboards and apps.' }
 try {
   const cfg = JSON.parse(fs.readFileSync(path.join(siteDir, 'config.json'), 'utf8'))
   summaries = cfg.summaries || {}
   names = cfg.names || {}
   titles = cfg.titles || {}
   videoOverrides = cfg.videoOverrides || {}
+  if (cfg.meta) metaCfg = cfg.meta
 } catch (e) {
   warn(`could not load config.json: ${String(e).slice(0, 100)}`)
 }
@@ -265,6 +267,7 @@ const catData = categories.map((cat) => {
 
 const data = {
   generatedAt: new Date().toISOString(),
+  meta: metaCfg,
   stats: { categories: categories.length, writeups: totalWriteups },
   categories: catData
 }
