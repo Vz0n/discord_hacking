@@ -1,4 +1,4 @@
-## Click me and I get access to your servers
+## A wispy link
 *Fixed on: 13/07/2026*
 
 [Website](https://wispbyte.com) | [Discord](https://www.wispbyte.com/discord)
