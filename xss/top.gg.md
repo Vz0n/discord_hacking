@@ -1,4 +1,4 @@
-<!-- P2 -->
+<!-- P1 -->
 ## Invite ma bot!1!!!!!
 *Fixed on: 12/07/2026*
 
@@ -40,5 +40,9 @@ And would get rendered by the client:
 ![1](assets/top.gg3.png)
 
 On this one, I didn't need an open redirect as the same server was redirecting to the invite URL, as intended.
+
+The user access token in this website is stored on `localStorage`, so it was possible to steal it. Moreover, other parts of the website had the same flaw but this bots tab was the only one where I was able to control the target URL. The most interesting fact is that new bots must be reviewed by the staff of the site.
+
+![Token](assets/top.gg4.png)
 
 The devs took a while to fix it.
