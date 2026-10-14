@@ -1,3 +1,4 @@
+<!-- P3 -->
 ## But the component was supposed to be safe!
 *Fixed on: 01/10/2026*
 

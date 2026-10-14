@@ -1,3 +1,4 @@
+<!-- P2 -->
 ## The admin (or ban) giveaway
 *Fixed on: 10/11/2025*
 

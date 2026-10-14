@@ -1,3 +1,4 @@
+<!-- P2 -->
 ## Currency emoji? or anything else! (now with Pizza included)
 *Fixed on: 03/06/2026*
 

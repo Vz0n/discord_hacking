@@ -1,3 +1,4 @@
+<!-- P4 -->
 *Fixed on: 22/04/2026*
 
 [Website](https://welcomer.gg) | [Discord](https://welcomer.gg/support)

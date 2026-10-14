@@ -193,6 +193,12 @@ function parseWriteup(cat, file) {
     else warn(`[${cat}/${file}] no "## " title found`)
   }
 
+  let severity = null
+  if (lines[0] && /^<!-- P([1-5]) -->$/.test(lines[0].trim())) {
+    severity = `P${lines[0].trim().match(/^<!-- P([1-5]) -->$/)[1]}`
+    skip.add(0)
+  }
+
   const body = lines
     .filter((_, i) => !skip.has(i))
     .join('\n')
@@ -203,6 +209,7 @@ function parseWriteup(cat, file) {
     slug: file.replace(/\.md$/, ''),
     title: title || file.replace(/\.md$/, ''),
     fixedOn,
+    severity,
     links,
     html: renderMarkdown(cat, body)
   }

@@ -1,3 +1,4 @@
+<!-- P4 -->
 *Fixed on: 24/04/2026*
 
 [Website](https://draftbot.gg) | [Discord](https://discord.gg/draftbot)

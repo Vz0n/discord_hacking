@@ -1,3 +1,4 @@
+<!-- P2 -->
 ## Everyone is an admin now.
 *Fixed on: 02/08/2026*
 

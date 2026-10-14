@@ -165,6 +165,12 @@ main.container {
   white-space: nowrap;
 }
 
+.sev-plate {
+  height: 20px;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+
 .chip-fixed {
   color: #7ee2a8;
   border-color: rgba(126, 226, 168, 0.3);
@@ -341,6 +347,7 @@ main.container {
 
 .w-meta {
   display: flex;
+  align-items: center;
   gap: 8px;
   flex-wrap: wrap;
   margin-bottom: 28px;

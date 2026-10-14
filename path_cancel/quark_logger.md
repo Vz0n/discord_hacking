@@ -1,3 +1,4 @@
+<!-- P2 -->
 ## The logger is the only thing reading messages... *or maybe not?*
 *Fixed on: 24/06/2026*
 

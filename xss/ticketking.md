@@ -1,3 +1,4 @@
+<!-- P2 -->
 ## Hey uhhhh, I wanted to buy your product but then the page said me this and I don't know what to do, you're staff here, could you help me?
 *Fixed on: 18/11/2025*
 

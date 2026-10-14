@@ -1,3 +1,4 @@
+<!-- P2 -->
 ## The admin (or ban) giveaway, but now with verification included
 *Fixed on: 28/05/2026*
 

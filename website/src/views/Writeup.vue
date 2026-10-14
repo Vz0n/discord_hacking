@@ -2,7 +2,7 @@
 import { computed, ref, watchEffect } from 'vue'
 import { useRoute } from 'vue-router'
 import content from '../content.json'
-import { setMeta } from '../seo'
+import { setMeta, severityPlateUrl } from '../seo'
 import NotFound from './NotFound.vue'
 
 const route = useRoute()
@@ -75,6 +75,13 @@ watchEffect(() => {
       </button>
     </div>
     <div class="w-meta">
+      <img
+        v-if="w.severity"
+        :src="severityPlateUrl(w.severity)"
+        :alt="w.severity"
+        class="sev-plate"
+        loading="lazy"
+      />
       <span v-if="w.fixedOn" class="chip chip-fixed">fixed on {{ w.fixedOn }}</span>
       <a
         v-for="l in w.links"

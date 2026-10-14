@@ -32,6 +32,11 @@ const escAttr = (s) => esc(s).replace(/"/g, '&quot;')
 const REPO_URL = 'https://github.com/Vz0n/discord_hacking'
 const ACCENT = 0x8014c2
 
+function severityPlateImg(sev) {
+  if (!/P[1-5]/.test(sev || '')) return ''
+  return `<img src="/severity/${sev}.svg" alt="${sev}" class="sev-plate" loading="lazy" />`
+}
+
 function discordEmbed({ text, thumbnail, buttons }) {
   const components = []
 
@@ -224,6 +229,7 @@ for (const cat of content.categories) {
       </button>
     </div>
     <div class="w-meta">
+      ${severityPlateImg(w.severity)}
       ${w.fixedOn ? `<span class="chip chip-fixed">fixed on ${esc(w.fixedOn)}</span>` : ''}
       ${w.links.map((l) => `<a href="${escAttr(l.url)}" target="_blank" rel="noopener noreferrer" class="chip chip-link">${esc(l.label)}</a>`).join('\n      ')}
     </div>

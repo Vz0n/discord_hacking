@@ -1,3 +1,4 @@
+<!-- P2 -->
 ## Rewarding some :3 JavaScript
 *Fixed on: 13/07/2026*
 
