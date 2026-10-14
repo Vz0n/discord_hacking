@@ -16,7 +16,10 @@ watchEffect(() => {
       There are {{ content.stats.categories }} categories with a total of {{ content.stats.writeups }} cases.
       <br><br>
       Every writeup uses the <code>DD/MM/YYYY</code> format to indicate when the bug was fixed.
-      Right now, there is no proof that any of these bugs were ever exploited in the wild, and I have no knowledge of any such incidents. 
+      Right now, there is no proof that any of these bugs were ever exploited in the wild, and I have no knowledge of any such incidents.
+      <br><br>
+      The severity assigned to each bug is based on real world impact + how the developers handled the issues. It uses the BugCrowd's standard rating (P1-P5)
+      as the own Discord's bug bounty program is hosted on that platform.
     </p>
   </section>
   <section class="grid">
