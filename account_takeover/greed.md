@@ -1,4 +1,4 @@
-## We are back to Medium writeups!!11!!1!!1!
+## A token in the fly
 *Won't fix*
 
 [Website](https://greed.best) | [Discord](https://discord.gg/greed)
