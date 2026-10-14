@@ -38,7 +38,7 @@ There was a funny thing at `user-data`:
 
 ![toor](assets/bdfd4.png)
 
-> If this was the correct one, the SSH password login was disabled anyways. At least.
+> If this was the correct one, the SSH password login was disabled anyways, at least on the node where my bot was.
 
 I also got the internal subnet address, and it gave me the ability to send arbitrary HTTP requests to other nodes and servers in the same network.
 
