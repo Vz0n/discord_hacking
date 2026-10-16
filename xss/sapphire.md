@@ -1,5 +1,5 @@
-<!-- P2 -->
-## Take this message kit... and click the link of the embed, trust me!
+<!-- P3 -->
+## A message kit with special links
 *Fixed on: 06/01/2025*
 
 [Website](https://sapph.xyz) | [Discord](https://sapph.xyz/server)
