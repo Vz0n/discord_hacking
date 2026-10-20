@@ -155,7 +155,7 @@ So, sending a `POST` against `/api/v1/log/webhooks/$webhookId/..%2F..%2Fchannels
 }
 ```
 
-Didn't work, but with the double URL encoded version (`/api/v1/log/webhooks/$webhookId/..%252F..%252Fchannels%252F{random_channel}%25%2Fmessages%2523/messages/111111111`)... it did:
+Didn't work, but with the double URL encoded version (`/api/v1/log/webhooks/$webhookId/..%252F..%252Fchannels%252F{random_channel}%252Fmessages%2523/messages/111111111`)... it did:
 
 ![Getting your messages](assets/discohook2.png)
 
