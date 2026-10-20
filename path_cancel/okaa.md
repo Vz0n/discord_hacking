@@ -49,7 +49,7 @@ When I changed it to an invalid channel, this message popped up:
 
 > On english: The ticket panel is not healthy; the message was deleted & there's no options.
 
-The `Recuperar` (Recover) button sends a request to `POST /guilds/:guild_id/tickets/recover`. By watching how it behaves I noticed that if `Message` is not null, it will try to delete the message with that ID on the channel `Channel` and then post the ticket panel message on the said channel. When setting a channel ID from another server the Recover function sent the ticket panel message without any questions.
+The `Recuperar` (Recover) button sends a request to `POST /guilds/:guild_id/tickets/recover`. By watching how it behaves I noticed that if `Message` is not null, it will try to delete the message with that ID on the channel `Channel` and then post the ticket panel message on the said channel. When setting a channel ID from another server the Recover function sent the ticket panel message there without any questions.
 
 The field was also not type validated, and the `DELETE` request to delete the message was constructed as this:
 
