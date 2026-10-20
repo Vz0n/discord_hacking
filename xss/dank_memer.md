@@ -1,5 +1,5 @@
 <!-- P2 -->
-## React2shell but inverse
+## Won't rob your currency/bank, just your data
 *Fixed on: 27/05/2026*
 
 [Website](https://dankmemer.lol) | [Discord](https://discord.gg/memers)

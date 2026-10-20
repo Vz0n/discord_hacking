@@ -1,5 +1,5 @@
 <!-- P2 -->
-## The token with two states
+## Two states token
 *Fixed on: 26/07/2026*
 
 [Website](https://quantum-bot.net) | [Discord](https://discord.gg/DPp36vkWTF)

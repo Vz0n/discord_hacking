@@ -1,5 +1,5 @@
 <!-- P1 -->
-## Invite ma bot!1!!!!!
+## Invite my bot, It's safe to use!
 *Fixed on: 12/07/2026*
 
 [Website](https://top.gg) | [Discord](https://discord.gg/dbl)

@@ -1,5 +1,4 @@
 <!-- P2 -->
-
 ## Here is you welcome imag... wtf?
 *Fixed on: ??/11/2025*
 

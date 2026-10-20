@@ -1,5 +1,5 @@
 <!-- P3 -->
-## Case updated... on a place that I don't even know?!??!?!?
+## Case updated... in the backrooms??
 *Fixed on: 06/09/2026*
 
 [Website](https://atlas.bot) | [Discord](https://atlas.bot/support)
