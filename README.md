@@ -6,7 +6,7 @@ I found very nasty bugs across all these apps and I documented them on this repo
 
 By viewing the repo, you should get how it's structured. Every folder's name is a class of bug and its contents are the apps where I found that type of bug. The file contains an explanation on how the bug works. The fix date in every case/writeup follows the `DD/MM/YYYY` format. 
 
-It's interesting that there was previous people hunting for bugs in specific apps (like Carl or Dyno), and nobody caught some nasty bugs that are here. Many of them were really easy to find and exploit... at least for me.
+It's interesting that there was previous people hunting for bugs in specific apps (like Carl or Dyno), and nobody caught some bugs that are here. Many of them were really easy to find and exploit... at least for me.
 
 > Yes, the cringe repo name is intentional btw
 
