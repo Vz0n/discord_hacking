@@ -84,7 +84,7 @@ So it worked... and with this I realized that the dashboard has now a time bomb,
 
 ![Bomb x2](assets/tickettool4.png)
 
-So with this, there is a chance that you could get RCE as the webserver user, and steal the bot token.
+So with this, there is a small chance that you could get RCE as the webserver user, and steal the bot token.
 
 I had to run to the server and report the bug before something else goes wrong. Thankfully, the dev fixed the bug quickly after I reported it.
 
