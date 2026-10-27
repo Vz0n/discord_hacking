@@ -121,10 +121,10 @@ Which will get substituted by the actual command output in the resulting string:
 hey uid=1000(vzon) gid=1000(vzon) groups=1000(vzon), you can suck my cock
 ```
 
-On the function that TriviaBot executes, user provided arguments after the base command are passed to the D++ exec function. Indeed what that means, is that I can blindly execute system commands as the bot process user by running one of the two allowed user commands that aren't native:
+On the function that TriviaBot executes, user provided arguments after the base command are passed to the D++ exec function. Indeed what that means, is that I can blindly execute system commands as the bot process user by running one of the two allowed user commands that aren't native (I sent a http request to my box containing the user that it's currently running the process):
 
 https://github.com/user-attachments/assets/dc9d8fd4-f224-4eb3-bd4a-4d3b68f830ee
 
-Obviously, with this you can steal the bot token and every other credentials that were in there (and maybe fully compromise the server).
+Obviously, with this you can steal the bot token and every other credentials that were accessible.
 
 The dev fixed it real quick. He also [improved the escaping](https://github.com/brainboxdotcc/DPP/pull/1632) of the D++ involved function (yes, he is one of the maintainers of the library).
