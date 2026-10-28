@@ -1,4 +1,4 @@
-<!-- P1 -->
+<!-- P2 -->
 ## The online gangster got hacked
 *Fixed on: 24/03/2026*
 
@@ -67,4 +67,4 @@ And here is an example usage of it:
 
 https://github.com/user-attachments/assets/a42e27fe-7368-40e1-8851-b10fe4f651d0
 
-They took some days to fix it.
+The devs took some days to fix it.
