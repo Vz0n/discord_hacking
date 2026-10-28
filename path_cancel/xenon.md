@@ -1,6 +1,6 @@
 <!-- P2 -->
 ## Getting your backups (and messages)!
-*Fixed on: 08/11/2025 - 09/05/2026*
+*Fixed on: 08/11/2025 && 09/05/2026*
 
 [Website](https://xenon.bot) | [Discord](https://xenon.bot/discord)
 
