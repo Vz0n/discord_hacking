@@ -67,4 +67,6 @@ And here is an example usage of it:
 
 https://github.com/user-attachments/assets/a42e27fe-7368-40e1-8851-b10fe4f651d0
 
+> **Trivia:** At the time of this finding, I remember that you were able to put any valid URL as image for a certain component of the bio page. Given that you just need to hit the `/api/callback/discord` endpoint to link the account and there was no CSP limiting image fetching. I've could used that to make the required interaction totally normal (just viewing a bio page), but in the moment I didn't think in chaining things, so it remains as something unproven.
+
 The devs took some days to fix it.
