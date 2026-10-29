@@ -10,7 +10,9 @@ While watching the `/auth-settings` command, I noticed that you can configure a 
 
 ![Auth logs](assets/raidprotect1.png)
 
-This did validate that the url starts with the format `https://discord.com/api/webhooks/[...]`... yeah, only checked if it starts with that, so you can go back in the route with `../` and redirect the request to other endpoints. As this will send messages, that means that you can point to channels of other guilds to send your log messages (for some reason, the bot was sending the Webhook request with the token, and you don't need to do that).
+This did validate that the url starts with the format `https://discord.com/api/webhooks/[...]`... yeah, only checked if it starts with that, so you can go back in the route with `../` and redirect the request to other endpoints. As this will send messages, that means that you can point to channels of other guilds to send your log messages.
+
+> For some reason, the bot was sending the Webhook request with the token, and you don't need to do that.
 
 As this is a `POST` request, you can also do some other stuff:
 
