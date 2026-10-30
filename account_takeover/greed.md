@@ -1,5 +1,6 @@
 <!-- P2 -->
 ## A token in the fly
+*Fixed on: ??/??/2026*
 
 [Website](https://greed.best) | [Discord](https://discord.gg/greed)
 
@@ -32,14 +33,4 @@ As this thing is using the `state` param to save the redirect in the flow, you d
 
 https://github.com/user-attachments/assets/37bce41e-40eb-4f95-9c95-cb0e0ceed2b4
 
-The dev just considered opening links as the same if a user opened their browser console and gave his token ("It's responsibility of the user clicking the link, not us."), so he won't fix this. View Discord and greed links carefully if you're using this bot.
-
-> Note that under such reasoning, the guns.lol bug isn't also a vulnerability. Maybe he thinks that every user has the same caution and knowledge as him? I don't really know.
-
-
-
-
-
-
-
-
+The dev just considered opening links as the same if a user opened their browser console and gave his token ("It's responsibility of the user clicking the link, not us."). But after some time, it seems that he just silently fixed it.
