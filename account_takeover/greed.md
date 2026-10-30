@@ -1,6 +1,5 @@
 <!-- P2 -->
 ## A token in the fly
-*Won't fix*
 
 [Website](https://greed.best) | [Discord](https://discord.gg/greed)
 
