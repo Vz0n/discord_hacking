@@ -1,4 +1,4 @@
-<!-- P1 -->
+<!-- P2 -->
 ## Invite my bot, It's safe to use!
 *Fixed on: 12/07/2026*
 
@@ -27,9 +27,17 @@ Next-Url: /en/bot/[bot_id]
 
 The `/bot/[bot_id]/invite` route just returns a `307` redirect to the invite URL.
 
-If you read the [Dank Memer](/xss/dank_memer.md) case, you might know that this is a React Server Components (RSC) preflight request, and it's expecting a `text/html` or a `text/x-component` response mimetype. The `text/x-component` is a serialized format that the React client renders as a raw HTML inside the same origin that initiated the request, and the request is going to be redirected to my server.
+If you read the [Dank Memer](/xss/dank_memer.md) case, you might know that this is a React Server Components (RSC) preflight request, and it's expecting a `text/html` or a `text/x-component` response mimetype from the server. The `text/x-component` is a serialized format that the React client renders as a raw HTML inside the same origin that initiated the request, and the request is going to be redirected to my server.
 
-So this means that I can just take a serialized response from the same site (as example, `https://top.gg/discord/news?_rsc=AnZnK6Nm6TZijOb5`), and make my server to send it as response. When somebody clicks the `Invite` button with it, they will just see that page... but now, as I have full control, I can add this funny thing to the serialized response:
+But there's a small catch, and it's that the route most times will trigger the Cloudflare's bot verification page, thus returning a `403 Forbidden` and making the preflight request fail, but we can edit the server code to just redirect the user to the top.gg page again, and they will think that it was by the bot verification:
+
+```js
+if(req.get("Rsc") !== "1" && req.method != "OPTIONS"){
+    return res.redirect(303, `https://top.gg/bot/${BOT_ID}`);
+}
+```
+
+Now, taking a serialized response from the own site (as example, `https://top.gg/discord/news?_rsc=AnZnK6Nm6TZijOb5`) and setting it as response in my server, will make the `Invite` button render the news page. As I have total control of the serialized data, I can now add this funny thing:
 
 ```json
 ["$", "div", null, {"dangerouslySetInnerHTML":{"__html":"<img src=x onerror='alert(`1`);'>"},"data-cfasync":"false"}]
