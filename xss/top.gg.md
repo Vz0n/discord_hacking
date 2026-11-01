@@ -49,7 +49,7 @@ And would get rendered by the client:
 
 On this one, I didn't need an open redirect as the same server was redirecting to the invite URL, as intended.
 
-The user access token in this website is stored on `localStorage`, so it was possible to steal it. Moreover, other parts of the website had the same flaw but this bots tab was the only one where I was able to control the target URL. The most interesting fact is that new bots must be reviewed by the staff of the site.
+The user access token in this website is stored on a cookie with `HttpOnly` set to false, so it was possible to steal it. Moreover, other parts of the website had the same flaw but this bots tab was the only one where I was able to control the target URL. The most interesting fact is that new bots must be reviewed by the staff of the site.
 
 ![Token](assets/top.gg4.png)
 

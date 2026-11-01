@@ -33,4 +33,6 @@ As this thing is using the `state` param to save the redirect in the flow, you d
 
 https://github.com/user-attachments/assets/37bce41e-40eb-4f95-9c95-cb0e0ceed2b4
 
+> Or, you can just use the same Greed and create a message with a link button containing this URL, saying that it's for something like verification to access the server.
+
 The dev just considered opening links as the same if a user opened their browser console and gave his token ("It's responsibility of the user clicking the link, not us."). But after some time, it seems that he just silently fixed it.
