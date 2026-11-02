@@ -34,6 +34,8 @@ And Nekotina sent this weird attachment:
 ![wtf](assets/nekotina3.webp)
 
 
-This file had the plain response from my server, and when I tried to contact `127.0.0.1` it was also retrieving me the responses from internal services.
+This file had the plain response from my server, and when I tried to contact `127.0.0.1` it was also retrieving me the responses from internal services. For example, they had a running instance of a software to bypass Cloudflare's bot verification:
+
+![Random instance](assets/nekotina4.png)
 
 I reported it, but for some reason the bot devs didn't contact me back. They just solved the issue.
