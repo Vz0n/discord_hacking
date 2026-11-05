@@ -8,7 +8,7 @@ This bot is very well known around Discord. It's mainly for invite management, b
 
 ![Portal](assets/invitetracker1.png)
 
-By watching the frontend HTML, I noticed that there's a subdomain that receives analytics from the main bot website, which is `https://plausible.riks.gg`. It hosts a Plausible CE instance.
+By looking the frontend HTML, I noticed that there's a domain that receives analytics from the main bot website, which is `https://plausible.riks.gg`. It hosts a Plausible CE instance.
 
 ![Plausible portal](assets/invitetracker2.png)
 
