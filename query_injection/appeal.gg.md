@@ -11,7 +11,7 @@ appeal.gg is a platform made by the dev of Sapphire to basically handle appeal f
 Inspecting requests sent to the dashboard API, I saw that if you put an object instead of an identifier, it will throw an error, but if I put something like `{"$neq": 1}`, the request now says that everything is good (and the change is made)... something already smelling bad there.
 
 ```http
-PATCH /api/v1/user-guilds/:guild_id/sections/forms HTTP/1.1
+PATCH /api/v1/user-guilds/$guildId/sections/forms HTTP/1.1
 Content-Type: application/json
 Host: dashboard.appeal.gg
 
@@ -34,14 +34,14 @@ But, it seems that on the dashboard I was constrained to only the document of my
 When sending the answers for a specific form, this request is sent:
 
 ```http
-POST /api/v1/guilds/:guild_id/submissions HTTP/1.1
+POST /api/v1/guilds/$guildId/submissions HTTP/1.1
 Content-Type: application/json
 Host: appeal.gg
 
 {
     "formId":"<Integer>",
     "answers":{
-        ":question_id":"<String>"
+        "$questionId":"<String>"
     },
     "encr":false
 }
@@ -101,7 +101,7 @@ So, by putting this:
         }
     },
     "answers":{
-        ":question_id":"<String>"
+        "$questionId":"<String>"
     },
     "encr":false
 }
