@@ -20,7 +20,7 @@ Looking at this analytics software, I noticed an advisory that points to a vulne
 
 The Plausible advisory points to the `/storybook` endpoint which was removed as an additional safety measure. This instance still had it.
 
-Reading the [Noctaly case](noctaly.md) should give you the needed information to understand and exploit this, but in summary, you can send a WebSocket message that injects Elixir code into an expression eval, thus granting you unauthenticated RCE.
+Reading the [Noctaly case](noctaly.md) should give you the needed information to understand this, but in summary, you can send a WebSocket message that injects Elixir code into an expression eval, thus granting you unauthenticated RCE.
 
 At first instance, a simple payload (`System.cmd("id",[])`) triggered the WAF and blocked the message, but as Elixir is lenient with spaces on syntax (this is a valid call: `File           .       read()`), I just added a few spaces and the request flowed without problems: it executed the injected code successfully (I sent to my box a http request with the running user info):
 
