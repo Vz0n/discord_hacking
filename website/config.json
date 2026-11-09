@@ -61,6 +61,7 @@
     "raidprotect": "RaidProtect",
     "rb3_guard": "RB3 Guard",
     "sapphire": "Sapphire",
+    "scrump":"Scrump",
     "sesh": "sesh",
     "slashbot": "SlashBot",
     "startit": "StartIT",
@@ -115,6 +116,8 @@
     "broken_authentication/quantumbot": "quantumbot2.mp4",
     "broken_authentication/sesh": "sesh2.mp4",
     "code_injection/triviabot": "triviabot2.mp4",
+    "content_injection/elementalbot":"elementalbot5.mp4",
+    "content_injection/scrump":"scrump4.mp4",
     "cves/ocelotbot": "ocelotbot3.mp4",
     "cves/noctaly":"noctaly4.mp4",
     "cves/invite_tracker":"invitetracker3.mp4",
@@ -140,8 +143,7 @@
     "broken_authentication/johnbot": "john4.mp4",
     "path_cancel/april": "april3.mp4",
     "path_cancel/carl": "carl3.mp4",
-    "mass_assignment/doll": "dolls4.mp4",
-    "content_injection/elementalbot":"elementalbot5.mp4"
+    "mass_assignment/doll": "dolls4.mp4"
   },
   "siteUrl": "https://hunting.vzon.moe",
   "meta": {
