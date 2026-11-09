@@ -1,0 +1,7 @@
+When you're able to tamper/inject special content on a program that can alter its representation or make its viewer do unintended actions, you're indeed injecting content in the website. (pretty obvious, isn't it?)  
+
+A recurrent example of this issue is XSS. Most of today's web apps use JavaScript for the frontend, to make it actually functional and attractive for the user. When you manage to inject JavaScript code to alter the app behaviour or do mischievous things like sending user session tokens to your server, that's cross-**S**ite **S**cripting (XSS). The acronym is XSS instead of CSS to avoid confusing it with Cascading Style Sheets.
+
+Other types of website content injection bugs are HTML injection or CSS injection, which are used instead of XSS when you can't inject JavaScript code (because there's a strict Content Security Policy or the site has sanitation and it kills every script tag). 
+
+Depending on where it happens, it may be useful or useless: an XSS is useless if it only happens in a page that only you can view and a HTML injection is very useful if you can create tags that can carry special elements of the website (like a form with an input element that has the CSRF token) on a page which everyone can view.

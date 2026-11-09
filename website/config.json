@@ -5,14 +5,14 @@
     "bac": "Broken Access Control: apps that fail to check you're allowed to touch a resource, like sending messages to channels you can't write to from the dashboard.",
     "broken_authentication": "Missing or bypassable authentication checks — getting an identity without the credentials that should be required for it.",
     "code_injection": "Injecting code or commands (shell injection, unsafe deserialization, ...) to get execution as the user running the app.",
+    "content_injection": "Injecting things like JavaScript, HTML, or CSS into web pages or other stuff.",
     "cves": "Apps running outdated software with known CVEs (CVE-YYYY-XXXXX) that still worked exactly as published.",
     "mass_assignment": "Setting object properties the server never meant to be editable by sending extra fields — from guild ownership to Discord API options.",
     "open_redirect": "Unvalidated `redirect` parameters that send you anywhere after a trusted flow (like an OAuth authorization) — mostly useful for phishing.",
     "path_cancel": "User input embedded into request URIs: dot segments cancel and rewrite the path before it reaches the Discord API, turning benign features into arbitrary API calls.",
     "prototype_pollution": "Polluting JavaScript object prototypes (`__proto__`) to make apps behave in ways their developers never wrote.",
     "query_injection": "Injecting SQL/NoSQL operators into database queries to extract data or flip boolean logic.",
-    "ssrf": "Server-Side Request Forgery: making the server send requests to internal services it was never supposed to reach.",
-    "xss": "Cross-Site Scripting: injecting JavaScript into apps to hijack sessions and do mischief as other users."
+    "ssrf": "Server-Side Request Forgery: making the server send requests to internal services it was never supposed to reach."
   },
   "names": {
     "appy": "Appy",
@@ -98,7 +98,7 @@
     "open_redirect/wamellow": "Protocol-relative open redirect on the OAuth state",
     "open_redirect/welcomer": "Protocol-relative open redirect on the OAuth callback",
     "open_redirect/yagpdb": "Protocol-relative open redirect on the OAuth goto parameter",
-    "xss/botghost": "Stored XSS on components viewer"
+    "content_injection/botghost": "XSS on components viewer"
   },
   "iconOverrides": {
     "nekotina": "https://cdn.discordapp.com/avatars/429457053791158281/3132cde9a13496e05f6fe31a7cd6d23b.png",
@@ -141,7 +141,7 @@
     "path_cancel/april": "april3.mp4",
     "path_cancel/carl": "carl3.mp4",
     "mass_assignment/doll": "dolls4.mp4",
-    "xss/elementalbot":"elementalbot5.mp4"
+    "content_injection/elementalbot":"elementalbot5.mp4"
   },
   "siteUrl": "https://hunting.vzon.moe",
   "meta": {

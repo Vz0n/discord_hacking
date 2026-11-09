@@ -27,7 +27,7 @@ Next-Url: /en/bot/[bot_id]
 
 The `/bot/[bot_id]/invite` route just returns a `307` redirect to the invite URL.
 
-If you read the [Dank Memer](/xss/dank_memer.md) case, you might know that this is a React Server Components (RSC) preflight request, and it's expecting a `text/html` or a `text/x-component` response mimetype from the server. The `text/x-component` is a serialized format that the React client renders as a raw HTML inside the same origin that initiated the request, and the request is going to be redirected to my server.
+If you read the [Dank Memer](/content_injection/dank_memer.md) case, you might know that this is a React Server Components (RSC) preflight request, and it's expecting a `text/html` or a `text/x-component` response mimetype from the server. The `text/x-component` is a serialized format that the React client renders as a raw HTML inside the same origin that initiated the request, and the request is going to be redirected to my server.
 
 But there's a small catch, and it's that the route most times will trigger the Cloudflare's bot verification page, thus returning a `403 Forbidden` and making the preflight request fail, but we can edit the server code to just redirect the user to the top.gg page again, and they will think that it was by the bot verification:
 
