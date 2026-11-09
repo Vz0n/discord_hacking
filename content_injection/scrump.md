@@ -49,7 +49,7 @@ So I forget about this? Nah, not my case. I started to search other parts that w
     <!-- ... [snip] -->
 ```
 
-That's the very top of the main content. I noticed that in the main content there is another form with an input containing the CSRF token, so, what would happen if I injected a `<form method="POST" action="/something">` without the closing `</form>`?
+That's the very top of the main content. I noticed that in the main content there is another form with an input containing the CSRF token, so, what would happen if I inject a `<form method="POST" action="/something">` without the closing `</form>`?
 
 The HTML parser will start to search for the closing `</form>` tag and everything that is between my newly opened form and the next `</form>` will be considered part of my new form. So, on this website the tree would now look like this:
 
