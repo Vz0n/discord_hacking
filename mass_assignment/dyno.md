@@ -52,4 +52,4 @@ I reported this, and the Dyno team fixed it quickly... guess because it was only
 
 ![Fixed response](assets/dyno3.png)
 
-Why that guess? Because I found other vulnerabilities like this one but less harmful, and I reported them a very long time ago after this, but the devs seems that were too lazy to fix them in a short/normal time span.
+Why that guess? Because I found other vulnerabilities like this one but less harmful, and I reported them a very long time ago after this, but the devs seems that were too lazy/busy to fix them in a short/normal time span. Or maybe they only get highly responsive on high severity issues (which is a common thing).
