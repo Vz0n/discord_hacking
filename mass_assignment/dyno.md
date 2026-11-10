@@ -1,5 +1,5 @@
 <!-- P3 -->
-## This message should not be there... or actually yes?
+## This message should not be here... or actually yes?
 *Fixed on: 03/01/2024*
 
 [Website](https://dyno.gg) | [Discord](https://discord.gg/dyno)

@@ -1,5 +1,5 @@
 <!-- P1 -->
-## A wispy link
+## Wispy link
 *Fixed on: 13/07/2026*
 
 [Website](https://wispbyte.com) | [Discord](https://www.wispbyte.com/discord)
