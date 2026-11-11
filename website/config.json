@@ -6,7 +6,7 @@
     "broken_authentication": "Missing or bypassable authentication checks — getting an identity without the credentials that should be required for it.",
     "code_injection": "Injecting code or commands (shell injection, unsafe deserialization, ...) to get execution as the user running the app.",
     "content_injection": "Injecting things like JavaScript, HTML, or CSS into web pages or other stuff.",
-    "cves": "Apps running outdated software with known CVEs (CVE-YYYY-XXXXX) that still worked exactly as published.",
+    "cves": "Apps running outdated software with known CVEs (CVE-YYYY-XXXXX) that were public months/years ago.",
     "mass_assignment": "Setting object properties the server never meant to be editable by sending extra fields — from guild ownership to Discord API options.",
     "open_redirect": "Unvalidated `redirect` parameters that send you anywhere after a trusted flow (like an OAuth authorization) — mostly useful for phishing.",
     "path_cancel": "User input embedded into request URIs: dot segments cancel and rewrite the path before it reaches the Discord API, turning benign features into arbitrary API calls.",
