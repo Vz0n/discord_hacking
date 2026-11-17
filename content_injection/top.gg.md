@@ -12,7 +12,7 @@ So, I noticed that you can set any link for the bot invite, which is the one tha
 
 ![Options](assets/top.gg2.png)
 
-Seems innocent, but I noticed that the frontend was prefetching the link rather than just redirecting to it:
+Seems innocent, but I noticed that when you click the button, the frontend was prefetching the link rather than just redirecting to it:
 
 ```http
 GET /bot/[bot_id]/invite?_rsc=AnZnK6Nm6TZijOb5 HTTP/1.1
@@ -43,14 +43,14 @@ Now, taking a serialized response from the own site (as example, `https://top.gg
 ["$", "div", null, {"dangerouslySetInnerHTML":{"__html":"<img src=x onerror='alert(`1`);'>"},"data-cfasync":"false"}]
 ```
 
-And would get rendered by the client:
+And would get rendered by the client. I also noticed that the bot submissions drafts can be viewed by anyone (even anonymous users) and was not properly restricted to only the draft owner. This makes exploitation of the bug against other users more trivial because new bots are supossed to be reviewed by moderators before publishing:
 
-![1](assets/top.gg3.png)
+https://github.com/user-attachments/assets/ec8a3d52-db8f-4bf4-8eb6-94e66dee947f
 
 On this one, I didn't need an open redirect as the same server was redirecting to the invite URL, as intended.
 
-The user access token in this website is stored on a cookie with `HttpOnly` set to false, so it was possible to steal it. Moreover, other parts of the website had the same flaw but this bots tab was the only one where I was able to control the target URL. The most interesting fact is that new bots must be reviewed by the staff of the site.
+The user access token in this website is stored on a cookie with `HttpOnly` set to false, so it was possible to steal it. Moreover, other parts of the website had the same flaw but this bots tab was the only one where I was able to control the target URL.
 
 ![Token](assets/top.gg4.png)
 
-The devs took a while to fix it.
+The devs took a while to fix both the XSS and the drafts IDOR.
