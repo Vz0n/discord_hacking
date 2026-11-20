@@ -1,5 +1,6 @@
 <script setup>
 import { useRouter } from 'vue-router'
+import SearchBar from './components/SearchBar.vue'
 
 const router = useRouter()
 
@@ -19,6 +20,7 @@ function onClick(e) {
     <header class="site-header">
       <div class="container header-inner">
         <router-link to="/" class="brand">discord_hacking</router-link>
+        <SearchBar />
         <nav>
           <a href="https://github.com/Vz0n/discord_hacking" target="_blank" rel="noopener">GitHub</a>
         </nav>
