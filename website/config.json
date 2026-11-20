@@ -104,7 +104,7 @@
     "content_injection/botghost": "XSS on components viewer"
   },
   "iconOverrides": {
-    "nekotina": "https://cdn.discordapp.com/avatars/429457053791158281/3132cde9a13496e05f6fe31a7cd6d23b.png",
+    "nekotina": "https://cdn.discordapp.com/avatars/429457053791158281/a_325d1b2c7f4406988f726aa271a610ee.gif",
     "galaxybot": "https://cdn.discordapp.com/avatars/697498867754729482/a_2d3a9f2ea56624622d7a59f10e8fcc49.gif?size=128"
   },
   "videoOverrides": {
