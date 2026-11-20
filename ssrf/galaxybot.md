@@ -65,9 +65,9 @@ app.run("127.0.0.1", 8000)
 
 While trying redirect to `127.0.0.1` I noticed that the server throws 404 if an error occurs in the request. Every common port was throwing an error, but from some extra info that I gathered, I knew that this was using clusters, so there must be containers... and when I tried to send a request to `172.17.0.1` (Docker default network) I got the response from https://galaxybot.app.
 
-Now; I focused on searching for internal services, and I noticed that the server will take ~3 seconds to answer with a 404 if the address is unreachable and < 1 second if it actually exists but the port is closed or `status_code >= 400`, and that this proxy can reach every address inside of `172.16.0.0/12`. With this I started searching the subnets and found some interesting internal services running:
+Now; I focused on searching for internal services, and I noticed that the server will take ~3 seconds to answer with a 404 if the address is unreachable and < 1 second if it actually exists but the port is closed or `status_code >= 400`, and that this proxy can reach every address inside of `172.16.0.0/12`. With this I started searching the subnets and found some interesting internal services running.
 
-![Internal service](assets/galaxybot2.png)
+![ConvertX at some container](assets/galaxybot2.png)
 
 The devs fixed it quickly after I reported it.
 

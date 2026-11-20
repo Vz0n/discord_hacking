@@ -18,9 +18,9 @@ When you hit the button, this will issue a request to `/client/api/auth/discord`
 https://discord.com/api/oauth2/authorize?response_type=code&redirect_uri=https%3A%2F%2Fwispbyte.com%2Fclient%2Fapi%2Fauth%2Fdiscord%2Fcallback&scope=identify%20email%20guilds&client_id=1346608298157412352
 ```
 
-If you saw the [guns.lol](guns.lol.md) case or have knowledge, you already know what's wrong here. There's no `state`, which means that I can directly request the Discord API and redirect users to my callback link, which will make them link my Discord account to their Wispbyte account. Total account takeover.
+If you saw the [guns.lol](guns.lol.md) case or have knowledge, you already know what's wrong here. There's no `state`, which means that I can directly request the Discord API and redirect users to my callback link, which will make them link my Discord account to their Wispbyte account.
 
-> Would like to show the video PoC, but it has my private email address xd. Anyways, by watching the one in guns.lol, you can imagine how it was.
+https://github.com/user-attachments/assets/0d5e5a3c-5d08-48c1-baeb-674423a80ab5
 
 This one has a downside, and is that if the user is not logged in on the target, the backend will instead log-in the user using your Discord as identification (they will get access to an account with your identity)
 

@@ -49,8 +49,8 @@ The `channelId` parameter was being type-validated, but the server didn't check 
 
 What made it more funnier, is that the button was actually working, and it creates the ticket under the default server subject:
 
-![when the ticket creation](assets/ticketbot2.png)
+https://github.com/user-attachments/assets/4f7970ee-83fd-4820-81c2-6aa0bbf6d896
 
-The endpoint used for editing the panel was also vulnerable, allowing you to edit messages sent by the bot in other servers.
+The endpoint used for editing the panel was also vulnerable, allowing you to edit messages sent by the bot in other servers, as you can see in the video.
 
 The devs fixed it quickly after I reported it.

@@ -20,6 +20,6 @@ That's full control over the `GET` request sent to the Discord API. You may thin
 
 ![Channels](assets/quark_logger4.png)
 
-So is the same as [Discohook](discohook.md). I can see private channels (more valuable now) with their messages, audit logs and webhooks. Being able to get these things is almost guaranteed on every guild as this is a logging bot and asks for Administrator by default.
+So it's the same as [Discohook](discohook.md) but totally unrestricted. I can see private channels with their messages, audit logs and webhooks information (including their tokens). Being able to get these things is almost guaranteed on every guild as this is a logging bot and asks for Administrator by default.
 
 The dev fixed it quickly.

@@ -130,6 +130,6 @@ We can also see data, and on MongoDB there is a special variable called `$$ROOT`
 
 > Note: That data is from my own server
 
-This, chained with the [Sapphire bug](/path_cancel/sapphire.md) could allow you to read appeals sent by other users as it leaks the channel where appeals are submitted. Note that you don't need to be able to submit appeals to exploit this.
+Yes, I can extract the entire configuration document from any server with this. Chained with the [Sapphire bug](/path_cancel/sapphire.md) could allow you to read appeals sent by other users as it leaks the channel where appeals are submitted. Note that you don't need to be able to submit appeals to exploit this.
 
 The dev fixed it some hours after I reported the bug.
