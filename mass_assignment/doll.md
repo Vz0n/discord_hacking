@@ -14,7 +14,7 @@ The bot offers a message system that you can configure to send messages on event
 
 On most events, to save a template a `POST` is sent to `https://api.dolls.gg/api/dashboard/guild/:guild_id/[boost|welcome|leave]/[id]` with this:
 
-```json
+```json - schema.json
 {
     "channelId":"<Snowflake>",
     "messageData":{
@@ -29,7 +29,7 @@ On the welcome, leave, boost and DM Welcomer systems the server allowed to appen
 
 With the leave and welcome (guild and DM) system didn't work, but on boosts, when I tested the message the server said:
 
-```http
+```http - Request inspector
 HTTP/1.1 500 Internal Server Error
 Content-Type: application/json; charset=utf-8
 Access-Control-Allow-Credentials: true

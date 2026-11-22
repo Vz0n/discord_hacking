@@ -501,6 +501,67 @@ main.container {
   padding: 0;
 }
 
+/* --- terminal-style code blocks --- */
+
+.code-term {
+  background: #101018;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.code-term-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-2);
+  user-select: none;
+}
+
+.tl {
+  display: inline-flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.tl span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.tl span:nth-child(1) {
+  background: #ff5f56;
+}
+
+.tl span:nth-child(2) {
+  background: #ffbd2e;
+}
+
+.tl span:nth-child(3) {
+  background: #27c93f;
+}
+
+.code-term-title {
+  font-family: ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace;
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.prose .code-term pre {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+}
+
 .prose code {
   font-family: ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace;
 }

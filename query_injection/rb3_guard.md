@@ -10,7 +10,7 @@ To access a dashboard, you send a request to `/dash/:guild_id`... being curious,
 
 But when I added a plus sign and another single quote (`1234' + '5`), the request was still working, so I suspected that there was some sort of injection. Then I made my request like this:
 
-```
+```sql
 1234' + if(substr(database(),1,1)='r','1',false) + '5
 ```
 

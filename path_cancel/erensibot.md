@@ -12,7 +12,7 @@ There is a reaction roles module:
 
 To create one, the dashboard sends a `POST` to the `/[guild_id]/reaction-role` API endpoint with the following body:
 
-```json
+```json - schema.json
 {
     "message":{
         "existingMessage":"<Boolean>",

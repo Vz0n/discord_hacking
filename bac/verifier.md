@@ -10,7 +10,7 @@ This is a security bot made mainly for member verification purposes, to prevent 
 
 When you create the verification message on the dashboard, a `POST` request is sent to `/api/@me/guilds/[guild_id]/verification` with the following JSON body:
 
-```json
+```json - schema.json
 {
     "welcomeMessage":"<String>",
     "welcomeChannelID":"<String>",

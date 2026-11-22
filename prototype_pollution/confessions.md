@@ -12,7 +12,7 @@ They have a dashboard, and at the moment it was in beta stage:
 
 When saving any setting, this request was sent:
 
-```http
+```http - Request inspector
 PATCH /api/guilds/[guild_id]/config HTTP/1.1
 Host: dashboard.confessions.bot
 Content-Type: application/json

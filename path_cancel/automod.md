@@ -16,7 +16,7 @@ There is a module that let's you create channels that shows server stats:
 
 Before; when you created one, a `PATCH` request was sent to `/api/v1/discord/channels?guildId={guild.id}&channelId={channel.id}`:
 
-```json
+```json - schema.json
 {
     "name":"Members: {count}"
 }

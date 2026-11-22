@@ -20,7 +20,7 @@ On load, this sends a `GET` to `/api/share/<uuid>`. Setting the share uuid to a 
 
 When you hit the `Import` button, the frontend sends this request:
 
-```http
+```http - Request inspector
 POST /api/share/<uuid>/import HTTP/1.1
 Host: dash.inventor.bot
 Content-Type: application/json
@@ -32,7 +32,7 @@ As you may have already guessed, we can also control the path of that request. E
 
 Now, watching how the backend handles `POST` requests, I noticed that almost every mutation endpoint was using the content type `multipart/form-data`, but for some reason, the backend was also accepting the required fields in the query string. i.e., you can send this:
 
-```http
+```http - Request inspector
 POST /api/user/change_name?username=owo&confirm=true HTTP/1.1
 Host: dash.inventor.bot
 Content-Type: multipart/form-data; boundary=----geckoformboundary2983c3877b5bd43daf76cccef7c90f89

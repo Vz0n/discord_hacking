@@ -14,7 +14,7 @@ There's a module for tickets that works with panels, just as most ticket bots ar
 
 On the settings (Ajustes), we can configure some global settings for the tickets like the transcripts channels. When you save it, a `PUT` is sent to `/guilds/:guild_id/tickets` with the following body:
 
-```json
+```json - schema.json
 {
     "TransCh":"<Snowflake>"
 }
@@ -22,7 +22,7 @@ On the settings (Ajustes), we can configure some global settings for the tickets
 
 The endpoint answers with this:
 
-```http
+```http - Request inspector
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
 Server: cloudflare

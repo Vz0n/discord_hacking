@@ -7,7 +7,7 @@ It's a multi-purpose Discord bot focused more on accessibility and fun stuff, li
 
 Looking at the source code, in [`app/login/route.ts`](https://github.com/shi-gg/mellow-web/blob/1309d8e21991a43e6b68853581863844c56e8a9d/app/login/route.ts#L112-L119), I noticed this function:
 
-```ts
+```ts - app/login/route.ts
 function parseRedirectUrlFromState(state: string | null) {
     if (!state) return "/";
 

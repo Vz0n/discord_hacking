@@ -14,7 +14,7 @@ When you save and edit everything goes as usual, except by the fact that they we
 
 But when a reaction role is deleted, this request is sent:
 
-```ruby
+```http - Request inspector
 DELETE /dashboard/roles_reactions/:server_id/:message_id?channel_id=:channel_id
 Host: api.draftbot.fr
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0

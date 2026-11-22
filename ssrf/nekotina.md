@@ -12,7 +12,7 @@ There is a module that lets you create a welcome message, with many options:
 
 When you save settings, this payload is sent via server actions:
 
-```json
+```json - schema.json
 {
   "channelId":"<Snowflake>",
   "content":"<String>",

@@ -12,7 +12,7 @@ On their dashboard, when you create a ticket panel, you have various options to 
 
 The settings are saved via a `PATCH` to `/api/:guild_id/panels/:panel_id` with the following data:
 
-```json
+```json - schema.json
 {
     "message_id":"<Snowflake>",
     "channel_id":"<Snowflake>",

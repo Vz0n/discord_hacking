@@ -12,7 +12,7 @@ This is a bot mainly used for quiz games. It has a wide set of questions for the
 
 While reading the source code, I noticed that the bot commands are implemented as a native module (ELF thingy). But there were some special commands that aren't part of the module:
 
-```cpp
+```cpp - modules/trivia/commands.cpp
 void TriviaModule::DoExternalCommands(std::vector<dpp::slashcommand>& normal, std::vector<dpp::slashcommand>& admin) {
 	/* This adds commands to the slash command system that are external to the bot's executable */
 	std::string path(getenv("HOME"));
@@ -26,7 +26,7 @@ void TriviaModule::DoExternalCommands(std::vector<dpp::slashcommand>& normal, st
 
 As the `www` indicated web, I tought that those commands could be listed in the main website... and I was right:
 
-```bash
+```bash - curl_output.txt
 ❯ curl -v "https://triviabot.co.uk/api/commands/commands.json"  
 # ... [snip]
 > GET /api/commands/commands.json HTTP/2
@@ -52,7 +52,7 @@ As the `www` indicated web, I tought that those commands could be listed in the 
 
 These four commands are actually PHP files, and this is how the bot was running them:
 
-```cpp
+```cpp - modules/trivia/webrequest.cpp
 void runcli(guild_settings_t settings, const std::string &command, uint64_t guild_id, uint64_t user_id, uint64_t channel_id, const std::string &parameters, const std::string& interaction_token, dpp::snowflake command_id)
 {
 	std::string home(getenv("HOME"));
@@ -74,7 +74,7 @@ void runcli(guild_settings_t settings, const std::string &command, uint64_t guil
 
 I jumped then to the `utility::exec` function of the `D++` Discord API wrapper and... it was doing only this with the command:
 
-```cpp
+```cpp - src/dpp/utility.cpp
 void exec(const std::string& cmd, std::vector<std::string> parameters, cmd_result_t callback) {
 	auto t = std::thread([cmd, parameters, callback]() {
         // ... [snip]
@@ -98,25 +98,25 @@ void exec(const std::string& cmd, std::vector<std::string> parameters, cmd_resul
 
 The `popen` standard C function just runs this:
 
-```bash
-/bin/sh -c "&command"
+```bash cli
+/bin/sh -c "$command"
 ```
 
 As this was escaping arguments with the `quoted` C++ function, every double quote was being escaped, just as this:
 
-```bash
-/bin/sh -c "&command" "argument\";owo"
+```bash cli
+/bin/sh -c "$command" "argument\";owo"
 ```
 
 The catastrophic flaw here is that, double quoted strings in shells also allows *substitutions*. Bash for example, allows you to put expressions like `$(<command>)` or 
 
-```bash
+```bash 
 `command`
 ```
 
 Which will get substituted by the actual command output in the resulting string:
 
-```bash
+```bash cli
 ❯ echo "hey $(id), you can suck my cock"
 hey uid=1000(vzon) gid=1000(vzon) groups=1000(vzon), you can suck my cock
 ```

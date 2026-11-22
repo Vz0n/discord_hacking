@@ -12,7 +12,7 @@ On a setting that lets you add an emoji, you can add a custom or default one:
 
 The emoji is sent raw on requests JSON:
 
-```json
+```json - schema.json
 {
     "emojis":[
         {

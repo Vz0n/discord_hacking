@@ -14,7 +14,7 @@ The bot dashboard has various functions:
 
 Inspecting how the bot saves settings, I saw that this is sent to the API endpoint `/api/legacy/serverInfo/:server_id/saveConfigs-v2` by `POST`:
 
-```json
+```json - sample.json
 {
   "changes":[
     {
@@ -35,7 +35,7 @@ Hmm... the lhs and rhs means left hand side and right hand side, if you learn ma
 
 When creating an entry for some value, the request changes to this:
 
-```json
+```json - sample.json
 {
   "changes":[
     {
@@ -59,7 +59,7 @@ This could be tought as an equivalent to `AdditionalRoles[0] = null`.
 
 So I tought, this in the backend could be doing something like `obj[path[0]][path[1]][path2]...[path[n]]`... so what could happen if I send this?:
 
-```json
+```json - payload.json
 {
   "changes":[
     {

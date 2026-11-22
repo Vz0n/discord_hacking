@@ -22,7 +22,7 @@ return obj[prop];
 
 And the deprecated ones were returning directly `obj[prop]`, because with the following code:
 
-```bash
+```bash - command.txt
 $objectCreate[{"x":123}]
 $getObjectProperty[toString]
 ```
@@ -31,7 +31,7 @@ The bot returned `function toString() { [native code] }`. This is useful for det
 
 So I saw the `$objectSet` function and when I tried to run it with this:
 
-```bash
+```bash - payload.txt
 $objectSet[__proto__;uwuowo;123]
 ```
 

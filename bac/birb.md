@@ -14,7 +14,7 @@ There's a dashboard which, at the time of this finding, was only for reading inf
 
 I noticed that the dashboard fetches data from the API at `https://backend.astrobirb.dev`. To get infractions, for example, a `GET` request is issued to `/infractions/[guild_id]/1/10?voided=false`, which answers with this on my guild:
 
-```http
+```http - Request inspector
 HTTP/1.1 200 OK
 Access-Control-Allow-Credentials: true
 Access-Control-Allow-Origin: https://astrobirb.dev

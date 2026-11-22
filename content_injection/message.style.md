@@ -16,7 +16,7 @@ From the above tools, the `Embed Links` lets you generate links that you can use
 
 This is sent via `POST` to `/api/embed-links` for creating the link in question (using `https://google.com` as example):
 
-```json
+```json seo.json
 {
     "url":"https://google.com",
     "theme_color":null,
@@ -35,8 +35,7 @@ This is sent via `POST` to `/api/embed-links` for creating the link in question 
 
 This is not too interesting, but if we look at the code that generates the page for the embed (the route `/e/:linkID`):
 
-```go
-// embedg-server/api/handlers/embed_links/render.go
+```go - embedg-server/api/handlers/embed_links/render.go
 func renderEmbedLinkHTML(c *fiber.Ctx, el pgmodel.EmbedLink) error {
 	metaTags := metaTagsToHTML(map[string]string{
 		"og:title":       el.OgTitle.String,
@@ -61,7 +60,7 @@ func renderEmbedLinkHTML(c *fiber.Ctx, el pgmodel.EmbedLink) error {
 
 It is using the `fmt#Sprintf` function without any validation against this variable:
 
-```go
+```go - embedg-server/api/handlers/embed_links/render.go
 const embedLinkHTML = `
 <!DOCTYPE html>
 <html>
@@ -79,7 +78,7 @@ As there no validation whatsoever in the previous mentioned endpoint, this means
 
 Moreover, the `metaTagsToHTML` function doesn't make any escaping too:
 
-```go
+```go - embedg-server/api/handlers/embed_links/render.go
 func metaTagsToHTML(metaTags map[string]string) string {
 	res := ""
 
@@ -95,7 +94,7 @@ func metaTagsToHTML(metaTags map[string]string) string {
 
 So, creating a link with this data:
 
-```json
+```json - payload.json
 {
     "og_title":"sample website",
     "og_description":"this is a sample website\"> <h1>haha I hacked you</h1> <div class=\"",

@@ -7,8 +7,7 @@ This bot is basically for what his name indicates: welcoming functions. And it's
 
 On the `/callback` route of the website, the following check is made against the saved `path` query parameter of a previous request to the `/login` route: 
 
-```go
-// welcomer-backend/backend/routes_session.go
+```go - welcomer-backend/backend/routes_session.go
 	if !ok || !strings.HasPrefix(queryPath, "/") {
 		queryPath = "/"
 	}

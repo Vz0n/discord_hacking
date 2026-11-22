@@ -14,7 +14,7 @@ On the dashboard, you can create setups and modify them:
 
 When you edit one, this is sent via `PUT` to `/api/dashboard/server-setup?guildId=[guild_id]&setupId=[setup_id]`
 
-```jsonc
+```jsonc - schema.json
 {
     "settings":{
         "setup_type":"Enum<default|dynamic|...>",

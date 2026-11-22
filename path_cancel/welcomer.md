@@ -12,7 +12,7 @@ It has the reaction roles function:
 
 This creates, edits and deletes the reaction roles in mass; that means it just modify an array of elements with a `POST` to `/api/guild/{guild.id}/reactionroles`:
 
-```json
+```json - schema.json
 {
     "reaction_roles":[
         {
@@ -36,8 +36,7 @@ This creates, edits and deletes the reaction roles in mass; that means it just m
 
 It validates every field including the emoji, but viewing the code I saw that it does so only if the reaction role is enabled:
 
-```go
-// welcomer-backend/backend/routes_guild_settings_reactionroles.go
+```go - welcomer-backend/backend/routes_guild_settings_reactionroles.go
 
 	for i, rr := range partial.ReactionRoles {
 		if !rr.Enabled {
@@ -52,7 +51,7 @@ And then proceeds to do everything as if the reaction role was enabled, I can al
 
 The function that creates reactions `CreateReaction`, does the following:
 
-```go
+```go - discord/channel_http.go
 func CreateReaction(ctx context.Context, session *Session, channelID, messageID Snowflake, emoji string) error {
 	endpoint := EndpointMessageReaction(channelID.String(), messageID.String(), emojiEscaper.Replace(emoji), "@me")
 

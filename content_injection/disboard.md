@@ -12,13 +12,13 @@ On your dashboard, where you can see your listed servers, you have a form to edi
 
 This is sent via `POST` to `/server/edit/$server_id`:
 
-```pwsh
+```bash - request.txt
 _csrf=<token>&Server%5Blanguage_id%5D=9&Server%5BtagsString%5D=<server tags>&Server%5Bdescription%5D=<server desc>&Server%5Bnsfw%5D=0|1&Server%5Bpublic%5D=0|1&save-button=
 ```
 
 or, decoded:
 
-```pwsh
+```bash request.txt
 _csrf=<token>&Server[language_id]=9&Server[tagsString]=<server tags>&Server[description]=<server desc>&Server[nsfw]=0|1&Server[public]=0|1&save-button=
 ```
 

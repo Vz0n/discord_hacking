@@ -33,7 +33,7 @@ and then, evaluating the expression without sanitation, sandbox or anything else
 
 The `psb-assign` WebSocket event looks like this:
 
-```json
+```json - schema.json
 [
   null,
   null,
@@ -52,7 +52,7 @@ The `psb-assign` WebSocket event looks like this:
 
 This event is sent to assign a variable value in the current Storybook's component (A Storybook is just a playground to edit a HTML element, which is the component). In the Plausible page, we can see that we have three components (button, dropdown and input). The original exploitation in a stock `phoenix_storybook` instance required just joining to a preview session and sending this payload with a valid component's variation ID and one of its variables as key (can be `type`, `theme`, `class`, `label`... etc), but on Plausible we also require knowing the live preview element ID as it doesn't use a global `iframe` to render the preview, which in this case, for buttons is `plausible_web_storybook_button-playground-preview`. So after loading the button preview page and sending this WebSocket message:
 
-```json
+```json - payload.json
 [
   null,
   null,

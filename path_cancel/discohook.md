@@ -12,7 +12,7 @@ Discohook is a website mainly used to design cool messages and send them with we
 
 When you do stuff on messages with a webhook, Discohook sends a `POST` to the endpoint `/api/v1/log/webhooks/$webhookId/$webhookToken/messages/$messageId` to verify that the message was sent and store it. The source code for this endpoint was the following:
 
-```ts
+```ts - packages/site/app/api/v1/log.webhooks.$webhookId.$webhookToken.messages.$messageId.ts
 export const action = async ({ request, context, params }: ActionArgs) => {
   const { webhookId, webhookToken, messageId } = zxParseParams(params, {
     webhookId: snowflakeAsString().transform(String),
@@ -106,7 +106,7 @@ export const action = async ({ request, context, params }: ActionArgs) => {
 
 The only validation made against the `webhookToken` is that the type must be a string. Knowing that the variable must be introduced in the path of the Discord API request makes this an injection point (but we must URL encode every character, as this parameter is taken from the route path). Now, the `getWebhookMessage` does the following:
 
-```ts
+```ts - packages/site/app/util/discord/http.ts
 export const getWebhookMessage = async (
   webhookId: string,
   webhookToken: string,
@@ -130,7 +130,7 @@ This `discordRequest` function is just using the `REST#request` of discord.js ag
 
 From the previous source code, I saw that if the response didn't have an `id` field, it will just return the plain response from Discord. The endpoint returns this JSON if the previous condition was true:
 
-```json
+```json - schema.json
 {
     "id":"<Snowflake>",
     "webhookId":"$webhookId",
@@ -148,7 +148,7 @@ If you read again the "if the response didn't have an `id` field, it will just r
 
 So, sending a `POST` against `/api/v1/log/webhooks/$webhookId/..%2F..%2Fchannels%2F{random_channel}%2Fmessages%23/messages/111111111` with the following body:
 
-```jsonc
+```jsonc - payload.json
 {
   "type":"edit", // To not trigger the timestamp check against $messageId
   "threadId":"1232131231254234231"

@@ -42,6 +42,33 @@ md.renderer.rules.link_open = (tokens, idx, options, env, self) => {
   return defaultLinkOpen(tokens, idx, options, env, self)
 }
 
+// Terminal-style code blocks: the first info-string word stays the language
+// (highlighting behavior is unchanged), any remainder becomes a custom title
+// rendered in a window header above the code.
+const defaultFence = md.renderer.rules.fence
+md.renderer.rules.fence = (tokens, idx, options, env, self) => {
+  const token = tokens[idx]
+  const rawInfo = (token.info || '').trim()
+  const langWord = rawInfo ? rawInfo.split(/\s+/)[0] : ''
+  const customTitle = rawInfo.length > langWord.length ? rawInfo.slice(langWord.length).trim() : ''
+  // keep only the language word so the stock rule and highlighter see the same input as before
+  const prevInfo = token.info
+  token.info = langWord
+  const body = defaultFence(tokens, idx, options, env, self)
+  token.info = prevInfo
+  // non-standard fence outputs (e.g. math) stay untouched
+  if (!body.startsWith('<pre')) return body
+  const label = md.utils.escapeHtml(customTitle || langWord.toLowerCase() || 'text')
+  return (
+    '<div class="code-term"><div class="code-term-head">' +
+    '<span class="tl" aria-hidden="true"><span></span><span></span><span></span></span>' +
+    `<span class="code-term-title">${label}</span>` +
+    '</div>' +
+    body +
+    '</div>'
+  )
+}
+
 const categories = fs
   .readdirSync(repoRoot, { withFileTypes: true })
   .filter(
@@ -57,14 +84,12 @@ const catSet = new Set(categories)
 let summaries = {}
 let names = {}
 let titles = {}
-let videoOverrides = {}
 let metaCfg = { siteName: "Vz0n's Discord Bug Hunting", description: 'Security writeups: bugs found across the Discord ecosystem — bots, dashboards and apps.' }
 try {
   const cfg = JSON.parse(fs.readFileSync(path.join(siteDir, 'config.json'), 'utf8'))
   summaries = cfg.summaries || {}
   names = cfg.names || {}
   titles = cfg.titles || {}
-  videoOverrides = cfg.videoOverrides || {}
   if (cfg.meta) metaCfg = cfg.meta
 } catch (e) {
   warn(`could not load config.json: ${String(e).slice(0, 100)}`)
@@ -147,13 +172,39 @@ function parseLinks(line) {
     .map((m) => ({ label: m[1], url: m[2] }))
 }
 
+// Videos follow the <slug>N naming convention (e.g. koya4.mp4): sorted
+// naturally, they are wired to the writeup's GitHub user-attachments video
+// embeds in document order. No config needed.
+function findLocalVideos(cat, slug) {
+  let files = []
+  try {
+    files = fs.readdirSync(path.join(repoRoot, cat, 'assets'))
+  } catch {
+    return []
+  }
+  const safeSlug = slug.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  const pattern = new RegExp(`^${safeSlug}[0-9._-]*\\.(mp4|webm|mov)$`, 'i')
+  return files
+    .filter((f) => pattern.test(f))
+    .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
+}
+
 function applyVideoOverride(cat, slug, html) {
-  const file = videoOverrides[`${cat}/${slug}`]
-  if (!file) return html
-  if (!copyAsset(cat, `assets/${file}`)) return html
+  const videos = findLocalVideos(cat, slug)
+  if (!videos.length) return html
+  const embeds = (html.match(/<video\b[^>]*\bsrc="https:\/\/github\.com\/user-attachments\//g) || []).length
+  if (embeds !== videos.length) {
+    warn(`[${cat}/${slug}] ${videos.length} local video file(s) for ${embeds} video embed(s)`)
+  }
+  let i = 0
   return html.replace(
     /(<video\b[^>]*\bsrc=")https:\/\/github\.com\/user-attachments\/[^"]+(")/g,
-    `$1/content/${cat}/${file}$2`
+    (m, pre, post) => {
+      if (i >= videos.length) return m
+      const file = videos[i++]
+      if (!copyAsset(cat, `assets/${file}`)) return m
+      return `${pre}/content/${cat}/${file}${post}`
+    }
   )
 }
 

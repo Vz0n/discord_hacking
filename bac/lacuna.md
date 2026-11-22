@@ -12,7 +12,7 @@ On the Utility dashboard section, I saw the `Interactive messages` and `Interact
 
 When you create one message, a `POST` request is sent to `/guilds/:guild_id/settings/interactive-messages` with this body:
 
-```jsonc
+```jsonc - schema.json
 {
     "channel_id":"<Snowflake>",
     "message":{
@@ -29,7 +29,7 @@ When you create one message, a `POST` request is sent to `/guilds/:guild_id/sett
 
 And this is sent via `POST` to `/guilds/:guild_id/settings/interactive-reactions` if you create a reaction:
 
-```json
+```json - schema.json
 {
     "id":"<String>",
     "type":"OneOf<ROLE,CHANNEL>",

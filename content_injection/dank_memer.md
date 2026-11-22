@@ -22,12 +22,12 @@ I started searching on the dashboard and other pages, and noticed that there was
 
 To save the settings, a `PUT` request is sent to `/api/bot/server/:server_id/discovery` with the following data:
 
-```json
+```json - schema.json
 {
-    "discoverable":true,
-    "description":"my cock is very hard",
-    "invite":":invite_url",
-    "tags":[]
+    "discoverable":"<Boolean>",
+    "description":"<String>",
+    "invite":"<String>",
+    "tags":"Array<String>"
 }
 ```
 
@@ -37,7 +37,7 @@ So, the server was validating if the `invite` field had a valid Discord invite U
 
 This didn't look interesting at the first glance, but I noticed that when I made click on the button, if the invite URL was under the web domain (dankmemer.lol), the request would look a *slight* different:
 
-```bash
+```http - Request inspector
 GET /owo?_rsc=1sec8 HTTP/1.1
 Host: dankmemer.lol
 ... [snip]
@@ -53,7 +53,7 @@ This request is expecting to get either a HTML page for redirecting to (the usua
 
 So, by putting an URL of the form `https://dankmemer.lol/api/auth/callback?state=https://cock.com#discord.gg/uWoAwX` in the invite link, I would get the ability to redirect the preflight request to a server that is under my control, but now I need to return a response that the React client would accept as a valid RSC payload. I made this wacky server on Node.js for that:
 
-```js
+```js - app.js
 const express = require("express");
 const fs = require("fs");
 
@@ -89,7 +89,7 @@ So, by returning that payload, the React client rendered the server discovery pa
 
 Then, I edited the payload to render a `div` element with any HTML that I want:
 
-```json
+```json - payload.rsc
 ["$","div",null,{"dangerouslySetInnerHTML":{"__html":"<img src=x onerror='alert(1);'>"},"data-cfasync":"false"}]
 ```
 

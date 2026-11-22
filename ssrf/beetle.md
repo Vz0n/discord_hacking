@@ -20,7 +20,7 @@ But then I tought: this is using a headless browser so, if the bot is just check
 
 While trying to point to internal addresses, I noticed that when beetle can't access a target, it will fall back to other two third-party services to take a screenshot:
 
-```bash
+```bash - python3 app.py
 vzon@vzon:~/oob$ python3 app.py 
 agent: [Beetle User-Agent]
 address: dy.dx.dz.dw

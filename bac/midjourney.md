@@ -10,7 +10,7 @@ Midjourney is a website used for AI multimedia generation. On their beginning, t
 
 At this date, the service can only be used if you pay a subscription, so I began to try to access to functions that were paywalled. While searching for API endpoints in the frontend assets I found an endpoint called `/api/storage-upload-feedback?file={filename}`. This endpoint would return this:
 
-```jsonc
+```jsonc - schema.json
 {
   "url":"https://storage.googleapis.com/user-feedback-uploads/",
   "fields":{

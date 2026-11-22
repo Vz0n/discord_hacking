@@ -14,7 +14,7 @@ The bot has a reaction roles module, just as other bots:
 
 When you create one with the default settings, this `POST` request is sent to `https://internal.aprilbot.me/api/reactionrole/{guild_id}`:
 
-```json
+```json - schema.json
 {
     "messageId":"<Discord.Snowflake>",
     "channelId":"<Discord.Snowflake>",

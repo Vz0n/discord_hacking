@@ -18,7 +18,7 @@ I confirmed it by sending a request to the port 22 and seeing that part of the S
 
 But I decided to send the request to my server and inspect it... looking at the ISP of the request ip addresss made something come into my mind:
 
-```bash
+```bash - ip_lookup.py ***.***.***.***
 [*] Ip: ***.***.***.***
 [*] City: Frankfurt am Main
 [*] Region: Hesse

@@ -12,7 +12,7 @@ On the dashboard, there is a module called Auto responder:
 
 When you edit an already created auto response, this request is sent to `/api/server/:guild_id/autoresponder/edit/:responder_id`:
 
-```json
+```json - schema.json
 {
     "command":{
         "command":"<String>",

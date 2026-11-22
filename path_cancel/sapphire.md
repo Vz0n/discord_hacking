@@ -12,7 +12,7 @@ The reaction roles function lets you load a message with a link:
 
 This is sent to `/api/v1/discord/bots/channelmsgs-$channelId` via `POST`
 
-```json
+```json - schema.json
 {
     "channelId":"$channelId",
     "messageId":"<Snowflake>"
@@ -25,7 +25,7 @@ This won't load any message from other channels that aren't part of my guild, bu
 
 Now, the channel object in the Discord API has always assigned a `last_message_id` field, and is visible even if you don't have permissions to access the channel:
 
-```json
+```json - schema.json
 {
     "id":"<Snowflake>",
     "type":"<Integer>",

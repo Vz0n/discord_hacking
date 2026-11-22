@@ -14,7 +14,7 @@ The dashboard has a function to manage Discord auto mod rules:
 
 When you save a rule, this is sent by `POST` to `/api/fetch/guilds/:guild_id/builtinautomod/save`
 
-```json
+```json - schema.json
 {
     "data":[
         {

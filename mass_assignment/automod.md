@@ -16,7 +16,7 @@ The bot has an engagement section, which has modules for creating reaction roles
 
 When you create a reaction role, this was sent via `POST` to `/api/v1/mongo/roles?guildId=<Snowflake>&reactionRoleId=<UUID>`:
 
-```jsonc
+```jsonc - schema.json
 {
     "emojis":"Array<String>",
     "buttons":"Array<ActionRow<Button>>",
@@ -31,7 +31,7 @@ When you create a reaction role, this was sent via `POST` to `/api/v1/mongo/role
 
 And this via `POST` to `/api/v1/mongo/giveaways?guildId=<Snowflake>&giveawayId=<UUID>&tz=<Timezone>` when you create a giveaway:
 
-```jsonc
+```jsonc - schema.json
 {
     "data":{
         "id":"<String>",

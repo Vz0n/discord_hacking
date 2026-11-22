@@ -10,7 +10,7 @@ It's a small multi-purpose bot with simple functionality and modules.
 
 While searching and testing things, I noticed that the session cookie, `discord_session`, has this format:
 
-```js
+```js - cookie.txt
 j:{"access_token":"<Bearer>","refresh_token":"<Refresh>","expires_in":"<Integer>","scope":"<Scopes>","token_type":"Bearer","renew_time":"<Integer>","user_id":"<Snowflake>"}
 ```
 
@@ -30,7 +30,7 @@ This means that whoever has a Bearer token with your identity and with the `iden
 
 As example, I made this simple Python website which gets a Bearer token and creates a giveaway in the target guild:
 
-```py
+```py - app.py
 import requests
 
 from flask import request, Flask, render_template

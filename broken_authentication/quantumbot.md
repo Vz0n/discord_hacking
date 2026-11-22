@@ -11,7 +11,7 @@ It's a small multi-purpose bot. It has an economy system, levelsm, AI and other 
 
 Inspecting requests, I noticed that the Discord Bearer token issued by the app was being used to identify users in the website:
 
-```bash
+```http - Request inspector
 GET /api/dashboard/user/settings HTTP/1.1
 Host: quantum-bot.net
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:152.0) Gecko/20100101 Firefox/152.0

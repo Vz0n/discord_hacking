@@ -14,7 +14,7 @@ At this date, their dashboard was recently opened to the public. So I decided to
 
 When you delete one, a request is sent to `POST /api/dashboard/[guild_id]/reaction-roles/batch` to invoke the `delete_role` intent. The body of that is:
 
-```json
+```json - schema.json
 {
     "channelID":"<Snowflake>",
     "messageID":"<Snowflake>",

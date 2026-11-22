@@ -7,7 +7,7 @@
 
 This check was made on the OAuth callback after logging-in, against the saved redirect in `/login?goto=<URL>`:
 
-```go
+```go - web/handlers_auth.go
   if redir != "" && strings.HasPrefix(redir, "/") {
 		common.RedisPool.Do(radix.Cmd(nil, "SET", "csrf_redir:"+csrfToken, redir, "EX", "500"))
   }

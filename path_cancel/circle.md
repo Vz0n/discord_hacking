@@ -14,7 +14,7 @@ There's a module for handling suggestions. To submit one, a user must use the `/
 
 When you save the config of the module itself, the tRPC method `suggestions.update` is called with this body:
 
-```jsonc
+```jsonc - schema.json
 {
     "actions":"Array<ButtonActionHandler>",
     "addTags":"Array<Snowflake>",
@@ -29,7 +29,7 @@ When you save the config of the module itself, the tRPC method `suggestions.upda
 
 The `commandID` initially was null, and this method allowed me to change it, even to non snowflakeish values. After setting the field, the dashboard would give me options to configure the slash command (you can see the menu in the image above). When updating the command, the `suggestions.updateCommand` method is invoked with this body:
 
-```jsonc
+```jsonc - schema.json
 {
     "commandArguments":"Array<DiscordSlashCommandOptions>",
     "inputMode":"command",
@@ -49,7 +49,7 @@ Given that it's updating a slash command on Discord and I can set the commandID 
 
 So the body that Circle must be sending to this endpoint is:
 
-```jsonc
+```jsonc - command.json
 {
     "name":"suggest",
     "description":"Submit a suggestion.",

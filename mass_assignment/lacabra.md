@@ -12,7 +12,7 @@ Their dashboard seems simple:
 
 To save settings in the dashboard, a `POST` request is sent to `/config/:server_id`
 
-```jsonc
+```jsonc - schema.json
 {
     // It's a big chunk of JSON, so imma cut it to the insteresting fields
     // [... snip]

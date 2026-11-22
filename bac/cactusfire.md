@@ -12,7 +12,7 @@ Their dashboard is pretty simple, they don't have many settings, but an interest
 
 The backend didn't validate if those channels actually belonged to the guild that is being configured, so by intercepting the `PATCH` request and editing those two fields:
 
-```json
+```json - schema.json
 {
     "data":{
         "confessionsChannel":"<Snowflake>",

@@ -18,7 +18,7 @@ When I was looking at it, one of my servers had the name "`<h1>Arasuka"'`", and 
 
 On almost every part of the page this was being rendered like that, including the own server's leaderboard page. You may already be thinking of `<script>alert(1);</script>`, but the server says:
 
-```http
+```http - Request inspector
 HTTP/1.1 200 OK
 Server: cloudflare
 Vary: Cookie, Accept-Encoding
@@ -35,7 +35,7 @@ That's a nice Content Security Policy and security headers that almost kills ent
 
 So I forget about this? Nah, not my case. I started to search other parts that were parsing HTML attributes raw, and I found that the site shows success/error messages by using the `?error=` and `?success=` query parameters, which were injectable too. Those messages get inserted like this in the HTML tree:
 
-```html
+```html - template.html
 <div class="site-toast-stack" aria-live="polite" aria-atomic="true">
     <div class="site-toast site-toast-success" role="status" data-toast>
         <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
@@ -53,7 +53,7 @@ That's the very top of the main content. I noticed that in the main content ther
 
 The HTML parser will start to search for the closing `</form>` tag and everything that is between my newly opened form and the next `</form>` will be considered part of my new form. So, on this website the tree would now look like this:
 
-```html
+```html - page.html
 <div class="site-toast-stack" aria-live="polite" aria-atomic="true">
     <div class="site-toast site-toast-success" role="status" data-toast>
         <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
@@ -76,7 +76,7 @@ The HTML parser will start to search for the closing `</form>` tag and everythin
 
 This means that my new form will have appended the CSRF token of whoever views a crafted URL. Since it's a full HTML injection, we can inject elements to deface the page, which in my case, I'll use to hide elements like the header and the main content, show a simple error message: "An unexpected error occurred while rendering that page. Click here to try again." and make the submit form button maximized and invisible, so it covers the entire page. I can code a simple server that uses this to inject an invisible form which creates a Role Menu in a specific target guild:
 
-```py
+```py - app.py
 from flask import Flask, redirect
 
 app = Flask(__name__)

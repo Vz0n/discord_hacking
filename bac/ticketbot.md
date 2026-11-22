@@ -10,7 +10,7 @@ It's a simple and not very known ticket managing bot with some nice functions an
 
 When you create a panel, this is sent via `POST` to `/setting/servers/$guild_id/panels` (creating a panel with a simple message and a button for the subject):
 
-```json
+```json - schema.json
 {
     "serverId":"$guild_id",
     "type":"BUTTON",

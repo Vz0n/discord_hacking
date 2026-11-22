@@ -14,7 +14,7 @@ As I said, there's a reviews section, in which users can leave reviews and also 
 
 When you're a staff of the listing you have some extra functions, like pinning messages, deleting other replies and reply with the server profile instead of your own. i.e., your response will be masked as the server name with their icon. This data is sent to the reply server action when you set that last option:
 
-```json
+```json - action.json
 [
     {
         "text":"<String>",
@@ -32,7 +32,7 @@ The action route is `/servers/[guild_id]`. If you try setting the `replyType` to
 
 To get the review id, we can simply send a `GET` to `/api/guilds/[guild_id]/reviews`, which will return an array of reviews and looks as this:
 
-```jsonc
+```jsonc - schema.json
 {
     "_id":"<ObjectId>",
     "createdAt":"<Date>",

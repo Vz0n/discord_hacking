@@ -12,7 +12,7 @@ His dashboard seems pretty cool. They have an organization-like web infrastructu
 
 While saving settings on the dashboard, I noticed that there were some modules whose settings structure is different to others. The Welcomer module was one of those and this `POST` request is sent to `/api/user/servers/[guild_id]/modules/welcome` when you save its settings:
 
-```jsonc
+```jsonc - schema.json
 {
     "enabled":"<Boolean>",
     "removeOldRolesEnabled":"<Boolean>",
@@ -36,7 +36,7 @@ While saving settings on the dashboard, I noticed that there were some modules w
 
 The `join.embed.footerImageURL` and `join.embed.thumbnailURL` became to my eyes, as every valid HTTPS url that were introduced was being transformed into `https://ext-images-01.galaxybot.app/file/proxy/[sha256]/[url]` by the backend. So I putted the URL of my server and I got the respective signed URL for it, to which I can send a `GET` and inspect the request that the proxy makes:
 
-```http
+```http - netcat
 vzon@vzon:~/oob$ nc -s 127.0.0.1 -lvnp 8000
 Listening on 127.0.0.1 8000
 Connection received on 127.0.0.1 49700
@@ -51,7 +51,7 @@ accept-encoding: gzip, br
 
 Trying to point a record directly to internal addresses didn't work, but I saw that the HTTP client that they were using follows redirects by default, so, what would happen if I redirect this to an internal address? We can make this simple Python server for that purpose:
 
-```python
+```python - redirect.py
 from flask import Flask, redirect, request, Response
 
 app = Flask(__name__)

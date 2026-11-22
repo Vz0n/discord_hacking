@@ -14,7 +14,7 @@ The dashboard allows configuring several stuff from the bot:
 
 When you save something, every change is sent as an operation to apply to a json object field, which in the request is represented as an absolute path. This is sent to `PATCH /api/v1/servers/{guild.id}` if you edit a setting (for example, the level up message):
 
-```json
+```json - schema.json
 [
     {
         "op":"add",
@@ -26,7 +26,7 @@ When you save something, every change is sent as an operation to apply to a json
 
 The endpoint answers with the modified object:
 
-```jsonc
+```jsonc - schema.json
 {
     "id":"<System.Integer>",
     "name":"<System.String>",
@@ -45,7 +45,7 @@ The endpoint answers with the modified object:
 
 The `/aboutText` can only be edited if you have premium. Trying to edit it results in:
 
-```http
+```http Request inspector
 HTTP/1.1 401 Unauthorized
 Date: Thu, 22 Oct 2026 19:10:59 GMT
 Content-Type: application/json; charset=utf-8
@@ -66,7 +66,7 @@ I also saw that the website lets you edit some specific things of your profile, 
 
 When you save your bio, this sends a `PATCH` to `/api/v1/users/@me` with the same body of the above endpoint, just with the attributes of the user now:
 
-```json
+```json - schema.json
 [
     {
         "op":"add",
@@ -78,7 +78,7 @@ When you save your bio, this sends a `PATCH` to `/api/v1/users/@me` with the sam
 
 This answers with this:
 
-```json
+```json - schema.json
 {
     "id":"<System.Integer>",
     "votes":"<System.Integer>",

@@ -18,7 +18,7 @@ There's is a section of the dashboard that let's you create giveaways with confi
 
 When you create it, a tRPC request is sent:
 
-```http
+```http - Request inspector
 POST /api/trpc/giveaway.create?batch=1 HTTP/1.1
 Host: appy.bot
 Content-Type: application/json

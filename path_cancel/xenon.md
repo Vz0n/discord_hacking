@@ -12,7 +12,7 @@ On the website, you can create server templates that other people can use and re
 
 This website uses [tRPC](https://trpc.io/) as design, they have various methods for getting and setting data. An interesting one was `templates.addTemplate`, invoked when you create a template. The input is:
 
-```json
+```json - schema.json
 {
     "0":{
         "json":{

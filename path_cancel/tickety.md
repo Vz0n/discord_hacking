@@ -14,7 +14,7 @@ The bot has a verification module and works much like the captcha.bot, Wick or Y
 
 To save settings of this module, the snowflakes of the selected roles are sent to `/api/guilds/:guild_id/verification/config` under this key:
 
-```json
+```json - schema.json
 {
     "roles":{
         "verified":[],
@@ -27,7 +27,7 @@ I tried to add a snowflake with a `./` at the beginning and a `#` at the end of 
 
 Given this, I also decided to give a shot to the Giveaways module. When creating one, this was the body of the request to create a giveaway sent to `/api/guilds/:guild_id/giveaways`:
 
-```json
+```json - schema.json
 {
   "action": "create",
   "prize": "<String>",

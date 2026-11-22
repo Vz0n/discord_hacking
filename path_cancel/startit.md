@@ -14,7 +14,7 @@ The automation module has an action that lets you add a reaction to the message 
 
 The JSON body of this reaction action was the following:
 
-```json
+```json - schema.json
 {
     "type":"add_reaction",
     "reactions":"Array<String>"

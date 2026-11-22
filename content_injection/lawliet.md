@@ -14,7 +14,7 @@ Starting to tamper with this was a bit complicated, as the bot's dashboard is us
 
 So well, files are uploaded on a `POST` request with this content:
 
-```bash
+```bash - request.txt
 -----------------------------88073330513477986272418408347
 Content-Disposition: form-data; name="file"; filename="uwu.png"
 Content-Type: image/png
@@ -27,7 +27,7 @@ Content-Type: image/png
 If I change the filename extension to js and I put plain text instead of binary image data, the request still success, and the mimetype reported by the server is according to the file extension:
 
 
-```bash
+```bash - curl_output.txt
 < HTTP/2 200 
 < date: Sat, 04 Jan 2025 22:51:21 GMT
 < content-type: text/javascript;charset=utf-8 <------

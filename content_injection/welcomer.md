@@ -12,7 +12,7 @@ The main function of the bot has an image builder to customize your welcome imag
 
 There's a preview feature, and it sends this request via `POST` to `/api/guild/{guild_id}/welcomer/builder/preview` with this JSON:
 
-```json
+```json - schema.json
 {
     "fill":"solid:profile",
     "layers":[
@@ -43,8 +43,7 @@ There's a preview feature, and it sends this request via `POST` to `/api/guild/{
 
 Inspecting the code, I noticed that all this data is going to be rendered into a HTML page, and the image that is rendered is a capture of that HTML page from a Chrome headless browser in the server. Some of these attributes will be parsed to CSS styles, and the `layers[n].fill` has an interesting code for parsing:
 
-```go
-// welcomer-images-next/service/generator.go
+```go - welcomer-images-next/service/generator.go
 func (is *ImageService) getFillAsCSS(ctx *ImageGenerationContext, value, defaultValue string) string {
 	if len(value) == 0 {
 		return defaultValue

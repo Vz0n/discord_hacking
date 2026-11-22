@@ -10,8 +10,11 @@ Sesh is a Discord bot made mainly for calendar things. It has functions for even
 
 The API of the bot directly uses the issued Bearer token as authorization, either as the `Access_token` header or the `access_token` JSON field on `POST` requests:
 
-```jsonc
-// POST /api/get_guild_settings_data HTTP/1.1
+```http Request inspector
+POST /api/get_guild_settings_data HTTP/1.1
+Host: sesh.fyi
+Content-Type: application/json
+
 {
     "guild_id":"<Snowflake>",
     "access_token":"<Bearer>",

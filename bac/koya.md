@@ -12,7 +12,7 @@ This bot has a message builder, it's for creating custom messages with/without e
 
 To send the message, a request to `/api/guilds/[guild_id]/messagebuilder` is sent:
 
-```json
+```json - schema.json
 {
     "_id":"<ObjectId>",
     "name":"<String>",
@@ -49,7 +49,7 @@ Two years later, I decided to look again at the bot. There is a birthday module 
 
 When you save settings, this is sent to `POST /api/guilds/[guild_id]/birthdays`:
 
-```json
+```json - schema.json
 {
     "enabled":"<Boolean>",
     "channelId":"<Snowflake>",

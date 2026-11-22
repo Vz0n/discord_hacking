@@ -14,7 +14,7 @@ As the other bots, this has the function to create a menu for role selection wit
 
 This request is sent by `POST` to the API endpoint `/guilds/:guild_id/role_selection` when you create one (removing useless fields):
 
-```json
+```json - schema.json
 {
     "channel_id":"<Snowflake>",
     "unique":"<Boolean>",

@@ -10,7 +10,7 @@ WispByte is a hosting platform mainly designed for Discord bots, but it also sup
 
 Inspecting the dashboard, I found some URLs related to ads videos (`/client/venatus-reward-demo-prod` and `/client/venatus-reward-demo`) that are triggered when you try to do certain actions like turning on a server. To return back the user to the URL where they was before, the page does a client side redirect using the `return` query param with some checks:
 
-```js
+```js - index.js
 function parseReturnUrl() {
     if (!returnUrl) return null;
       try {
@@ -25,7 +25,7 @@ function parseReturnUrl() {
 
 Welp, this does not verify if the URL if the same as the origin, and on pseudo-protocols like `javascript:`, the second parameter (the base) has no effect:
 
-```js
+```js - repl
 > let t = new URL("javascript:alert('cock')", "https://wispbyte.com")
 undefined
 > t
@@ -47,7 +47,7 @@ URL {
 
 The last thing that the site does before issuing the redirect, is adding a query parameter. On this pseudo-protocol, the JS engine just adds it without any questioning:
 
-```js
+```js - repl
 > t.searchParams.append("rewardFailed", "1")
 undefined
 > t

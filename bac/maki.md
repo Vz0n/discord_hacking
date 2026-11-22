@@ -14,7 +14,7 @@ There's a module called automations which lets you configure the bot to make thi
 
 One of the action that the bot can do is sending a CV2 message to a specific channel. The schema of that action in requests is the following:
 
-```json
+```json - schema.json
 {
     "type":"SEND_MESSAGE",
     "components":"Array<? extends DiscordV2Component>",
