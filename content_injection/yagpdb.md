@@ -59,6 +59,6 @@ function esc(s) {
 
 It was being used to sanitize the href attribute, but didn't account for double quotes.
 
-The dev fixed it quickly.
+The dev [fixed it quickly](https://github.com/botlabs-gg/yagpdb/commit/168c2d30a23c30257273e2a3f6a2263fae060f50).
 
 

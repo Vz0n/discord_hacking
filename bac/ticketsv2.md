@@ -1,6 +1,6 @@
 <!-- P3 -->
 ## Hey, you can't put th- oh it's disabled, go ahead then.
-*Fixed on: ??/04/2026*
+*Fixed on: 09/04/2026*
 
 [Website](https://tickets.bot) | [Discord](https://discord.gg/ticketsbot)
 
@@ -64,4 +64,6 @@ Now, with the `ticket_notification_channel` field this also happened, but only i
 
 ![weird behaviour](assets/tickets2.png)
 
-Don't know how much the dev took to fix it, as an admin got mad at me for using this on a public channel (to prove that you can do what i'm saying) and closed the ticket. But yeah, it's fixed now.
+Don't know how much the dev took to fix it, as an admin got mad at me for using this on a public channel (to prove that you can do what i'm saying) and closed the ticket but yeah, it's fixed now. The date points to when [the fix commit](https://github.com/TicketsBot-cloud/dashboard/commit/d84f42f2f8b8ed823222496a17bfa0390bb25691) was made.
+
+> I need to say that I was a little upset when the admin said it wasn't possible what I was reporting, at the moment I wasn't feeling too good emotionally. Since then, I started to report almost all my findings with PoC videos. 

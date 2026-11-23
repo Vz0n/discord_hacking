@@ -83,4 +83,4 @@ Moreover, a squid proxy was being used to hide the real source address of the he
 
 ![When the forwarded-for](assets/welcomer3.png)
 
-As the others, the dev took some hours to fix it.
+As the others, the dev took some hours to [fix it](https://github.com/WelcomerTeam/Welcomer/commit/8c1e5c9b9cdc0d03e5a22c4b222368c55b582ac1).

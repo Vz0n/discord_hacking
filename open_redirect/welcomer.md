@@ -15,3 +15,5 @@ On the `/callback` route of the website, the following check is made against the
 
 This didn't account for relative protocol URLs, so putting something like `//example.com` in `path` would get you redirected to `https://example.com` after authorizing the app.
 
+The dev took a while to [fix it](https://github.com/WelcomerTeam/Welcomer/commit/8c1e5c9b9cdc0d03e5a22c4b222368c55b582ac1). 
+

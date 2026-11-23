@@ -15,4 +15,4 @@ This check was made on the OAuth callback after logging-in, against the saved re
 
 As the welcomer one, this didn't account for protocol relative redirects.
 
-The dev fixed it quickly after reporting it.
+The dev [fixed it quickly](https://github.com/botlabs-gg/yagpdb/commit/9e44d3979311c23ed02fe487c1e9cad8617f26fa) after reporting it.

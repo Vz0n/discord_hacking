@@ -107,3 +107,5 @@ Would create this malicious page:
 ![Pwned](assets/ms3.png)
 
 The dev took some days to read my message, but he fixed the bug quickly.
+
+> For this one I don't have a link to the commit, since the guy did a rewrite of the entire git commit history, and it's gone.

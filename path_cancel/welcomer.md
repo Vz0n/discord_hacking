@@ -76,6 +76,6 @@ So with this and bypassing the "escaper" by using the `?` character, you can sen
 
 https://github.com/user-attachments/assets/44a7e0e6-012e-467f-96f2-15f49756d6e8
 
-The dev took a little to fix it.
+The dev took a little to [fix it](https://github.com/WelcomerTeam/Welcomer/commit/8c1e5c9b9cdc0d03e5a22c4b222368c55b582ac1).
 
 
