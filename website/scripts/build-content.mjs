@@ -140,6 +140,27 @@ function preprocess(cat, text) {
       }
     )
 
+    // GitHub-style relative case links -> router links
+    // same folder: [Tickety](tickety.md) | cross folder: [Tickety](../path_cancel/tickety.md)
+    chunk = chunk.replace(
+      /(?<!!)\]\((?:\.\.\/([A-Za-z0-9_-]+)\/|\.\/)?([A-Za-z0-9_.-]+\.md)(#[A-Za-z0-9_-]*)?\)/g,
+      (m, targetCat, file, anchor) => {
+        const c = targetCat || cat
+        if (!catSet.has(c)) {
+          warn(`[${cat}] unresolved relative link: ${m.slice(2, -1)}`)
+          return m
+        }
+        if (file.toLowerCase() === 'readme.md') {
+          return `](/c/${c})`
+        }
+        if (fs.existsSync(path.join(repoRoot, c, file))) {
+          return `](/c/${c}/${file.replace(/\.md$/, '')}${anchor || ''})`
+        }
+        warn(`[${cat}] unresolved relative link: ${m.slice(2, -1)}`)
+        return m
+      }
+    )
+
     // cross-writeup links like [Tickety](/path_cancel/tickety.md) -> router links
     chunk = chunk.replace(
       /\]\((\/[A-Za-z0-9_-]+\/[A-Za-z0-9_.-]+\.md)\)/g,

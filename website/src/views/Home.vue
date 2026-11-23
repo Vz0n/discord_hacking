@@ -12,7 +12,7 @@ watchEffect(() => {
   <section class="hero">
     <h1>Vz0n's Discord bug hunting</h1>
     <p class="tagline">
-      This is a collection of security writeups of bugs that I found across popular Discord apps —
+      This is a collection of security writeups of bugs that I found across popular Discord apps (and sometimes, Discord itself) —
       There are {{ content.stats.categories }} categories with a total of {{ content.stats.writeups }} cases.
       <br><br>
       Every writeup uses the <code>DD/MM/YYYY</code> format to indicate when the bug was fixed.
