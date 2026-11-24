@@ -1,8 +1,6 @@
 ## My Discord ecosystem hacking adventures
 
-Since 2024, after a short series of videos made by the youtuber [No Text To Speech](https://www.youtube.com/@NoTextToSpeech) with [xyzeva](https://github.com/xyzeva) as collaborator, I decided to go and hunt bugs across all the bots and popular apps/websites in the Discord community, especially the ones that are widely recommended by many users.
-
-I found very nasty bugs across all these apps and I documented them on this repository, moving away from [my blog](https://vzon.moe/blog) as very few people visit it (and also, the original language of the posts was Spanish, making it a bit more difficult getting known).
+This is a collection of security writeups of bugs that I found across various popular (and not so popular) apps/bots in the Discord ecosystem, and sometimes in Discord itself. I started to search in 2024 after [xyzeva](https://eva.ac/) with [No Text To Speech](https://www.youtube.com/@NoTextToSpeech) showcased how some popular bots had dumb vulnerabilities.
 
 By viewing the repo, you should get how it's structured. Every folder's name is a class of bug and its contents are the apps where I found that type of bug. The file contains an explanation on how the bug works. The fix date in every case/writeup follows the `DD/MM/YYYY` format. 
 
