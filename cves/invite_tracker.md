@@ -10,7 +10,7 @@ This bot is very well known around Discord. It's mainly for invite management, b
 
 By looking the frontend HTML, I noticed that there's a domain that receives analytics from the main bot website, which is `https://plausible.riks.gg`. It hosts a Plausible CE instance.
 
-![Plausible portal](assets/invitetracker2.png)
+![Plausible portal](assets/plausible.png)
 
 Looking at this analytics software, I noticed an advisory that points to a vulnerability in a dependency called [phoenix_storybook](https://github.com/phenixdigital/phoenix_storybook). Specifically, `CVE-2026-8467` says:
 

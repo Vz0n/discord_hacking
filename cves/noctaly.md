@@ -10,7 +10,7 @@ Noctaly is a multi-purpose Discord bot which is a bit popular. Seems that some b
 
 Peeking at subdomains, I noticed that the main website was collecting usage analytics at the subdomain `https://s.noctaly.com`, which uses Plausible CE:
 
-![Plausible Portal](assets/noctaly2.png)
+![Plausible Portal](assets/plausible.png)
 
 Looking at this analytics software, I noticed an advisory from months ago that points to a vulnerability in a dependency called [phoenix_storybook](https://github.com/phenixdigital/phoenix_storybook). Specifically, `CVE-2026-8467` says:
 
@@ -20,7 +20,7 @@ Looking at this analytics software, I noticed an advisory from months ago that p
 
 The Plausible advisory points to the `/storybook` endpoint which was removed as an additional safety measure. The Noctaly instance still had it:
 
-![Storybook](assets/noctaly3.png)
+![Storybook](assets/noctaly2.png)
 
 So indeed, it's vulnerable. The advisory points to a WebSocket event called `psb-assign`, from which the server was processing one of its name/val args using this:
 
