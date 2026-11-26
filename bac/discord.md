@@ -19,10 +19,10 @@ When you submit a modal, this interaction data is sent by the client to `POST /a
 ```json - schema.json
 {
     "type":5,
-    "guild_id":"@type :: integer()",
-    "channel_id":"@type :: integer()",
-    "data":"@type :: ModalSubmissionData()",
-    "nonce":"@type :: integer()"
+    "guild_id":"<u64>",
+    "channel_id":"<u64>",
+    "data":"<ModalSubmissionData>",
+    "nonce":"<u64>"
 }
 ```
 
@@ -32,12 +32,12 @@ As this modal is only triggered as response to an interaction, this should be *b
 {
       "version":1,
       "type":5,
-      "token":"@type :: str()",
+      "token":"<String>",
       "message":{
-          "webhook_id": "@type :: integer()",
+          "webhook_id": "<u64>",
           "type": 23,
           "tts": false,
-          "timestamp": "@type :: integer()",
+          "timestamp": "<u64>",
           "pinned": false,
           "mentions": [],
           "mention_roles": [],
@@ -49,13 +49,13 @@ As this modal is only triggered as response to an interaction, this should be *b
       },
       "member":{
             // ... [snip]
-            "roles":"Roles(C)",
-            "permissions":"Perms(A)"
+            "roles":"Discord::Roles(C)",
+            "permissions":"Discord::Perms(A)"
       },
       "guild_id":"C",
-      "guild":"GuildData(C)",
+      "guild":"Discord::GuildData(C)",
       "channel_id":"B",
-      "channel":"ChannelObject(B)"
+      "channel":"Discord::ChannelData(B)"
       // ... [snip]
 }
 ```
@@ -78,7 +78,7 @@ The bot provides basic functions like a welcoming system, auto responses and it 
 
 ```json modal_data.json
 {
-  "id":"@type :: integer()",
+  "id":"<u64>",
   "custom_id":"arEditModal help me",
   "components":[
     {
@@ -87,7 +87,7 @@ The bot provides basic functions like a welcoming system, auto responses and it 
         {
           "type":4,
           "custom_id":"arReplyInput",
-          "value":"@type :: str()"
+          "value":"<String>"
         }
       ]
     }
@@ -107,7 +107,7 @@ I also tested other bots besides this one, and one [Reaction Roles bot](https://
 
 ```json modal_data.json
 {
-  "id":"@type :: integer()",
+  "id":"<u64>",
   "custom_id":"1:customize-bot-bio",
   "components":[
     {
@@ -116,7 +116,7 @@ I also tested other bots besides this one, and one [Reaction Roles bot](https://
         {
           "type":4,
           "custom_id":"bio",
-          "value":"uwu owo"
+          "value":"<String>"
         }
       ]
     }
