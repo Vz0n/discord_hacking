@@ -106,7 +106,8 @@
   },
   "iconOverrides": {
     "nekotina": "https://cdn.discordapp.com/avatars/429457053791158281/a_325d1b2c7f4406988f726aa271a610ee.gif",
-    "galaxybot": "https://cdn.discordapp.com/avatars/697498867754729482/a_2d3a9f2ea56624622d7a59f10e8fcc49.gif?size=128"
+    "galaxybot": "https://cdn.discordapp.com/avatars/697498867754729482/a_2d3a9f2ea56624622d7a59f10e8fcc49.gif?size=128",
+    "discohook": "https://cdn.discordapp.com/avatars/792842038332358656/da056550fd65a4d7e4636cb1707ca801.png?size=4096"
   },
   "siteUrl": "https://hunting.vzon.moe",
   "meta": {
